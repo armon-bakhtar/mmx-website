@@ -1,0 +1,184 @@
+/* stylelint-disable csstools/media-use-custom-media */
+// Don't forget to correct values into breakpoints.ts too!
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$mobile-xl: 475px;
+$tablet-s: 600px;
+$tablet: 768px;
+$tablet-l: 880px;
+$laptop: 1024px;
+$desktop: 1200px;
+$desktop-xs: 1280px;
+$desktop-s: 1366px;
+$desktop-m: 1441px;
+$desktop-l: 1680px;
+$desktop-xl: 1920px;
+
+@mixin mobile-s($position: min) {
+  @if $position == min {
+    @media (min-width: $mobile-s) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $mobile-s) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-m($position: min) {
+  @if $position == min {
+    @media (min-width: $mobile-m) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $mobile-m) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-l($position: min) {
+  @if $position == min {
+    @media (min-width: $mobile-l) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $mobile-l) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-xl($position: min) {
+  @if $position == min {
+    @media (min-width: $mobile-xl) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $mobile-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin tablet-s($position: min) {
+  @if $position == min {
+    @media (min-width: $tablet-s) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $tablet-s) {
+      @content;
+    }
+  }
+}
+
+@mixin tablet($position: min) {
+  @if $position == min {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+}
+
+@mixin tablet-l($position: min) {
+  @if $position == min {
+    @media (min-width: $tablet-l) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $tablet-l) {
+      @content;
+    }
+  }
+}
+
+@mixin laptop($position: min) {
+  @if $position == min {
+    @media (min-width: $laptop) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $laptop) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop-xs($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop-xs) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop-xs) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop-s($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop-s) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop-s) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop-m($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop-m) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop-m) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop-l($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop-l) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop-l) {
+      @content;
+    }
+  }
+}
+
+@mixin desktop-xl($position: min) {
+  @if $position == min {
+    @media (min-width: $desktop-xl) {
+      @content;
+    }
+  } @else if $position == max {
+    @media (max-width: $desktop-xl) {
+      @content;
+    }
+  }
+}

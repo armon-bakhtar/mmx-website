@@ -1,0 +1,9 @@
+.layout {
+  overflow-x: hidden;
+  background-color: var(--grayscale-2);
+  padding-top: 54px;
+
+  @include laptop {
+    padding-top: 78px;
+  }
+}
