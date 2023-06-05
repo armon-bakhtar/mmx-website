@@ -1,3 +1,4 @@
+import { Afghanistan } from '@/shared/icons/flags';
 import Head from 'next/head';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
@@ -15,6 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div></div>
     </>
   );
 }
