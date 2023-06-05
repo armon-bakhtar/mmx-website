@@ -1,73 +1,100 @@
-// $fonts-path: '/fonts';
+$fonts-path: '/fonts';
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Garamond Premiere Pro';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro.woff2'),
-//     url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$fonts-path}/Poppins/Poppins-Light.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins-Light.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Garamond Premiere Pro';
-//   font-style: normal;
-//   font-weight: 600;
-//   src: url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro-SmbdSubh.woff2'),
-//     url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro-SmbdSubh.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts-path}/Poppins/Poppins_Regular.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins_Regular.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Garamond Premiere Pro';
-//   font-style: normal;
-//   font-weight: 300;
-//   src: url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro-SmbdSubh.woff2'),
-//     url('#{$fonts-path}/GaramondPremierePro/GaramondPremrPro-SmbdSubh.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$fonts-path}/Poppins/Poppins_Medium.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins_Medium.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Gilroy';
-//   font-style: normal;
-//   font-weight: 300;
-//   src: url('#{$fonts-path}/Gilroy/Gilroy-Light.woff2'),
-//     url('#{$fonts-path}/Gilroy/Gilroy-Light.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$fonts-path}/Poppins/Poppins_SemiBold.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins_SemiBold.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Gilroy';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url('#{$fonts-path}/Gilroy/Gilroy_Regular.woff2'),
-//     url('#{$fonts-path}/Gilroy/Gilroy_Regular.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$fonts-path}/Poppins/Poppins_Bold.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins_Bold.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Gilroy';
-//   font-style: normal;
-//   font-weight: 500;
-//   src: url('#{$fonts-path}/Gilroy/Gilroy_Medium.woff2'),
-//     url('#{$fonts-path}/Gilroy/Gilroy_Medium.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Light.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-Light.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Gilroy';
-//   font-style: normal;
-//   font-weight: 600;
-//   src: url('#{$fonts-path}/Gilroy/Gilroy_SemiBold.woff2'),
-//     url('#{$fonts-path}/Gilroy/Gilroy_SemiBold.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: italic;
+  font-weight: 300;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-LightSlanted.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-LightSlanted.woff');
+}
 
-// @font-face {
-//   font-display: swap;
-//   font-family: 'Gilroy';
-//   font-style: normal;
-//   font-weight: 700;
-//   src: url('#{$fonts-path}/Gilroy/Gilroy_Bold.woff2'),
-//     url('#{$fonts-path}/Gilroy/Gilroy_Bold.woff');
-// }
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Regular.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity_Regular.woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Medium.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity_Medium.woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity_SemiBold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity_SemiBold.woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Bold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity_Bold.woff');
+}

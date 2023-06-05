@@ -1,0 +1,104 @@
+@mixin title-bold-52 {
+  @include font($size: 52px, $weight: 700, $lineHeight: 60px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-light-italic-52 {
+  @include font($size: 52px, $weight: 300, $lineHeight: 60px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-bold-46 {
+  @include font($size: 46px, $weight: 700, $lineHeight: 50px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-light-italic-46 {
+  @include font($size: 46px, $weight: 300, $lineHeight: 50px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-semibold-44 {
+  @include font($size: 44px, $weight: 600, $lineHeight: 48px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-bold-32 {
+  @include font($size: 32px, $weight: 700, $lineHeight: 36px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-light-italic-32 {
+  @include font($size: 32px, $weight: 300, $lineHeight: 36px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-bold-30 {
+  @include font($size: 30px, $weight: 700, $lineHeight: 34px);
+  font-family: 'Subjectivity';
+}
+
+@mixin title-semibold-28 {
+  @include font($size: 28px, $weight: 600, $lineHeight: 32px);
+  font-family: 'Subjectivity';
+}
+
+@mixin subhead-bold-24 {
+  @include font($size: 24px, $weight: 700, $lineHeight: 28px);
+  font-family: 'Subjectivity';
+}
+
+@mixin subhead-medium-24 {
+  @include font($size: 24px, $weight: 500, $lineHeight: 28px);
+  font-family: 'Poppins';
+}
+
+@mixin subhead-medium-20 {
+  @include font($size: 20px, $weight: 500, $lineHeight: 24px);
+  font-family: 'Poppins';
+}
+
+@mixin subhead-regular-20 {
+  @include font($size: 20px, $weight: 400, $lineHeight: 24px);
+  font-family: 'Poppins';
+}
+
+@mixin subhead-medium-18 {
+  @include font($size: 18px, $weight: 500, $lineHeight: 22px);
+  font-family: 'Poppins';
+}
+
+@mixin body-bold-16 {
+  @include font($size: 16px, $weight: 700, $lineHeight: 20px);
+  font-family: 'Subjectivity';
+}
+
+@mixin subhead-medium-16 {
+  @include font($size: 16px, $weight: 500, $lineHeight: 20px);
+  font-family: 'Subjectivity';
+}
+
+@mixin body-regular-15 {
+  @include font($size: 15px, $weight: 400, $lineHeight: 19px);
+  font-family: 'Poppins';
+}
+
+@mixin subhead-medium-14 {
+  @include font($size: 14px, $weight: 500, $lineHeight: 18px);
+  font-family: 'Subjectivity';
+}
+
+@mixin body-regular-14 {
+  @include font($size: 14px, $weight: 400, $lineHeight: 18px);
+  font-family: 'Poppins';
+}
+
+@mixin body-bold-12 {
+  @include font($size: 12px, $weight: 700, $lineHeight: 16px);
+  font-family: 'Poppins';
+}
+
+@mixin body-regular-12 {
+  @include font($size: 12px, $weight: 400, $lineHeight: 18px);
+  font-family: 'Poppins';
+}
