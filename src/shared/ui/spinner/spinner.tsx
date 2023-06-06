@@ -9,16 +9,25 @@ export interface SpinnerProps
   extends TypeWithoutClassName<SVGProps<SVGSVGElement>>,
     CommonTypes {
   isAbsolute?: boolean;
-  svgColor?: string;
+  circleColor?: string;
+  strokeColor?: string;
 }
 
 export const Spinner: FC<SpinnerProps> = ({
   className,
   isAbsolute = true,
-  svgColor,
+  circleColor,
+  strokeColor,
   ...props
 }) => {
   const { cnRoot } = useClasses({ isAbsolute });
 
-  return <Loader className={cnRoot} color={svgColor} {...props} />;
+  return (
+    <Loader
+      className={cnRoot}
+      circleColor={circleColor}
+      strokeColor={strokeColor}
+      {...props}
+    />
+  );
 };
