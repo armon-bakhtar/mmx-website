@@ -1,0 +1,7 @@
+.text-button-primary {
+  color: var(--greyscale-11);
+
+  &:disabled {
+    color: var(--greyscale-7);
+  }
+}

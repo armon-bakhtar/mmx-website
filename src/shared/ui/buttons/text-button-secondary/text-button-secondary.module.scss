@@ -1,0 +1,7 @@
+.text-button-secondary {
+  color: var(--additional-text-dark-lilac);
+
+  &:disabled {
+    color: var(--greyscale-7);
+  }
+}

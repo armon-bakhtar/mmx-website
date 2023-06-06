@@ -1,0 +1,35 @@
+$loading: ':global(.loading)';
+
+.button {
+  position: relative;
+  display: block;
+  @include body-medium-16;
+  align-items: center;
+  padding: 14px 30px;
+  border-radius: 10px;
+  border: 1px solid;
+  transition: all 0.3s;
+  text-transform: uppercase;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  // &:not(:disabled, :active):focus {
+
+  // }
+
+  // &:not(#{$loading}):disabled {
+  // }
+}
+
+.button__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &#{$loading} {
+    opacity: 0;
+  }
+}

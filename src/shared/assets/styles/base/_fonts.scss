@@ -14,8 +14,8 @@ $fonts-path: '/fonts';
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url('#{$fonts-path}/Poppins/Poppins_Regular.woff2'),
-    url('#{$fonts-path}/Poppins/Poppins_Regular.woff');
+  src: url('#{$fonts-path}/Poppins/Poppins-Regular.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins-Regular.woff');
 }
 
 @font-face {
@@ -23,8 +23,8 @@ $fonts-path: '/fonts';
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url('#{$fonts-path}/Poppins/Poppins_Medium.woff2'),
-    url('#{$fonts-path}/Poppins/Poppins_Medium.woff');
+  src: url('#{$fonts-path}/Poppins/Poppins-Medium.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins-Medium.woff');
 }
 
 @font-face {
@@ -32,8 +32,8 @@ $fonts-path: '/fonts';
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url('#{$fonts-path}/Poppins/Poppins_SemiBold.woff2'),
-    url('#{$fonts-path}/Poppins/Poppins_SemiBold.woff');
+  src: url('#{$fonts-path}/Poppins/Poppins-SemiBold.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins-SemiBold.woff');
 }
 
 @font-face {
@@ -41,8 +41,8 @@ $fonts-path: '/fonts';
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url('#{$fonts-path}/Poppins/Poppins_Bold.woff2'),
-    url('#{$fonts-path}/Poppins/Poppins_Bold.woff');
+  src: url('#{$fonts-path}/Poppins/Poppins-Bold.woff2'),
+    url('#{$fonts-path}/Poppins/Poppins-Bold.woff');
 }
 
 @font-face {
@@ -68,8 +68,8 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 400;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Regular.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity_Regular.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Regular.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-Regular.woff');
 }
 
 @font-face {
@@ -77,8 +77,8 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 500;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Medium.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity_Medium.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Medium.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-Medium.woff');
 }
 
 @font-face {
@@ -86,8 +86,8 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 600;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity_SemiBold.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity_SemiBold.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-SemiBold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-SemiBold.woff');
 }
 
 @font-face {
@@ -95,6 +95,6 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 700;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity_Bold.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity_Bold.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff');
 }

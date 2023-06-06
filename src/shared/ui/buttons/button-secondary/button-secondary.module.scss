@@ -1,0 +1,23 @@
+.button-secondary {
+  background-color: transparent;
+  color: var(--greyscale-11);
+  border-color: var(--greyscale-11);
+
+  &:not(:disabled, :active):focus {
+    outline: 1px solid var(--greyscale-11);
+    background-color: var(--property-initial);
+  }
+
+  &:disabled {
+    color: var(--greyscale-7);
+    border-color: var(--greyscale-7);
+  }
+
+  &:not(:disabled):hover {
+    background-color: var(--property-initial);
+  }
+
+  &:not(:disabled):active {
+    background-color: var(--greyscale-1);
+  }
+}
