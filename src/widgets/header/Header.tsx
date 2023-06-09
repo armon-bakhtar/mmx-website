@@ -1,6 +1,12 @@
 import { useLockScroll } from '@/shared/hooks/use-lock-scroll';
 import { useScroll } from '@/shared/hooks/use-scroll';
-import { BurgerMenu, MomentumLogo } from '@/shared/icons';
+import {
+  BurgerMenu,
+  Instagram,
+  Linkedin,
+  MomentumLogo,
+  Twitter,
+} from '@/shared/icons';
 import { CommonTypes } from '@/shared/types/common';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { Container } from '@/shared/ui/container/container';
@@ -23,8 +29,9 @@ const Header: FC<HeaderProps> = ({ className }) => {
     cnMenu,
     cnMenuItem,
     cnLink,
-    cnButton,
     cnLogo,
+    cnMenuSocialLinks,
+    cnSocialLink,
   } = useClasses({
     className,
     isMenuOpen,
@@ -74,6 +81,17 @@ const Header: FC<HeaderProps> = ({ className }) => {
             <li className={cnMenuItem}>
               <a target="_blank" href="/" className={cnLink}>
                 Contact
+              </a>
+            </li>
+            <li className={cnMenuSocialLinks}>
+              <a target="_blank" href="/" className={cnLink}>
+                <Linkedin />
+              </a>
+              <a target="_blank" href="/" className={cnLink}>
+                <Twitter />
+              </a>
+              <a target="_blank" href="/" className={cnLink}>
+                <Instagram />
               </a>
             </li>
             <li className={cnMenuItem}>
