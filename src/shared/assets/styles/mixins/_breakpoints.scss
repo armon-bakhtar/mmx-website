@@ -13,7 +13,7 @@ $desktop-xs: 1280px;
 $desktop-s: 1366px;
 $desktop-m: 1441px;
 $desktop-l: 1680px;
-$desktop-xl: 1920px;
+$desktop-xl: 1921px;
 
 @mixin mobile-s($position: min) {
   @if $position == min {

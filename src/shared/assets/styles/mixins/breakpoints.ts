@@ -13,5 +13,5 @@ export enum Breakpoints {
   '$desktop-s' = 1366,
   '$desktop-m' = 1441,
   '$desktop-l' = 1680,
-  '$desktop-xl' = 1920,
+  '$desktop-xl' = 1921,
 }
