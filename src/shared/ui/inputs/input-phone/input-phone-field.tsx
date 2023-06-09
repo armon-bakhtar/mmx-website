@@ -4,18 +4,19 @@ import {
   useController,
   UseControllerProps,
 } from 'react-hook-form';
-import { BaseProps } from '../base/Base';
-import { InputText } from './input-text';
 
-type Props<T extends FieldValues> = UseControllerProps<T> & BaseProps;
+import { InputPhone, InputPhoneProps } from './input-phone';
 
-export const InputTextField = <T extends FieldValues>({
+type Props<T extends FieldValues> = UseControllerProps<T> &
+  Omit<InputPhoneProps, 'value' | 'onChange'>;
+
+export const InputPhoneField = <T extends FieldValues>({
   control,
   name,
   ...props
 }: Props<T>) => {
   const {
-    field,
+    field: { onChange, ...field },
     fieldState: { isTouched, error },
   } = useController<T>({
     control,
@@ -23,13 +24,15 @@ export const InputTextField = <T extends FieldValues>({
   });
 
   const status = getInputStatus(isTouched, error);
+  const statusText = isTouched ? error?.message : '';
 
   return (
-    <InputText
+    <InputPhone
       {...props}
       {...field}
+      onChange={(value) => onChange(value ?? '')}
       status={status}
-      statusText={isTouched ? error?.message : ``}
+      statusText={statusText}
     />
   );
 };

@@ -5,7 +5,7 @@ import classes from '../base.module.scss';
 
 type PickedBaseProps = Pick<
   BaseProps,
-  'className' | 'disabled' | 'contentLeft' | 'isLoading'
+  'className' | 'disabled' | 'contentLeft' | 'isLoading' | 'sizeVariant'
 >;
 
 interface Props extends PickedBaseProps {
@@ -22,6 +22,7 @@ export const useClasses = ({
   isSuccess,
   contentLeft,
   isLoading,
+  sizeVariant,
 }: Props) => {
   const hasContentLeft = Boolean(contentLeft);
 
@@ -41,7 +42,7 @@ export const useClasses = ({
     [`input-content-left--disabled`]: disabled,
   });
 
-  const cnField = cn(`input__field`, {
+  const cnField = cn(`input__field`, `input__field--${sizeVariant}`, {
     'input__field--error': isError,
     'input__field--success': isSuccess,
     'input__field--content-left': hasContentLeft,

@@ -28,12 +28,17 @@
   },
   "dependencies": {
     "@svgr/cli": "8.0.1",
+    "@types/lodash": "4.14.195",
     "classnames": "2.3.2",
     "commitizen": "4.3.0",
+    "lodash": "4.17.21",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.44.3",
+    "react-phone-input-2": "2.15.1",
+    "react-phone-number-input": "3.2.23",
+    "react-select": "5.7.3",
     "sass": "1.62.1",
     "yup": "1.2.0"
   },

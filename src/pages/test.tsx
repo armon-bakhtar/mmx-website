@@ -3,10 +3,15 @@ import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { ButtonSecondary } from '@/shared/ui/buttons/button-secondary';
 import { TextButtonPrimary } from '@/shared/ui/buttons/text-button-primary';
 import { TextButtonSecondary } from '@/shared/ui/buttons/text-button-secondary';
-import { InputText } from '@/shared/ui/inputs/input-text/input-text';
-import React from 'react';
+import { InputSize } from '@/shared/ui/inputs/base/Base';
+import { InputPhone } from '@/shared/ui/inputs/input-phone/input-phone';
+import { InputText } from '@/shared/ui/inputs/input-text';
 
-const test = () => {
+import React, { useState } from 'react';
+
+const Test = () => {
+  const [phone, setPhone] = useState<any>();
+  const [phoneNumber, setPhoneNumber] = useState<any>();
   return (
     <div
       style={{
@@ -67,9 +72,24 @@ const test = () => {
           statusText="Invalid email."
           status={InputStatus.ERROR}
         />
+        <InputPhone value={phone} onChange={setPhone} />
+
+        <h2>Input mobile</h2>
+        <InputText placeholder="Name" sizeVariant={InputSize.Small} />
+        <InputText
+          placeholder="Name"
+          isLoading={true}
+          sizeVariant={InputSize.Small}
+        />
+        <InputText placeholder="Name" disabled sizeVariant={InputSize.Small} />
+        <InputPhone
+          value={phoneNumber}
+          onChange={phoneNumber}
+          sizeVariant={InputSize.Small}
+        />
       </div>
     </div>
   );
 };
 
-export default test;
+export default Test;

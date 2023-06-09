@@ -35,8 +35,9 @@
 
 .input-content-left {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   top: 50%;
+  height: 16px;
   left: 16px;
   color: var(--greyscale-6);
   transform: translateY(-50%);
@@ -51,8 +52,6 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 46px;
-  padding: 22px 32px;
   border-radius: 10px;
   background-color: var(--greyscale-4);
   color: var(--greyscale-10);
@@ -64,9 +63,20 @@
     padding-left: calc(16px + 20px + 10px);
   }
 
-  // &.loading {
-  //   padding-right: calc(10px + 20px + 16px);
-  // }
+  //variants
+  &--normal {
+    height: 64px;
+    padding: 22px 32px;
+  }
+
+  &--small {
+    height: 44px;
+    padding: 16px 12px;
+  }
+
+  &.loading {
+    padding-right: calc(10px + 20px + 16px);
+  }
 
   // statuses
   &--error {

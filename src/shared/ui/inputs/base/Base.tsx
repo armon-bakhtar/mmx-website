@@ -9,6 +9,11 @@ import { Spinner } from '../../spinner';
 
 import { useClasses } from './lib/use-classes';
 
+export enum InputSize {
+  Normal = 'normal',
+  Small = 'small',
+}
+
 export interface BaseProps
   extends TypeWithoutClassName<InputHTMLAttributes<HTMLInputElement>>,
     CommonTypes {
@@ -18,6 +23,7 @@ export interface BaseProps
   statusText?: string;
   isLoading?: boolean;
   isRequired?: boolean;
+  sizeVariant?: InputSize;
 }
 
 export const Base = forwardRef<HTMLInputElement, BaseProps>(
@@ -33,6 +39,7 @@ export const Base = forwardRef<HTMLInputElement, BaseProps>(
       statusText,
       isLoading,
       isRequired,
+      sizeVariant = InputSize.Normal,
       ...props
     },
     ref,
@@ -61,6 +68,7 @@ export const Base = forwardRef<HTMLInputElement, BaseProps>(
       isSuccess,
       contentLeft,
       isLoading,
+      sizeVariant,
     });
 
     return (
