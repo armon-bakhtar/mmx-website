@@ -1,0 +1,169 @@
+.header {
+  --transition-settings: 0.4s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: var(--greyscale-11);
+  background-color: var(--greyscale-1);
+  transition: all var(--transition-settings);
+  transition-property: background-color, visibility, opacity;
+  backdrop-filter: blur(12px);
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__logo {
+    position: relative;
+    width: 142px;
+    height: 12px;
+  }
+
+  &__navigation {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    z-index: 5;
+    flex-direction: column;
+    padding: 30px 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--greyscale-1);
+    opacity: 1;
+    transition: right var(--transition-settings);
+  }
+
+  &__navigation_open {
+    right: 0;
+  }
+
+  &__navigation_open &__menu-item {
+    opacity: 1;
+  }
+
+  &__menu {
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    grid-auto-flow: row;
+    text-align: center;
+  }
+
+  &__menu-item {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    &:first-child {
+      margin-bottom: 45px;
+    }
+    &:last-child {
+      margin-top: 240px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include subhead-regular-20;
+    color: var(--graescale-11);
+  }
+}
+
+.buttonBurger {
+  overflow: hidden;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  color: var(--greyscale-12);
+
+  :global(.svg-burger-line) {
+    transition: all var(--transition-settings);
+    transition-property: transform, opacity, fill;
+    transform-origin: center;
+  }
+
+  &_invert {
+    :global(.svg-burger-line) {
+      fill: var(--greyscale-2);
+    }
+  }
+
+  &_active {
+    :global(.svg-burger__top) {
+      transform: rotate(225deg) translateY(9px);
+    }
+
+    :global(.svg-burger__middle) {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    :global(.svg-burger__bottom) {
+      transform: rotate(-225deg) translateY(-9px);
+    }
+  }
+}
+
+.header {
+  @include tablet {
+    &__navigation {
+      width: 342px;
+      padding: 30px 40px;
+    }
+
+    &__container {
+      padding-top: 20;
+      padding-bottom: 20px;
+    }
+  }
+
+  @include laptop {
+    &__logo {
+      width: 160;
+      height: 32px;
+    }
+
+    &__navigation {
+      width: 400px;
+      padding: 20px 40px;
+    }
+  }
+
+  @include desktop-m {
+    &__logo {
+      width: 200px;
+      height: 60px;
+    }
+
+    &__navigation {
+      width: 500px;
+    }
+
+    &__link {
+      @include subhead-medium-24;
+    }
+  }
+
+  @include desktop-xl {
+    &__navigation_open {
+      right: 27%;
+    }
+  }
+}

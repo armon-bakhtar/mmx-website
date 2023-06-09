@@ -6,4 +6,5 @@ export { default as GrowSales } from './GrowSales';
 export { default as Instagram } from './Instagram';
 export { default as Linkedin } from './Linkedin';
 export { default as Loader } from './Loader';
+export { default as MomentumLogo } from './MomentumLogo';
 export { default as Twitter } from './Twitter';

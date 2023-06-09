@@ -1,6 +1,4 @@
-import { Afghanistan } from '@/shared/icons/flags';
-import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
-import { ButtonSecondary } from '@/shared/ui/buttons/button-secondary';
+import { Layout } from '@/widgets/layout';
 import Head from 'next/head';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
@@ -18,6 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Layout></Layout>
     </>
   );
 }
