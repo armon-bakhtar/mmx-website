@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { HeaderProps } from '../Header';
+import { HeaderProps } from '../header';
 import classes from '../header.module.scss';
 
 const cn = classNames.bind(classes);

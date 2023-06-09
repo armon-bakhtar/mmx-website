@@ -1,0 +1,92 @@
+.footer {
+  padding: 60px 0;
+  color: var(--greyscale-11);
+
+  &__container {
+  }
+
+  &__top-wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__first-block {
+  }
+
+  &__logo {
+    width: 120px;
+    height: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__link-wrapper {
+    display: grid;
+    margin-bottom: 40px;
+    gap: 16px;
+  }
+
+  &__link {
+    @include body-regular-12;
+  }
+
+  &__second-block {
+  }
+
+  &__social-link-wrapper {
+    display: grid;
+    width: 96px;
+    grid-auto-flow: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__social-link {
+  }
+
+  &__social-text {
+    @include body-regular-12;
+  }
+
+  &__bot-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__copyright {
+    @include body-regular-12;
+    color: var(--additional-text-dark-lilac);
+    white-space: nowrap;
+  }
+
+  &__bottom-links {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  @include tablet {
+    padding-bottom: 80px;
+
+    &__top-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    &__link-wrapper {
+      grid-auto-flow: column;
+      gap: 20px;
+    }
+
+    &__social-link-wrapper {
+      margin-bottom: 28px;
+      margin-left: auto;
+    }
+
+    &__bottom-links {
+      grid-auto-flow: column;
+      gap: 20px;
+      max-width: 400px;
+    }
+  }
+}
