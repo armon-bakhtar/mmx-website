@@ -1,3 +1,25 @@
 :root {
   //colors
+  --primary: #e3ff77;
+  --primary-2: #e8fb9e;
+  --property-initial: rgba(208, 201, 255, 0.1);
+  --property-hover-stroke: rgba(255, 255, 255, 0.25);
+  --property-hover: rgba(208, 201, 255, 0.16);
+  --additional-error: #ff0000;
+  --additional-text-lilac: #e8dfff;
+  --additional-text-dark-lilac: #8376a9;
+  --greyscale-1: #04000d;
+  --greyscale-2: #09011a;
+  --greyscale-3: #181425;
+  --greyscale-4: #2a273b;
+  --greyscale-5: #2f2c3b;
+  --greyscale-6: #6a6876;
+  --greyscale-7: #898989;
+  --greyscale-8: #a2a1a6;
+  --greyscale-9: #b7b7b7;
+  --greyscale-10: #dddddd;
+  --greyscale-11: #ffffff;
+
+  //index
+  --index-dropdown: 5;
 }

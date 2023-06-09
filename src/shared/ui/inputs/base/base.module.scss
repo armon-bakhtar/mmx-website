@@ -1,0 +1,141 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__label {
+  @include body-medium-16;
+  margin-bottom: 12px;
+  color: var(--greyscale2);
+
+  &--disabled {
+    color: var(--greyscale2);
+  }
+}
+
+.input__required {
+  color: var(--primary);
+}
+
+.input__outer {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--greyscale1);
+
+  &--disabled {
+    background-color: var(--grayscale2);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.input-content-left {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  height: 16px;
+  left: 16px;
+  color: var(--greyscale-6);
+  transform: translateY(-50%);
+
+  &--disabled {
+    color: var(--greyscale-4);
+  }
+}
+
+.input__field {
+  @include body-medium-16;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--greyscale-4);
+  color: var(--greyscale-10);
+  border: 1px solid;
+  border-color: var(--greyscale-4);
+
+  // content (left & right)
+  &--content-left {
+    padding-left: calc(16px + 20px + 10px);
+  }
+
+  //variants
+  &--normal {
+    height: 64px;
+    padding: 22px 32px;
+  }
+
+  &--small {
+    height: 44px;
+    padding: 16px 12px;
+  }
+
+  &.loading {
+    padding-right: calc(10px + 20px + 16px);
+  }
+
+  // statuses
+  &--error {
+    border-color: var(--additional-error);
+  }
+
+  &--success {
+    border-color: var(--primary);
+  }
+
+  // states
+  // &:not(:disabled, :focus):hover {
+  //   // border-color: var(--greyscale-4);
+  // }
+
+  &:focus {
+    border-color: var(--greyscale-4);
+  }
+
+  &::placeholder {
+    @include body-regular-14;
+    color: var(--greyscale-6);
+  }
+
+  &:not(.loading):disabled {
+    border-color: var(--greyscale-4);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.input-content-right {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: var(--index-initial);
+  top: 50%;
+  right: 20px;
+  color: var(--greyscale6);
+  transform: translateY(-50%);
+
+  &--disabled {
+    color: var(--greyscale4);
+  }
+}
+
+.input__status-text {
+  @include body-regular-12;
+  align-self: flex-start;
+  margin-top: 4px;
+  word-break: break-word;
+
+  &--error {
+    color: var(--additional-error);
+  }
+
+  &--success {
+    color: var(--primary);
+  }
+}
