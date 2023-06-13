@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import classes from '../layout.module.scss';
-import { LayoutProps } from '../Layout';
+import { LayoutProps } from '../layout';
 
 const cn = classNames.bind(classes);
 

@@ -13,6 +13,7 @@ import { Container } from '@/shared/ui/container/container';
 import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
 import { useClasses } from './lib/use-classes';
+
 export interface HeaderProps extends CommonTypes {
   isMenuOpen?: boolean;
 }
