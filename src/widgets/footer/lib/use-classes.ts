@@ -29,7 +29,7 @@ export const useClasses = ({ className }: PickedFooterProps) => {
 
   const cnSocialText = cn('footer__social-text');
 
-  const cnBotWrapper = cn('footer__bot-wrapper');
+  const cnBotWrapper = cn('footer__bottom-wrapper');
 
   const cnCopyright = cn('footer__copyright');
 

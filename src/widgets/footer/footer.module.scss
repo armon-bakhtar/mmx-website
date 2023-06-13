@@ -46,7 +46,7 @@
     @include body-regular-12;
   }
 
-  &__bot-wrapper {
+  &__bottom-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -61,6 +61,7 @@
     display: grid;
     gap: 16px;
     margin-bottom: 28px;
+    white-space: nowrap;
   }
 
   @include tablet {
@@ -87,6 +88,22 @@
       grid-auto-flow: column;
       gap: 20px;
       max-width: 400px;
+    }
+  }
+
+  @include laptop {
+    &__link-wrapper {
+      gap: 30px;
+    }
+
+    &__bottom-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__bottom-links {
+      gap: 44px;
+      margin-bottom: 0;
+      max-width: 100%;
     }
   }
 }
