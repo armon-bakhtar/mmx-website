@@ -1,3 +1,4 @@
+import { Hero } from '@/page-components/hero';
 import { Layout } from '@/widgets/layout';
 import Head from 'next/head';
 
@@ -17,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div style={{ height: '500px' }}></div>
+        <Hero />
       </Layout>
     </>
   );
