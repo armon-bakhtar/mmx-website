@@ -3,6 +3,7 @@ import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
+import { useClientSize } from '@/shared/hooks/use-client-size';
 
 export type HeroProps = CommonTypes;
 
@@ -17,11 +18,17 @@ const Hero: FC<HeroProps> = ({ className }) => {
     cnInfoItem,
     cnCanvas,
   } = useClasses({ className });
+
+  const { getIsBreakpoint } = useClientSize();
+  const isTablet = getIsBreakpoint('$tablet');
+  const isLaptop = getIsBreakpoint('$laptop');
+
   return (
     <section className={cnRoot}>
       <Container className={cnContainer}>
         <h2 className={cnTitle}>
-          <b>We Generate Leads & Calls</b> for Insurance
+          <b>We Generate Leads {isTablet && !isLaptop && <br />}& Calls</b> for
+          Insurance
         </h2>
         <ButtonPrimary className={cnButton}>Let’s talk</ButtonPrimary>
         <div className={cnInfoWrapper}>
