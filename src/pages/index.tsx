@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Hero } from '@/page-components/home/hero';
 import { Layout } from '@/widgets/layout';
 import { WorkSpheres } from '@/page-components/home/work-spheres';
+import { Features } from '@/page-components/home/features';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -21,6 +22,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <WorkSpheres />
+        <Features />
       </Layout>
     </>
   );

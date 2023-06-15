@@ -6,6 +6,7 @@ const SvgGrowSales = (props: SVGProps<SVGSVGElement>) => (
     width={32}
     height={32}
     fill="none"
+    viewBox="0 0 32 32"
     {...props}
   >
     <path

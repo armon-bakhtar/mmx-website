@@ -10,4 +10,5 @@ export { default as Linkedin } from './Linkedin';
 export { default as Loader } from './Loader';
 export { default as Loan } from './Loan';
 export { default as MomentumLogo } from './MomentumLogo';
+export { default as Notebook } from './Notebook';
 export { default as Twitter } from './Twitter';
