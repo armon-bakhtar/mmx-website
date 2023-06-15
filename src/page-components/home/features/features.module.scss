@@ -1,0 +1,141 @@
+.features {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: var(--greyscale-11);
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-auto-flow: row;
+  }
+
+  &__text-wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include title-bold-30;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: var(--z-index-features-title);
+  }
+
+  &__text {
+    @include body-regular-15;
+    color: var(--additional-text-lilac);
+    max-width: 470px;
+  }
+
+  &__card-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+  }
+
+  &__card {
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    padding: 36px 20px;
+    border-radius: 20px;
+    background: var(--property-initial);
+    border: 1px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--greyscale-5);
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    @include subhead-medium-20;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    @include body-regular-15;
+    color: var(--greyscale-8);
+  }
+
+  &__blur {
+    display: none;
+  }
+
+  @include tablet-s {
+    &__title {
+      @include title-semibold-44;
+    }
+
+    &__card-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__blur {
+      display: block;
+      position: absolute;
+      left: -200px;
+      bottom: -50px;
+      width: 560px;
+      height: 300px;
+      border-radius: 150px;
+      background: var(--features-blur);
+      opacity: 0.9;
+      filter: blur(37px);
+    }
+  }
+
+  @include laptop {
+    padding-top: 100px;
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    &__text-wrapper {
+      margin-top: 175px;
+    }
+
+    &__title {
+      @include title-semibold-44;
+    }
+
+    &__card-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      grid-auto-flow: column;
+      max-width: 510px;
+      border-radius: 30px;
+      gap: 28px;
+    }
+
+    &__card:hover {
+      background: var(--property-hover);
+      border-color: var(--greyscale-8);
+    }
+
+    &__card:hover &__icon {
+      box-shadow: var(--features-icon-shadow);
+    }
+
+    &__name {
+      @include subhead-medium-24;
+    }
+    &__blur {
+      width: 1000px;
+      height: 500px;
+      left: -100px;
+      bottom: 100px;
+      transform: rotate(8deg);
+      opacity: 0.7;
+      background: var(--features-blur-desktop);
+    }
+  }
+}

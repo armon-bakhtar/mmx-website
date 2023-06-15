@@ -26,6 +26,8 @@ export const useClasses = ({ className }: PickedWorkSpheresProps) => {
 
   const cnIcon = cn('work-spheres__icon');
 
+  const cnIconBlur = cn('work-spheres__icon-blur');
+
   const cnBlur = cn('work-spheres__blur');
 
   return {
@@ -38,6 +40,7 @@ export const useClasses = ({ className }: PickedWorkSpheresProps) => {
     cnText,
     cnIconWrapper,
     cnIcon,
+    cnIconBlur,
     cnBlur,
   };
 };

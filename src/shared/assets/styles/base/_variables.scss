@@ -24,8 +24,33 @@
   --index-dropdown: 5;
   --z-index-hero-decor: 2;
   --z-index-work-spheres-icon: 1;
+  --z-index-features-title: 1;
 
   //shadow
   --hero-decor-shadow: 0px 0px 21.0852px 15px rgba(208, 201, 255, 0.25);
   --work-spheres-decor-shadow: 0px 0px 65px 45px rgba(208, 201, 255, 0.5);
+  --features-icon-shadow: 1px 1px 16px rgba(254, 254, 254, 0.19);
+
+  //blur
+  --work-spheres-blur-1: linear-gradient(
+    325deg,
+    rgba(4, 0, 13, 0.1) 49.03%,
+    #513ec9 122.15%
+  );
+  --work-spheres-blur-2: linear-gradient(
+    151.54deg,
+    rgba(4, 0, 13, 0.1) 37.79%,
+    #3a2b93 104.32%
+  );
+
+  --features-blur: linear-gradient(
+    200deg,
+    rgba(4, 0, 13, 0) 37.79%,
+    #3a2b93 104.32%
+  );
+  --features-blur-desktop: linear-gradient(
+    200deg,
+    rgba(4, 0, 13, 0.5) 37.79%,
+    #3a2b93 104.32%
+  );
 }

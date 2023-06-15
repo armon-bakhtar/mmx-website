@@ -17,6 +17,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
     cnText,
     cnIconWrapper,
     cnIcon,
+    cnIconBlur,
     cnBlur,
   } = useClasses({ className });
 
@@ -35,7 +36,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
             </p>
             <div className={cnIconWrapper}>
               <Healthcare className={cnIcon} />
-              <span className={cnBlur}></span>
+              <span className={cnIconBlur}></span>
             </div>
           </div>
 
@@ -53,7 +54,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
             </p>
             <div className={cnIconWrapper}>
               <Dollar className={cnIcon} />
-              <span className={cnBlur}></span>
+              <span className={cnIconBlur}></span>
             </div>
           </div>
 
@@ -72,7 +73,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
             </p>
             <div className={cnIconWrapper}>
               <Loan className={cnIcon} />
-              <span className={cnBlur}></span>
+              <span className={cnIconBlur}></span>
             </div>
           </div>
 
@@ -83,6 +84,11 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
               theft.
             </p>
           </div>
+        </div>
+
+        <div>
+          <div className={cnBlur}></div>
+          <div className={cnBlur}></div>
         </div>
       </Container>
     </section>
