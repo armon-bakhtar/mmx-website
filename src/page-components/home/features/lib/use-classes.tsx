@@ -28,6 +28,8 @@ export const useClasses = ({ className }: PickedFeaturesProps) => {
 
   const cnDescription = cn('features__description');
 
+  const cnBlur = cn('features__blur');
+
   return {
     cnRoot,
     cnContainer,
@@ -39,5 +41,6 @@ export const useClasses = ({ className }: PickedFeaturesProps) => {
     cnIcon,
     cnName,
     cnDescription,
+    cnBlur,
   };
 };

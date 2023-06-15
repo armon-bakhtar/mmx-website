@@ -18,6 +18,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
     cnIcon,
     cnName,
     cnDescription,
+    cnBlur,
   } = useClasses({ className });
 
   return (
@@ -75,6 +76,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
             </div>
           </div>
         </div>
+        <div className={cnBlur}></div>
       </Container>
     </section>
   );

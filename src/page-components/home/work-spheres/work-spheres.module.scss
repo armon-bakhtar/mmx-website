@@ -2,8 +2,9 @@
   padding-top: 40px;
   color: var(--greyscale-11);
 
-  // &__container {
-  // }
+  &__container {
+    position: relative;
+  }
 
   &__title {
     @include title-bold-30;
@@ -25,8 +26,9 @@
     position: relative;
     padding: 36px 20px;
     border-radius: 20px;
-    border: 1px transparent;
+    border: 1px solid transparent;
     background: var(--property-initial);
+    transition: all 0.3s;
   }
 
   &__name {
@@ -52,7 +54,7 @@
     z-index: var(--z-index-work-spheres-icon);
   }
 
-  &__blur {
+  &__icon-blur {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,6 +63,10 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     box-shadow: var(--work-spheres-decor-shadow);
+  }
+
+  &__blur {
+    display: none;
   }
 
   @include tablet-s {
@@ -120,6 +126,32 @@
     &__card:nth-child(5) &__icon-wrapper {
       grid-row: 1/2;
       margin-bottom: 12px;
+    }
+
+    &__blur {
+      display: block;
+      position: absolute;
+      border-radius: 150px;
+    }
+
+    &__blur:first-child {
+      top: 100px;
+      left: -250px;
+      width: 700px;
+      height: 700px;
+      background: var(--work-spheres-blur-1);
+      opacity: 0.5;
+      filter: blur(37px);
+    }
+
+    &__blur:last-child {
+      right: -60px;
+      bottom: 275px;
+      width: 560px;
+      height: 300px;
+      background: var(--work-spheres-blur-2);
+      opacity: 0.5;
+      filter: blur(37px);
     }
   }
 
@@ -187,6 +219,10 @@
 
     &__name {
       @include subhead-medium-24;
+    }
+
+    &__blur:last-child {
+      bottom: -60px;
     }
   }
 }
