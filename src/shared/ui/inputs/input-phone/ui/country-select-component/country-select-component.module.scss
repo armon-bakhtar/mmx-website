@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: var(--index-dropdown);
+  z-index: var(--z-index-dropdown);
   transform: translateY(-50%);
 }
 
@@ -37,7 +37,7 @@
   $vertical-position: 100%;
 
   position: absolute;
-  z-index: var(--index-dropdown);
+  z-index: var(--z-index-dropdown);
   left: 0;
   padding: 8px 0;
   opacity: 0;

@@ -30,6 +30,7 @@
     display: grid;
     grid-auto-flow: row;
     gap: 20px;
+    z-index: var(--z-index-features-card-wrapper);
   }
 
   &__card {
