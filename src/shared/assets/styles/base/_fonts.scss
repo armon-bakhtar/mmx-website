@@ -86,8 +86,8 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 600;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity-SemiBold.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity-SemiBold.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff');
 }
 
 @font-face {
@@ -95,6 +95,6 @@ $fonts-path: '/fonts';
   font-family: 'Subjectivity';
   font-style: normal;
   font-weight: 700;
-  src: url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff2'),
-    url('#{$fonts-path}/Subjectivity/Subjectivity-Bold.woff');
+  src: url('#{$fonts-path}/Subjectivity/Subjectivity-ExtraBold.woff2'),
+    url('#{$fonts-path}/Subjectivity/Subjectivity-ExtraBold.woff');
 }
