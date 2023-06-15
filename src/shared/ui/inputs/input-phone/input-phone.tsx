@@ -21,7 +21,11 @@ export const InputPhone = forwardRef<HTMLInputElement, InputPhoneProps>(
         className={cnRoot}
         inputComponent={Base}
         numberInputProps={
-          { className: cnField, halfRadius: 'right' } as BaseProps
+          {
+            className: cnField,
+            halfRadius: 'right',
+            style: props.style,
+          } as BaseProps
         }
         // countrySelectComponent={CountrySelectComponent}
         withCountryCallingCode
