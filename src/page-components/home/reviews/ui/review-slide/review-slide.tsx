@@ -21,7 +21,8 @@ const ReviewSlide: FC<ReviewSlideProps> = ({
   className,
 }) => {
   const safeStars = stars > 5 ? 5 : stars;
-  const starsArray = Array(safeStars).fill({ id: v4() });
+  const starsArray = Array(safeStars).fill(1);
+
   const {
     cnRoot,
     cnReviewer,
@@ -41,8 +42,9 @@ const ReviewSlide: FC<ReviewSlideProps> = ({
           <h3 className={cnName}>{name}</h3>
           <p className={cnPosition}>{position}</p>
           <div className={cnStars}>
-            {starsArray.map((star) => {
-              return <SvgStar key={star.id} />;
+            {starsArray.map((index) => {
+              index += v4();
+              return <SvgStar key={index} />;
             })}
           </div>
         </div>
