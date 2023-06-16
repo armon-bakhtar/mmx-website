@@ -3,8 +3,9 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  // &__container {
-  // }
+  &__container {
+    position: relative;
+  }
 
   &__title {
     @include title-bold-30;
@@ -15,10 +16,28 @@
     color: var(--primary);
   }
 
+  &__blur {
+    display: none;
+  }
+
   @include tablet {
     &__title {
       @include title-semibold-44;
       max-width: 725px;
+    }
+
+    &__blur {
+      display: block;
+      position: absolute;
+      top: -40px;
+      right: -200px;
+      width: 730px;
+      height: 485px;
+      background: var(--reviews-blur);
+      opacity: 0.5;
+      filter: blur(37px);
+      transform: rotate(154deg);
+      border-radius: 30%;
     }
   }
 
