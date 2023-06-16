@@ -1,0 +1,30 @@
+.reviews {
+  color: var(--greyscale-11);
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  // &__container {
+  // }
+
+  &__title {
+    @include title-bold-30;
+    margin-bottom: 40px;
+  }
+
+  &__title > span {
+    color: var(--primary);
+  }
+
+  @include tablet {
+    &__title {
+      @include title-semibold-44;
+      max-width: 725px;
+    }
+  }
+
+  @include laptop {
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+}

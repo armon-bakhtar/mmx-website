@@ -4,6 +4,7 @@ import { Layout } from '@/widgets/layout';
 import { WorkSpheres } from '@/page-components/home/work-spheres';
 import { Features } from '@/page-components/home/features';
 import { ContactUsQuick } from '@/page-components/home/contact-us-quick';
+import { Reviews } from '@/page-components/home/reviews';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -25,6 +26,7 @@ export default function Home() {
         <WorkSpheres />
         <Features />
         <ContactUsQuick />
+        <Reviews />
       </Layout>
     </>
   );
