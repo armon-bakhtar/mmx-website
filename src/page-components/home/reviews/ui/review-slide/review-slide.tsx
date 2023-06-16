@@ -3,7 +3,7 @@ import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import Image from 'next/image';
 import SvgStar from '@/shared/icons/Star';
-
+import { v4 } from 'uuid';
 export interface ReviewSlideProps extends CommonTypes {
   avatar: any;
   name: string;
@@ -21,7 +21,7 @@ const ReviewSlide: FC<ReviewSlideProps> = ({
   className,
 }) => {
   const safeStars = stars > 5 ? 5 : stars;
-  const starsArray = Array(safeStars).fill(1);
+  const starsArray = Array(safeStars).fill({ id: v4() });
   const {
     cnRoot,
     cnReviewer,
@@ -41,9 +41,9 @@ const ReviewSlide: FC<ReviewSlideProps> = ({
           <h3 className={cnName}>{name}</h3>
           <p className={cnPosition}>{position}</p>
           <div className={cnStars}>
-            {starsArray.map((index) => (
-              <SvgStar key={index} />
-            ))}
+            {starsArray.map((star) => {
+              return <SvgStar key={star.id} />;
+            })}
           </div>
         </div>
       </div>
