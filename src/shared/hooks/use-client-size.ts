@@ -1,6 +1,6 @@
 import { Breakpoints } from '@/shared/assets/styles/mixins/breakpoints';
 import throttle from 'lodash/throttle';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type BreakpointsKeys = keyof typeof Breakpoints;
 type Positions = 'min' | 'max';
@@ -28,7 +28,7 @@ export const useClientSize = () => {
     return isMinWidth;
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleResize = throttle(() => {
       setWidth(document.documentElement.clientWidth || undefined);
     }, 150);

@@ -29,6 +29,7 @@
   "dependencies": {
     "@svgr/cli": "8.0.1",
     "@types/lodash": "4.14.195",
+    "@types/uuid": "9.0.2",
     "classnames": "2.3.2",
     "commitizen": "4.3.0",
     "lodash": "4.17.21",
@@ -40,6 +41,8 @@
     "react-phone-number-input": "3.2.23",
     "react-select": "5.7.3",
     "sass": "1.62.1",
+    "swiper": "9.4.1",
+    "uuid": "9.0.0",
     "yup": "1.2.0"
   },
   "devDependencies": {
