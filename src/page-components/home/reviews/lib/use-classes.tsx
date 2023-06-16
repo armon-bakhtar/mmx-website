@@ -14,9 +14,12 @@ export const useClasses = ({ className }: PickedReviewsProps) => {
 
   const cnTitle = cn('reviews__title');
 
+  const cnBlur = cn('reviews__blur');
+
   return {
     cnRoot,
     cnContainer,
     cnTitle,
+    cnBlur,
   };
 };

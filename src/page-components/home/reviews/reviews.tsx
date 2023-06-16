@@ -7,7 +7,7 @@ import { ReviewsSwiper } from './ui/reviews-swiper';
 export type ReviewsProps = CommonTypes;
 
 const Reviews: FC<ReviewsProps> = ({ className }) => {
-  const { cnRoot, cnContainer, cnTitle } = useClasses({ className });
+  const { cnRoot, cnContainer, cnTitle, cnBlur } = useClasses({ className });
 
   return (
     <section className={cnRoot}>
@@ -16,6 +16,7 @@ const Reviews: FC<ReviewsProps> = ({ className }) => {
           Find out <span>what clients think</span> about our work
         </h2>
         <ReviewsSwiper />
+        <div className={cnBlur}></div>
       </Container>
     </section>
   );

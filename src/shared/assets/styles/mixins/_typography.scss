@@ -38,6 +38,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@mixin title-bold-28 {
+  @include font($size: 28px, $weight: 600, $lineHeight: 32px);
+  font-family: 'Poppins', sans-serif;
+}
+
 @mixin title-semibold-28 {
   @include font($size: 28px, $weight: 600, $lineHeight: 32px);
   font-family: 'Subjectivity', sans-serif;
@@ -50,6 +55,11 @@
 
 @mixin subhead-medium-24 {
   @include font($size: 24px, $weight: 500, $lineHeight: 28px);
+  font-family: 'Poppins';
+}
+
+@mixin subhead-bold-20 {
+  @include font($size: 20px, $weight: 700, $lineHeight: 24px);
   font-family: 'Poppins';
 }
 

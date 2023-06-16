@@ -26,6 +26,7 @@
   --z-index-work-spheres-icon: 1;
   --z-index-features-title: 1;
   --z-index-features-card-wrapper: 1;
+  --z-index-contact-us: 1;
 
   //shadow
   --hero-decor-shadow: 0px 0px 21.0852px 15px rgba(208, 201, 255, 0.25);
@@ -53,5 +54,18 @@
     200deg,
     rgba(4, 0, 13, 0.5) 37.79%,
     #3a2b93 104.32%
+  );
+
+  --reviews-blur: linear-gradient(
+    300deg,
+    rgba(4, 0, 13, 0.4) 7.14%,
+    rgba(60, 45, 150, 0.837548) 57.57%,
+    #513ec9 76.29%
+  );
+
+  --contact-us-blur: linear-gradient(
+    150.65deg,
+    rgba(4, 0, 13, 0) 17.13%,
+    #3a2b93 100.01%
   );
 }
