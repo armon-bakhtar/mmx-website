@@ -1,17 +1,12 @@
-// import { ADDITIONAL_HEIGHTS } from '@shared/constants/common';
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import { useOnClickOutside } from '@/shared/hooks/use-onclick-outside';
 import { usePositionAreas } from '@/shared/hooks/use-position-areas';
 import { useToggle } from '@/shared/hooks/use-toggle';
-import { UnitedStatesOfAmerica } from '@/shared/icons/flags';
-// import { SvgPolygonDown } from '@shared/icons/polygon-down';
 import { CommonTypes, Maybe } from '@/shared/types/common';
-// import { OptionType } from '@shared/types/filters';
 import { CountryCode } from '@/shared/types/phone';
 import { FC, useMemo, useRef } from 'react';
 import { getCountryCallingCode } from 'react-phone-number-input';
 import Select from 'react-select';
-
 import { selectStyles } from './lib/select-styles';
 import { useClasses } from './lib/use-classes';
 import { Option } from './ui/option/option';
@@ -90,7 +85,7 @@ export const CountrySelectComponent: FC<CountrySelectComponentProps> = ({
         type="button"
         ref={staticRef}
       >
-        <UnitedStatesOfAmerica color="currentColor" />
+        {/* <UnitedStatesOfAmerica color="currentColor" /> */}
       </button>
 
       <div className={cnBox} ref={relocatableRef}>

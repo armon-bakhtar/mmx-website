@@ -1,4 +1,4 @@
-import { CommonTypes } from '@shared/types/common';
+import { CommonTypes } from '@/shared/types/common';
 import classNames from 'classnames/bind';
 
 import classes from '../option.module.scss';
