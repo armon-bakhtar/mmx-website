@@ -1,0 +1,55 @@
+.cookie-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: transparent;
+  z-index: var(--z-index-cookie-banner);
+
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__content {
+    display: grid;
+    grid-auto-flow: row;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 24px;
+    border-radius: 16px;
+    background-color: var(--greyscale-5);
+  }
+
+  &__text {
+    @include body-regular-15;
+    color: var(--greyscale-10);
+    max-width: 732px;
+  }
+
+  &__button-wrapper {
+    display: grid;
+    justify-self: center;
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  @include tablet {
+    &__container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @include tablet-l {
+    &__content {
+      grid-auto-flow: column;
+      max-width: 1286px;
+    }
+  }
+}
