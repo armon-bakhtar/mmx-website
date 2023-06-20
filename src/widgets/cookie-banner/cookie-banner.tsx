@@ -6,7 +6,7 @@ import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { ButtonSecondary } from '@/shared/ui/buttons/button-secondary';
 import SecureStoreServices, {
   WebSecureStorageKeys,
-} from '@/shared/services/SecureStoreServices';
+} from '@/shared/services/secure-store-services';
 
 export interface CookieBannerProps extends CommonTypes {
   cookie?: string;

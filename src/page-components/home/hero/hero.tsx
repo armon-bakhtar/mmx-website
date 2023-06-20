@@ -4,6 +4,7 @@ import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { useClientSize } from '@/shared/hooks/use-client-size';
+import ModelContainer from './ui/Model';
 
 export type HeroProps = CommonTypes;
 
@@ -47,6 +48,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
           <div className={cnInfoDecor}></div>
         </div>
         <canvas className={cnCanvas} />
+        <ModelContainer className={cnCanvas} />
       </Container>
     </section>
   );

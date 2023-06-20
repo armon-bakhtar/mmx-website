@@ -9,8 +9,9 @@ import { ContactUs } from '@/page-components/home/contact-us';
 import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
   WebSecureStorageKeys,
-} from '@/shared/services/SecureStoreServices';
+} from '@/shared/services/secure-store-services';
 import { GetServerSidePropsContext } from 'next';
+import { Preloader } from '@/widgets/preloader';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -32,6 +33,8 @@ export default function Home({ cookie }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <Preloader />
+
         <Hero />
         <WorkSpheres />
         <Features />
