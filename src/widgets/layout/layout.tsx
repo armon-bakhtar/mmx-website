@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from 'react';
 import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
-import { Header } from '../header';
-import { Footer } from '../footer';
+import { Header } from 'src/widgets/header';
+import { Footer } from 'src/widgets/footer';
 
 export interface LayoutProps extends CommonTypes {
   children?: ReactNode;
