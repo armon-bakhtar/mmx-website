@@ -10,7 +10,7 @@ import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
   WebSecureStorageKeys,
 } from '@/shared/services/SecureStoreServices';
-import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
