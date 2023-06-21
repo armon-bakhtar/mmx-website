@@ -5,9 +5,9 @@ import { HeroProps } from '../hero';
 
 const cn = classNames.bind(classes);
 
-type PickedHeroProps = Pick<HeroProps, 'className'>;
+type PickedHeroProps = Pick<HeroProps, 'className' | 'itemActive'>;
 
-export const useClasses = ({ className }: PickedHeroProps) => {
+export const useClasses = ({ className, itemActive }: PickedHeroProps) => {
   const cnRoot = cn(`hero`, className);
 
   const cnContainer = cn('hero__container');
@@ -18,11 +18,17 @@ export const useClasses = ({ className }: PickedHeroProps) => {
 
   const cnInfoWrapper = cn('hero__info-wrapper');
 
-  const cnInfoDecor = cn('hero__info-decor');
+  const cnInfoDecor = cn('hero__info-decor', {
+    'hero__info-decor--first-active': itemActive === 0,
+    'hero__info-decor--second-active': itemActive === 1,
+    'hero__info-decor--third-active': itemActive === 2,
+  });
 
-  const cnInfoItem = cn('hero__info-item');
-
-  const cnCanvas = cn('hero__canvas');
+  const cnInfoItem = cn('hero__info-item', {
+    'hero__info-item--first-active': itemActive === 0,
+    'hero__info-item--second-active': itemActive === 1,
+    'hero__info-item--third-active': itemActive === 2,
+  });
 
   return {
     cnRoot,
@@ -32,6 +38,5 @@ export const useClasses = ({ className }: PickedHeroProps) => {
     cnInfoWrapper,
     cnInfoDecor,
     cnInfoItem,
-    cnCanvas,
   };
 };

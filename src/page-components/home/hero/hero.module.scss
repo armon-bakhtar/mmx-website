@@ -2,6 +2,7 @@
   padding-top: 45px;
   padding-bottom: 60px;
   color: var(--greyscale-11);
+  position: relative;
 
   &__container {
     position: relative;
@@ -34,6 +35,19 @@
     position: relative;
     @include body-medium-14;
     color: var(--additional-text-dark-lilac);
+    transition: color 0.1s ease-in;
+  }
+
+  &__info-item--first-active:nth-child(1) {
+    color: var(--greyscale-11);
+  }
+
+  &__info-item--second-active:nth-child(2) {
+    color: var(--greyscale-11);
+  }
+
+  &__info-item--third-active:nth-child(3) {
+    color: var(--greyscale-11);
   }
 
   &__info-item > b {
@@ -72,7 +86,6 @@
 
   &__info-decor {
     position: absolute;
-    top: 19px;
     left: 25px;
     width: 8px;
     height: 8px;
@@ -80,6 +93,8 @@
     border-radius: 50%;
     box-shadow: var(--hero-decor-shadow);
     z-index: var(--z-index-hero-decor);
+    transition: all 0.3s ease-in;
+    animation-name: decorstart;
   }
 
   &__info-decor:before {
@@ -94,13 +109,16 @@
     transform: translate(-50%, -50%);
   }
 
-  &__canvas {
-    // display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__info-decor--first-active {
+    top: 19px;
+  }
+
+  &__info-decor--second-active {
+    top: 103px;
+  }
+
+  &__info-decor--third-active {
+    top: 187px;
   }
 
   @include tablet {

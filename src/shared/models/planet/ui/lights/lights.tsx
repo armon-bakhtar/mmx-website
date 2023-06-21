@@ -1,7 +1,3 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-import { AmbientLight } from 'three';
 export const Lights = () => {
   return (
     <>
@@ -32,22 +28,3 @@ export const Lights = () => {
     </>
   );
 };
-
-const Model = (props: any) => {
-  const { scene } = useGLTF('planet.glb');
-  return <primitive {...props} object={scene} />;
-};
-
-const ModelContainer = (props: any) => {
-  return (
-    <Canvas {...props} style={{ width: '100%', height: '100%' }}>
-      <Suspense>
-        <Model />
-        <Lights />
-        <OrbitControls />
-      </Suspense>
-    </Canvas>
-  );
-};
-
-export default ModelContainer;
