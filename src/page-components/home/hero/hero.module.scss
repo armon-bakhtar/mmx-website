@@ -207,6 +207,7 @@
   }
 
   @include laptop {
+    padding-top: 150px;
     padding-bottom: 250px;
     &__title {
       @include title-light-italic-52;

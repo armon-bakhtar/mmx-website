@@ -2,7 +2,6 @@ import React, { FC, Suspense } from 'react';
 import { CommonTypes } from 'src/shared/types/common';
 import { Canvas } from '@react-three/fiber';
 import { Environment } from '@react-three/drei';
-import { Lights } from './ui/lights/lights';
 import Model from './ui/model/model';
 import { useClasses } from './lib/use-classes';
 
@@ -18,18 +17,17 @@ const Planet: FC<PlanetProps> = ({ className, ...props }) => {
         gl={{ antialias: true }}
         camera={{
           position: [-30, 0, 0],
-          fov: 30,
+          fov: 45,
         }}
       >
         <Suspense>
           <Model />
-          <Lights />
           <Environment
             files="3D/colorful_studio_1k.hdr"
             near={100}
             far={1000}
           />
-          <axesHelper args={[15]} />
+          {/* <axesHelper args={[15]} /> */}
         </Suspense>
       </Canvas>
     </div>
