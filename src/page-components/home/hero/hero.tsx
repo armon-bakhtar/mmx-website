@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useLayoutEffect, useState } from 'react';
 import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
@@ -6,15 +6,8 @@ import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import { Planet } from '@/shared/models/planet';
 import { motion } from 'framer-motion';
-import {
-  buttonMotion,
-  decorMotion,
-  itemMotion1,
-  itemMotion2,
-  itemMotion3,
-  titleMotion,
-} from './lib/animation';
 import { TIME } from '@/shared/constants';
+import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
 
 export interface HeroProps extends CommonTypes {
   itemActive?: number;
@@ -34,6 +27,15 @@ const Hero: FC<HeroProps> = ({ className }) => {
     cnInfoDecor,
     cnInfoItem,
   } = useClasses({ className, itemActive });
+  const {
+    titleMotionSpan1,
+    titleMotionSpan2,
+    titleMotionSpan3,
+    buttonMotion,
+    decorMotion,
+    infoMotion,
+    itemMotion,
+  } = useAnimation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -52,35 +54,82 @@ const Hero: FC<HeroProps> = ({ className }) => {
     }, preloaderTimeInBillseconds);
   }, [itemActive]);
 
-  const { getIsBreakpoint } = useClientSize();
+  const { getIsBreakpoint, width } = useClientSize();
   const isTablet = getIsBreakpoint('$tablet');
   const isLaptop = getIsBreakpoint('$laptop');
+
+  const isSmallThanTablet = width && width <= 768;
 
   return (
     <section className={cnRoot}>
       <Container className={cnContainer}>
-        <motion.h2 className={cnTitle} {...titleMotion}>
-          <b>We Generate Leads {isTablet && !isLaptop && <br />}& Calls</b> for
-          Insurance
-        </motion.h2>
-        <motion.div {...buttonMotion}>
+        <h2 className={cnTitle}>
+          <motion.span
+            key={String(isTablet + 'titleMotionSpan1')}
+            {...titleMotionSpan1}
+          >
+            <b>We Generate&nbsp;</b>
+          </motion.span>
+          {isTablet && !isLaptop && <br />}
+          <motion.span
+            key={String(isTablet + 'titleMotionSpan2')}
+            {...titleMotionSpan2}
+          >
+            <b>Leads & Calls </b>
+          </motion.span>
+          <motion.span
+            key={String(isTablet + 'titleMotionSpan3')}
+            {...titleMotionSpan3}
+          >
+            for Insurance
+          </motion.span>
+        </h2>
+        <motion.div {...buttonMotion} key={String(isTablet + 'buttonMotion')}>
           <ButtonPrimary className={cnButton}>Let’s talk</ButtonPrimary>
         </motion.div>
-        <div className={cnInfoWrapper}>
-          <motion.div className={cnInfoItem} {...itemMotion1}>
+        <motion.div
+          className={cnInfoWrapper}
+          key={String(isTablet + 'infoMotion')}
+          {...infoMotion}
+        >
+          <motion.div
+            className={cnInfoItem}
+            key={String(isTablet + 'itemMotion')}
+            {...itemMotion}
+            transition={{
+              duration: 1,
+              delay: preloaderPlusPlanetTime + 0.5,
+            }}
+          >
             <p>Call sold</p>
             <b>2 500 000</b>
           </motion.div>
-          <motion.div className={cnInfoItem} {...itemMotion2}>
+          <motion.div
+            className={cnInfoItem}
+            key={String(isTablet + 'itemMotion2')}
+            {...itemMotion}
+            transition={{
+              duration: 1,
+              delay: preloaderPlusPlanetTime + 0.6,
+            }}
+          >
             <p>Leads Generated</p>
             <b>2,400,000</b>
           </motion.div>
-          <motion.div className={cnInfoItem} {...itemMotion3}>
+          <motion.div
+            className={cnInfoItem}
+            key={String(isTablet + 'itemMotion3')}
+            {...itemMotion}
+            transition={{
+              duration: 1,
+              delay: preloaderPlusPlanetTime + 0.7,
+            }}
+          >
             <p>Team Members</p>
             <b>1600</b>
           </motion.div>
           <motion.div className={cnInfoDecor} {...decorMotion}></motion.div>
-        </div>
+        </motion.div>
       </Container>
       <Planet />
     </section>

@@ -19,6 +19,10 @@
     @include title-bold-32;
   }
 
+  &__title > span {
+    display: inline-block;
+  }
+
   &__button {
     margin-bottom: 45px;
   }
@@ -94,7 +98,6 @@
     box-shadow: var(--hero-decor-shadow);
     z-index: var(--z-index-hero-decor);
     transition: all 0.3s ease-in;
-    animation-name: decorstart;
   }
 
   &__info-decor:before {
@@ -122,6 +125,9 @@
   }
 
   @include tablet {
+    padding-top: 80px;
+    padding-bottom: 180px;
+
     &__title {
       @include title-light-italic-46;
       margin-bottom: 32px;
@@ -186,9 +192,22 @@
       width: 55px;
       height: 55px;
     }
+
+    &__info-decor--first-active {
+      left: 0px;
+    }
+
+    &__info-decor--second-active {
+      left: 125px;
+    }
+
+    &__info-decor--third-active {
+      left: 283px;
+    }
   }
 
   @include laptop {
+    padding-bottom: 250px;
     &__title {
       @include title-light-italic-52;
       margin-bottom: 52px;
@@ -226,6 +245,18 @@
 
     &__info-decor {
       top: 104px;
+    }
+
+    &__info-decor--first-active {
+      left: 0px;
+    }
+
+    &__info-decor--second-active {
+      left: 202px;
+    }
+
+    &__info-decor--third-active {
+      left: 420px;
     }
   }
 }
