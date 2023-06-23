@@ -76,6 +76,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
             <InputPhoneField
               className={cnInput}
               control={control}
+              placeholder="+ 1 900 000 00 00 "
               name="phoneNumber"
               sizeVariant={inputsSize}
             />
