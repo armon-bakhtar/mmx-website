@@ -60,11 +60,6 @@ const Header: FC<HeaderProps> = ({ className }) => {
         <nav className={cnNav}>
           <ul className={cnMenu}>
             <li className={cnMenuItem}>
-              <Link href="/">
-                <MomentumLogo className={cnLogo} />
-              </Link>
-            </li>
-            <li className={cnMenuItem}>
               <a target="_blank" href="/" className={cnLink}>
                 Services
               </a>

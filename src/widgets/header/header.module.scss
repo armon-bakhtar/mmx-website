@@ -23,8 +23,8 @@
 
   &__logo {
     position: relative;
-    width: 142px;
-    height: 12px;
+    width: 148px;
+    height: 22px;
   }
 
   &__navigation {
@@ -64,10 +64,6 @@
   &__menu-item {
     opacity: 0;
     transition: 0.5s ease-in-out;
-
-    &:first-child {
-      margin-bottom: 45px;
-    }
   }
 
   &__social-link-wrapper {
@@ -141,14 +137,9 @@
   }
 
   @include laptop {
-    &__logo {
-      width: 160;
-      height: 32px;
-    }
-
     &__navigation {
       width: 400px;
-      padding: 20px 40px;
+      padding: 40px;
     }
   }
 
