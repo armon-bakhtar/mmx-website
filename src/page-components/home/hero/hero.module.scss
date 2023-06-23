@@ -2,6 +2,7 @@
   padding-top: 45px;
   padding-bottom: 60px;
   color: var(--greyscale-11);
+  position: relative;
 
   &__container {
     position: relative;
@@ -16,6 +17,10 @@
 
   &__title > b {
     @include title-bold-32;
+  }
+
+  &__title > span {
+    display: inline-block;
   }
 
   &__button {
@@ -34,6 +39,19 @@
     position: relative;
     @include body-medium-14;
     color: var(--additional-text-dark-lilac);
+    transition: color 0.1s ease-in;
+  }
+
+  &__info-item--first-active:nth-child(1) {
+    color: var(--greyscale-11);
+  }
+
+  &__info-item--second-active:nth-child(2) {
+    color: var(--greyscale-11);
+  }
+
+  &__info-item--third-active:nth-child(3) {
+    color: var(--greyscale-11);
   }
 
   &__info-item > b {
@@ -72,7 +90,6 @@
 
   &__info-decor {
     position: absolute;
-    top: 19px;
     left: 25px;
     width: 8px;
     height: 8px;
@@ -80,6 +97,7 @@
     border-radius: 50%;
     box-shadow: var(--hero-decor-shadow);
     z-index: var(--z-index-hero-decor);
+    transition: all 0.3s ease-in;
   }
 
   &__info-decor:before {
@@ -94,16 +112,22 @@
     transform: translate(-50%, -50%);
   }
 
-  &__canvas {
-    // display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__info-decor--first-active {
+    top: 19px;
+  }
+
+  &__info-decor--second-active {
+    top: 103px;
+  }
+
+  &__info-decor--third-active {
+    top: 187px;
   }
 
   @include tablet {
+    padding-top: 80px;
+    padding-bottom: 180px;
+
     &__title {
       @include title-light-italic-46;
       margin-bottom: 32px;
@@ -168,9 +192,23 @@
       width: 55px;
       height: 55px;
     }
+
+    &__info-decor--first-active {
+      left: 0px;
+    }
+
+    &__info-decor--second-active {
+      left: 125px;
+    }
+
+    &__info-decor--third-active {
+      left: 283px;
+    }
   }
 
   @include laptop {
+    padding-top: 150px;
+    padding-bottom: 250px;
     &__title {
       @include title-light-italic-52;
       margin-bottom: 52px;
@@ -208,6 +246,18 @@
 
     &__info-decor {
       top: 104px;
+    }
+
+    &__info-decor--first-active {
+      left: 0px;
+    }
+
+    &__info-decor--second-active {
+      left: 202px;
+    }
+
+    &__info-decor--third-active {
+      left: 420px;
     }
   }
 }
