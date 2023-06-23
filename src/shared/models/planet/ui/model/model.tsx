@@ -1,6 +1,5 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { motion } from 'framer-motion-3d';
-import { TIME } from '@/shared/constants';
 import { useAnimation } from './lib/use-animation';
 import { useEffect, useRef } from 'react';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -22,22 +21,13 @@ export function Model() {
   ) as GLTFResult;
   const { planetAnimation } = useAnimation();
   const { actions, names } = useAnimations(animations, group);
-  const { getIsBreakpoint } = useClientSize();
-
-  const isTablet = getIsBreakpoint('$tablet');
 
   useEffect(() => {
     actions[names[0]]?.reset().fadeIn(0.5).play();
   }, []);
 
   return (
-    <motion.group
-      ref={group}
-      dispose={null}
-      {...planetAnimation}
-      // key={isTablet + 'planetAnimation'}
-      // transition={{ rotateX: {} }}
-    >
+    <motion.group ref={group} dispose={null} {...planetAnimation}>
       <group name="Scene001">
         <mesh
           name="purple_sphere002"
