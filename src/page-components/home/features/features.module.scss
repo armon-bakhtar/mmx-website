@@ -87,6 +87,7 @@
       background: var(--features-blur);
       opacity: 0.9;
       filter: blur(37px);
+      pointer-events: none;
     }
   }
 
