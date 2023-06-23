@@ -25,7 +25,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
     <section className={cnRoot}>
       <Container className={cnContainer}>
         <div className={cnTextWrapper}>
-          <h2 className={cnTitle}>Why Momentum max</h2>
+          <h2 className={cnTitle}>Why Momentum Max</h2>
           <p className={cnText}>
             Momentum Max lets you decide what you want to put aside for your
             family with flexible, fast, and easy plans that you can tailor to

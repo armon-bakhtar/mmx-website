@@ -2,15 +2,7 @@ import React, { FC } from 'react';
 import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
-import {
-  Bulb,
-  Clock,
-  Coin,
-  Etherium,
-  GraphCirle,
-  GrowSales,
-  Notebook,
-} from '@/shared/icons';
+import { Coin, Etherium, GraphCirle } from '@/shared/icons';
 import { InputText, InputTextField } from '@/shared/ui/inputs/input-text';
 import { InputPhoneField } from '@/shared/ui/inputs/input-phone/input-phone-field';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
@@ -61,6 +53,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
             <InputTextField
               style={{ height: isLargerThanTablet ? '48px' : '44px' }}
               control={control}
+              placeholder="Name"
               name="name"
               sizeVariant={inputsSize}
             />
@@ -68,6 +61,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
               style={{ height: isLargerThanTablet ? '48px' : '44px' }}
               control={control}
               name="phoneNumber"
+              placeholder="+ 1 900 000 00 00 "
               sizeVariant={inputsSize}
             />
 

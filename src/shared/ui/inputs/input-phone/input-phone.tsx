@@ -29,7 +29,7 @@ export const InputPhone = forwardRef<HTMLInputElement, InputPhoneProps>(
         }
         // countrySelectComponent={CountrySelectComponent}
         withCountryCallingCode
-        defaultCountry="US"
+        // defaultCountry="US"
         international
         ref={ref as any}
         {...props}
