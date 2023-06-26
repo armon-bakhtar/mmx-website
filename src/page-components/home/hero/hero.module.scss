@@ -6,6 +6,7 @@
 
   &__container {
     position: relative;
+    z-index: var(--z-index-hero-container);
   }
 
   &__title {

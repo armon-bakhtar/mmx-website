@@ -8,6 +8,7 @@ import { Planet } from '@/shared/models/planet';
 import { motion } from 'framer-motion';
 import { TIME } from '@/shared/constants';
 import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
+import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 
 export interface HeroProps extends CommonTypes {
   itemActive?: number;
@@ -36,6 +37,8 @@ const Hero: FC<HeroProps> = ({ className }) => {
     infoMotion,
     itemMotion,
   } = useAnimation();
+
+  const { showRequestSent } = useShowRequestSent();
 
   useEffect(() => {
     setTimeout(() => {
@@ -85,7 +88,9 @@ const Hero: FC<HeroProps> = ({ className }) => {
           </motion.span>
         </h2>
         <motion.div {...buttonMotion} key={String(isTablet + 'buttonMotion')}>
-          <ButtonPrimary className={cnButton}>Let’s talk</ButtonPrimary>
+          <ButtonPrimary className={cnButton} onClick={showRequestSent}>
+            Let’s talk
+          </ButtonPrimary>
         </motion.div>
         <motion.div
           className={cnInfoWrapper}

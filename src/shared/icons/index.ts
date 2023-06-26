@@ -16,5 +16,6 @@ export { default as Loader } from './Loader';
 export { default as Loan } from './Loan';
 export { default as MomentumLogo } from './MomentumLogo';
 export { default as Notebook } from './Notebook';
+export { default as OkCircle } from './OkCircle';
 export { default as Star } from './Star';
 export { default as Twitter } from './Twitter';
