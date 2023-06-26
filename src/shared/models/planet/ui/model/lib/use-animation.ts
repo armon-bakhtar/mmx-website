@@ -10,7 +10,7 @@ export const useAnimation = () => {
   if (isDesktop) {
     planetAnimation = {
       animate: {
-        x: [-10, 30, 0],
+        x: [-8, 30, 0],
         y: -3,
         z: 10,
         rotateY: 6,
@@ -38,7 +38,7 @@ export const useAnimation = () => {
   } else if (isTablet) {
     planetAnimation = {
       animate: {
-        x: [-10, 30, 10],
+        x: [-8, 30, 10],
         y: -3,
         z: 10,
         rotateY: 6,
@@ -66,7 +66,7 @@ export const useAnimation = () => {
   } else {
     planetAnimation = {
       animate: {
-        x: [120, 10, 20],
+        x: [-8, 30, 20],
         y: -5,
         z: 8,
         rotateY: 6,
