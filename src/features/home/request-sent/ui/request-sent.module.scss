@@ -1,0 +1,26 @@
+.request-sent {
+  padding: 17px;
+  color: var(--greyscale-11);
+  text-align: center;
+
+  &__icon {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @include subhead-medium-18;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @include body-regular-14;
+    margin-bottom: 15px;
+    max-width: 270px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 150px;
+  }
+}
