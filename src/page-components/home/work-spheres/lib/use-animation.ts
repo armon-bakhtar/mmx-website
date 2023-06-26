@@ -1,6 +1,5 @@
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import { Variants } from 'framer-motion';
-import { useEffect } from 'react';
 
 export const useAnimation = () => {
   const { getIsBreakpoint } = useClientSize();
