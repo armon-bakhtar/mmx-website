@@ -1,6 +1,6 @@
 .contact-us {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 60px;
   color: var(--greyscale-11);
 
   &__container {
@@ -186,6 +186,8 @@
   }
 
   @include laptop {
+    padding-top: 85px;
+    padding-bottom: 85px;
     &__form-wrapper {
       max-width: 1120px;
       margin: 0 auto;
