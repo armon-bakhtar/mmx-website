@@ -88,15 +88,19 @@
   &__icon:first-child {
     top: -20px;
     right: -10px;
-    width: 55px;
-    height: 60px;
+    svg {
+      width: 55px;
+      height: 60px;
+    }
   }
 
   &__icon:last-child {
     left: 20px;
     bottom: -65px;
-    width: 82px;
-    height: 76px;
+    svg {
+      width: 82px;
+      height: 76px;
+    }
   }
 
   &__blur {
@@ -129,15 +133,19 @@
       top: 315px;
       left: 270px;
       right: unset;
-      width: 55px;
-      height: 60px;
+      svg {
+        width: 55px;
+        height: 60px;
+      }
     }
 
     &__icon:last-child {
       left: 100px;
       bottom: 60px;
-      width: 120px;
-      height: 105px;
+      svg {
+        width: 120px;
+        height: 105px;
+      }
     }
 
     &__blur {
@@ -151,6 +159,7 @@
       opacity: 0.5;
       filter: blur(37px);
       transform: rotate(154deg);
+      pointer-events: none;
     }
   }
 
@@ -186,15 +195,19 @@
       top: 350px;
       left: 370px;
       right: unset;
-      width: 55px;
-      height: 60px;
+      svg {
+        width: 55px;
+        height: 60px;
+      }
     }
 
     &__icon:last-child {
       left: 200px;
       bottom: 100px;
-      width: 120px;
-      height: 105px;
+      svg {
+        width: 120px;
+        height: 105px;
+      }
     }
 
     &__blur {

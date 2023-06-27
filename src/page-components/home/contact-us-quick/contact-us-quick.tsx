@@ -32,14 +32,16 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-120% start', '-20% start'],
+    offset: isTablet
+      ? ['-200% start', '-50% start']
+      : ['-100% start', '-10% start'],
   });
 
   const iconY = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
   const etheriumY = useTransform(
     scrollYProgress,
     [0, 1],
-    [isLaptop ? '-300px' : '-900px', '0%'],
+    [isTablet ? '-300px' : '-900px', '0%'],
   );
 
   const inputsSize = isTablet ? InputSize.Normal : InputSize.Small;
