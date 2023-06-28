@@ -25,8 +25,9 @@
   --z-index-header-navigation: 5;
   --z-index-header-burger: 6;
   --z-index-dropdown: 5;
+  --z-index-hero-content: 9;
   --z-index-planet: 8;
-  --z-index-hero-container: 9;
+  --z-index-hero-blur: 1;
   --z-index-hero-decor: 2;
   --z-index-work-spheres-icon: 1;
   --z-index-features-title: 1;
@@ -41,6 +42,12 @@
   --features-icon-shadow: 1px 1px 16px rgba(254, 254, 254, 0.19);
 
   //blur
+  --hero-blur: linear-gradient(
+    300deg,
+    rgba(4, 0, 13, 0.4) 7.14%,
+    rgba(60, 45, 150, 0.837548) 57.57%,
+    #513ec9 76.29%
+  );
   --work-spheres-blur-1: linear-gradient(
     325deg,
     rgba(4, 0, 13, 0.1) 49.03%,

@@ -6,7 +6,6 @@
 
   &__container {
     position: relative;
-    z-index: var(--z-index-hero-container);
   }
 
   &__title {
@@ -14,6 +13,7 @@
     text-transform: uppercase;
     margin-bottom: 28px;
     max-width: 300px;
+    z-index: var(--z-index-hero-content);
   }
 
   &__title > b {
@@ -26,6 +26,8 @@
 
   &__button {
     margin-bottom: 45px;
+
+    z-index: var(--z-index-hero-content);
   }
 
   &__info-wrapper {
@@ -34,6 +36,7 @@
     grid-auto-flow: row;
     gap: 38px;
     padding-left: 54px;
+    z-index: var(--z-index-hero-content);
   }
 
   &__info-item {
@@ -123,6 +126,36 @@
 
   &__info-decor--third-active {
     top: 187px;
+  }
+
+  &__blur {
+    display: block;
+    position: absolute;
+    right: -80px;
+    bottom: -100px;
+    width: 400px;
+    height: 285px;
+    background: var(--hero-blur);
+    opacity: 0.5;
+    filter: blur(37px);
+    transform: rotate(154deg);
+    border-radius: 30%;
+    z-index: var(--z-index-hero-blur);
+  }
+
+  &__blur:before {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 100px;
+    bottom: 120px;
+    width: 330px;
+    height: 285px;
+    background: var(--hero-blur);
+    opacity: 0.5;
+    filter: blur(37px);
+    transform: rotate(54deg);
+    border-radius: 30%;
   }
 
   @include tablet {
@@ -279,5 +312,49 @@
     &__info-decor--third-active {
       left: 420px;
     }
+
+    &__blur {
+      width: 500px;
+      height: 400px;
+      right: -250px;
+      bottom: -300px;
+      animation: blur-animation 5s infinite ease-in;
+    }
+
+    &__blur:before {
+      width: 500px;
+      height: 400px;
+      right: -230px;
+      bottom: 60px;
+      animation: blur-animation 6s infinite ease-in;
+    }
+
+    &__blur:after {
+      display: block;
+      content: '';
+      position: absolute;
+      right: 100px;
+      bottom: 150px;
+      width: 500px;
+      height: 400px;
+      background: var(--hero-blur);
+      opacity: 0.5;
+      filter: blur(37px);
+      transform: rotate(0deg);
+      border-radius: 30%;
+      animation: blur-animation 8s infinite ease-in;
+    }
+  }
+}
+
+@keyframes blur-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
