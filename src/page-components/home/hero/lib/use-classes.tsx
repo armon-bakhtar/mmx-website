@@ -5,9 +5,13 @@ import { HeroProps } from '../hero';
 
 const cn = classNames.bind(classes);
 
-type PickedHeroProps = Pick<HeroProps, 'className' | 'itemActive'>;
+type PickedHeroProps = Pick<HeroProps, 'className' | 'itemActive' | 'isSafari'>;
 
-export const useClasses = ({ className, itemActive }: PickedHeroProps) => {
+export const useClasses = ({
+  className,
+  itemActive,
+  isSafari,
+}: PickedHeroProps) => {
   const cnRoot = cn(`hero`, className);
 
   const cnContainer = cn('hero__container');
@@ -28,6 +32,7 @@ export const useClasses = ({ className, itemActive }: PickedHeroProps) => {
     'hero__info-item--first-active': itemActive === 0,
     'hero__info-item--second-active': itemActive === 1,
     'hero__info-item--third-active': itemActive === 2,
+    'hero__info-item-is-safari': isSafari,
   });
 
   return {

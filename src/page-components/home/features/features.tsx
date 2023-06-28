@@ -42,7 +42,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
         <div className={cnCardWrapper}>
           {featureCards.map((card, index) => (
             <motion.div
-              key={card.name}
+              key={index + 1}
               className={cnCard}
               {...motionConfig}
               variants={cardAnimation}
