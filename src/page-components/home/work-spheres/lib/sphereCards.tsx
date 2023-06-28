@@ -1,9 +1,10 @@
+import React, { FunctionComponent, SVGProps } from 'react';
 import { Dollar, Healthcare, Loan } from '@/shared/icons';
 
 interface SpheresProps {
   name: string;
   text: string;
-  icon?: any;
+  icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
 }
 
 export const sphereCards: SpheresProps[] = [

@@ -1,6 +1,6 @@
 .contact-us {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 60px;
   color: var(--greyscale-11);
 
   &__container {
@@ -88,15 +88,19 @@
   &__icon:first-child {
     top: -20px;
     right: -10px;
-    width: 55px;
-    height: 60px;
+    svg {
+      width: 55px;
+      height: 60px;
+    }
   }
 
   &__icon:last-child {
     left: 20px;
     bottom: -65px;
-    width: 82px;
-    height: 76px;
+    svg {
+      width: 82px;
+      height: 76px;
+    }
   }
 
   &__blur {
@@ -129,15 +133,19 @@
       top: 315px;
       left: 270px;
       right: unset;
-      width: 55px;
-      height: 60px;
+      svg {
+        width: 55px;
+        height: 60px;
+      }
     }
 
     &__icon:last-child {
       left: 100px;
       bottom: 60px;
-      width: 120px;
-      height: 105px;
+      svg {
+        width: 120px;
+        height: 105px;
+      }
     }
 
     &__blur {
@@ -151,6 +159,7 @@
       opacity: 0.5;
       filter: blur(37px);
       transform: rotate(154deg);
+      pointer-events: none;
     }
   }
 
@@ -177,6 +186,8 @@
   }
 
   @include laptop {
+    padding-top: 85px;
+    padding-bottom: 85px;
     &__form-wrapper {
       max-width: 1120px;
       margin: 0 auto;
@@ -186,15 +197,19 @@
       top: 350px;
       left: 370px;
       right: unset;
-      width: 55px;
-      height: 60px;
+      svg {
+        width: 55px;
+        height: 60px;
+      }
     }
 
     &__icon:last-child {
       left: 200px;
       bottom: 100px;
-      width: 120px;
-      height: 105px;
+      svg {
+        width: 120px;
+        height: 105px;
+      }
     }
 
     &__blur {

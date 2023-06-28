@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
@@ -8,10 +8,10 @@ import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { useForm } from 'react-hook-form';
 import { InputSize } from '@/shared/ui/inputs/base/Base';
 import { useClientSize } from '@/shared/hooks/use-client-size';
-import { Breakpoints } from '@/shared/assets/styles/mixins/breakpoints';
 import Link from 'next/link';
 import EtheriumGreen from '@/shared/icons/EtheriumGreen';
 import CoinViolet from '@/shared/icons/CoinViolet';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export type ContactUsProps = CommonTypes;
 
@@ -33,10 +33,24 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
     cnIcon,
     cnBlur,
   } = useClasses({ className });
-  const { width } = useClientSize();
-  const isLargerThanTablet = width && width >= Breakpoints.$tablet;
+  const { width, getIsBreakpoint } = useClientSize();
+  const isLaptop = getIsBreakpoint('$laptop');
+  const isTablet = getIsBreakpoint('$tablet');
 
-  const inputsSize = isLargerThanTablet ? InputSize.Normal : InputSize.Small;
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: isTablet ? ['-100% start', '150% end'] : ['-60% start', '100% end'],
+  });
+
+  const etheriumY = useTransform(scrollYProgress, [0, 1], ['-200px', '0%']);
+  const coinY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [isTablet ? '-150px' : '-1200px', '0%'],
+  );
+
+  const inputsSize = isTablet ? InputSize.Normal : InputSize.Small;
 
   const defaultValues = {
     name: '',
@@ -48,7 +62,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
   const { control } = useForm({ defaultValues });
 
   return (
-    <section className={cnRoot}>
+    <motion.section className={cnRoot} ref={ref}>
       <Container className={cnContainer}>
         <div className={cnFormWrapper}>
           <div className={cnTextWrapper}>
@@ -104,13 +118,17 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
             </ButtonPrimary>
           </form>
           <div className={cnIconWrapper}>
-            <EtheriumGreen className={cnIcon} />
-            <CoinViolet className={cnIcon} />
+            <motion.div className={cnIcon} style={{ y: etheriumY }}>
+              <EtheriumGreen />
+            </motion.div>
+            <motion.div className={cnIcon} style={{ y: coinY }}>
+              <CoinViolet />
+            </motion.div>
           </div>
           <div className={cnBlur}></div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

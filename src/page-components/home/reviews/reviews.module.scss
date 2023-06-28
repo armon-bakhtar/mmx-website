@@ -1,6 +1,6 @@
 .reviews {
   color: var(--greyscale-11);
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
 
   &__container {
@@ -42,6 +42,7 @@
   }
 
   @include laptop {
+    padding-top: 100px;
     &__title {
       margin-bottom: 60px;
     }
