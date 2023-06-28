@@ -3,7 +3,6 @@ import { motion } from 'framer-motion-3d';
 import { useAnimation } from './lib/use-animation';
 import { useEffect, useRef } from 'react';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
-import { useClientSize } from '@/shared/hooks/use-client-size';
 
 type GLTFResult = GLTF & {
   nodes: any;

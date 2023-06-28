@@ -34,14 +34,14 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
     target: ref,
     offset: isTablet
       ? ['-200% start', '-50% start']
-      : ['-100% start', '-10% start'],
+      : ['-100% start', 'start start'],
   });
 
   const iconY = useTransform(scrollYProgress, [0, 1], ['-100%', '0%']);
   const etheriumY = useTransform(
     scrollYProgress,
     [0, 1],
-    [isTablet ? '-300px' : '-900px', '0%'],
+    [isLaptop ? '-300px' : '-200px', '20px'],
   );
 
   const inputsSize = isTablet ? InputSize.Normal : InputSize.Small;

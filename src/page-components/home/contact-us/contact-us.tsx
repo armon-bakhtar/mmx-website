@@ -47,7 +47,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
   const coinY = useTransform(
     scrollYProgress,
     [0, 1],
-    [isTablet ? '-150px' : '-1200px', '0%'],
+    [isTablet ? '-150px' : '-200px', '10px'],
   );
 
   const inputsSize = isTablet ? InputSize.Normal : InputSize.Small;
