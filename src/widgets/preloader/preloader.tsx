@@ -62,7 +62,7 @@ const Preloader: FC<PreloaderProps> = ({ className }) => {
       <Container>
         <div className={cnContent}>
           <Lottie className={cnAnimation} animationData={loader} loop={true} />
-          <span className={cnLoading}>{Math.round(progress)}</span>
+          <span className={cnLoading}>{Math.round(progress)}%</span>
           <div
             className={cnProgressbar}
             style={{ width: `${Math.round(progress)}%` }}
