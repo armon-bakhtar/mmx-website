@@ -13,25 +13,17 @@ export const useAnimation = () => {
         x: [-8, 30, 0],
         y: -3,
         z: 10,
-        rotateY: 6,
-        rotateX: [0, 0.2, -0.2, 0.3, -0.3, 0],
-        rotateZ: [0, 0.2, 0.2, -0.3, 0.3, 0],
+        rotateY: [0, 0.2, -0.6, 0.2, 0],
+        rotateZ: 6.4,
       },
       transition: {
         duration: TIME.planetDuration,
         delay: TIME.preloaderTimeInSeconds,
         ease: 'easeInOut',
-        rotateX: {
+        rotateY: {
           repeat: Infinity,
           ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
-        },
-        rotateZ: {
-          repeat: Infinity,
-          ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
+          duration: 20,
         },
       },
     };
@@ -41,25 +33,17 @@ export const useAnimation = () => {
         x: [-8, 30, 10],
         y: -3,
         z: 10,
-        rotateY: 6,
-        rotateX: [0, 0.2, -0.2, 0.3, -0.3, 0],
-        rotateZ: [0, 0.2, 0.2, -0.3, 0.3, 0],
+        rotateY: [0, 0.2, -0.6, 0.2, 0],
+        rotateZ: 6.4,
       },
       transition: {
         duration: TIME.planetDuration,
         delay: TIME.preloaderTimeInSeconds,
         ease: 'easeInOut',
-        rotateX: {
+        rotateY: {
           repeat: Infinity,
           ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
-        },
-        rotateZ: {
-          repeat: Infinity,
-          ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
+          duration: 20,
         },
       },
     };
@@ -69,25 +53,17 @@ export const useAnimation = () => {
         x: [-8, 30, 20],
         y: -5,
         z: 8,
-        rotateY: 6,
-        rotateX: [0, 0.3, -0.2, 0.3, -0.3, 0],
-        rotateZ: [0, 0.3, 0.2, -0.3, 0.3, 0],
+        rotateY: [0, 0.2, -0.6, 0.2, 0],
+        rotateZ: 6.4,
       },
       transition: {
         duration: TIME.planetDuration,
         delay: TIME.preloaderTimeInSeconds,
         ease: 'easeInOut',
-        rotateX: {
+        rotateY: {
           repeat: Infinity,
           ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
-        },
-        rotateZ: {
-          repeat: Infinity,
-          ease: 'easeInOut',
-          duration: 10,
-          delay: TIME.preloaderTimeInSeconds + 1,
+          duration: 20,
         },
       },
     };
