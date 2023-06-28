@@ -168,7 +168,7 @@
 
     &__info-item:first-child::after {
       top: 80px;
-      left: 6px;
+      left: 5px;
       width: 400px;
       height: 1px;
       transform: translate(0, 0);
@@ -179,12 +179,17 @@
       );
     }
 
+    &__info-item-is-safari:first-child::after {
+      left: -25px;
+    }
+
     &__info-decor {
       position: absolute;
       top: 74px;
       left: 0px;
       width: 12px;
       height: 12px;
+      box-shadow: none;
     }
 
     &__info-decor:before {
@@ -192,6 +197,20 @@
       position: absolute;
       width: 55px;
       height: 55px;
+      box-shadow: var(--hero-decor-shadow);
+      background-color: var(--greyscale-1);
+    }
+
+    &__info-decor:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      transform: translate(-50%, -50%);
     }
 
     &__info-decor--first-active {

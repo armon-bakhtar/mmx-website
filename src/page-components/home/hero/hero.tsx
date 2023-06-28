@@ -9,9 +9,10 @@ import { motion } from 'framer-motion';
 import { TIME } from '@/shared/constants';
 import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
-
+import { useSafari } from '@/shared/hooks/use-safari';
 export interface HeroProps extends CommonTypes {
   itemActive?: number;
+  isSafari?: boolean;
 }
 
 const preloaderTimeInBillseconds = TIME.preloaderTimeInSeconds * 1000;
@@ -19,6 +20,8 @@ const activeItemDelay = 2000;
 
 const Hero: FC<HeroProps> = ({ className }) => {
   const [itemActive, setItemActive] = useState(2);
+  const { isSafari } = useSafari();
+
   const {
     cnRoot,
     cnContainer,
@@ -27,7 +30,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
     cnInfoWrapper,
     cnInfoDecor,
     cnInfoItem,
-  } = useClasses({ className, itemActive });
+  } = useClasses({ className, itemActive, isSafari });
   const {
     titleMotionSpan1,
     titleMotionSpan2,
