@@ -14,7 +14,7 @@ export const useAnimation = () => {
         y: -3,
         z: 10,
         rotateY: [0, 0.2, -0.6, 0.2, 0],
-        rotateZ: 6.4,
+        rotateZ: -6.4,
       },
       transition: {
         duration: TIME.planetDuration,
