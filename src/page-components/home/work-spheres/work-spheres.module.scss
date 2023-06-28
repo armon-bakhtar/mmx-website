@@ -53,6 +53,7 @@
   &__icon {
     position: relative;
     z-index: var(--z-index-work-spheres-icon);
+    transition: all 0.3s ease-in;
   }
 
   &__icon-blur {
@@ -64,6 +65,7 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     box-shadow: var(--work-spheres-decor-shadow);
+    transition: all 0.3s ease-in;
   }
 
   &__blur {
@@ -200,6 +202,14 @@
     &__card:hover {
       background: var(--property-hover);
       border-color: var(--greyscale-8);
+    }
+
+    &__card:hover &__icon {
+      scale: 1.1;
+      rotate: -5deg;
+    }
+    &__card:hover &__icon-blur {
+      scale: 1.5;
     }
 
     &__card-wrapper &__card &__icon-wrapper {
