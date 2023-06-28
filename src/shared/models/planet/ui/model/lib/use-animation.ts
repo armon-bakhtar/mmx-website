@@ -50,9 +50,9 @@ export const useAnimation = () => {
   } else {
     planetAnimation = {
       animate: {
-        x: [-8, 30, 20],
+        x: [-8, 30, 5],
         y: -5,
-        z: 8,
+        z: 7.2,
         rotateY: [0, 0.2, -0.6, 0.2, 0],
         rotateZ: 6.4,
       },

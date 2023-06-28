@@ -4,11 +4,14 @@ import { Canvas } from '@react-three/fiber';
 import { Environment } from '@react-three/drei';
 import Model from './ui/model/model';
 import { useClasses } from './lib/use-classes';
+import { useClientSize } from '@/shared/hooks/use-client-size';
 
 export type PlanetProps = CommonTypes;
 
 const Planet: FC<PlanetProps> = ({ className, ...props }) => {
   const { cnRoot, cnCanvas } = useClasses({ className });
+  const { getIsBreakpoint } = useClientSize();
+  const isTablet = getIsBreakpoint('$tablet');
 
   return (
     <div className={cnRoot}>
@@ -16,7 +19,7 @@ const Planet: FC<PlanetProps> = ({ className, ...props }) => {
         className={cnCanvas}
         gl={{ antialias: true }}
         camera={{
-          position: [-30, 0, 0],
+          position: isTablet ? [-30, 0, 0] : [-40, 0, 0],
           fov: 45,
         }}
       >
