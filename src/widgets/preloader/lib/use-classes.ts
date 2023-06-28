@@ -16,6 +16,8 @@ export const useClasses = ({ className }: PickedPreloaderProps) => {
 
   const cnLoading = cn('preloader__loading');
 
+  const cnProgressbarWrapper = cn('preloader__progressbar-wrapper');
+
   const cnProgressbar = cn('preloader__progressbar');
 
   return {
@@ -23,6 +25,7 @@ export const useClasses = ({ className }: PickedPreloaderProps) => {
     cnContent,
     cnAnimation,
     cnLoading,
+    cnProgressbarWrapper,
     cnProgressbar,
   };
 };

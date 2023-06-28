@@ -14,10 +14,16 @@ export type PreloaderProps = CommonTypes;
 const preloaderTimeInBilliseconds = TIME.preloaderTimeInSeconds * 1000;
 
 const Preloader: FC<PreloaderProps> = ({ className }) => {
-  const { cnRoot, cnContent, cnAnimation, cnLoading, cnProgressbar } =
-    useClasses({
-      className,
-    });
+  const {
+    cnRoot,
+    cnContent,
+    cnAnimation,
+    cnLoading,
+    cnProgressbarWrapper,
+    cnProgressbar,
+  } = useClasses({
+    className,
+  });
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -62,11 +68,14 @@ const Preloader: FC<PreloaderProps> = ({ className }) => {
       <Container>
         <div className={cnContent}>
           <Lottie className={cnAnimation} animationData={loader} loop={true} />
-          <span className={cnLoading}>{Math.round(progress)}%</span>
-          <div
-            className={cnProgressbar}
-            style={{ width: `${Math.round(progress)}%` }}
-          ></div>
+
+          <div className={cnProgressbarWrapper}>
+            <span className={cnLoading}>{Math.round(progress)}%</span>
+            <div
+              className={cnProgressbar}
+              style={{ width: `${Math.round(progress)}%` }}
+            ></div>
+          </div>
         </div>
       </Container>
     </div>
