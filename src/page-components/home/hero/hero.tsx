@@ -30,6 +30,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
     cnInfoWrapper,
     cnInfoDecor,
     cnInfoItem,
+    cnBlur,
   } = useClasses({ className, itemActive, isSafari });
   const {
     titleMotionSpan1,
@@ -138,6 +139,8 @@ const Hero: FC<HeroProps> = ({ className }) => {
           </motion.div>
           <motion.div className={cnInfoDecor} {...decorMotion}></motion.div>
         </motion.div>
+
+        <div className={cnBlur}></div>
       </Container>
       <Planet />
     </section>

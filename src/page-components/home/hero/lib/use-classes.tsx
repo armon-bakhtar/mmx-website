@@ -35,6 +35,8 @@ export const useClasses = ({
     'hero__info-item-is-safari': isSafari,
   });
 
+  const cnBlur = cn('hero__blur');
+
   return {
     cnRoot,
     cnContainer,
@@ -43,5 +45,6 @@ export const useClasses = ({
     cnInfoWrapper,
     cnInfoDecor,
     cnInfoItem,
+    cnBlur,
   };
 };

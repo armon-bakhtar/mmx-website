@@ -23,11 +23,10 @@ const Planet: FC<PlanetProps> = ({ className, ...props }) => {
         <Suspense>
           <Model />
           <Environment
-            files="3D/colorful_studio_1k.hdr"
+            files="3D/spiaggia_di_mondello_1k.hdr"
             near={100}
             far={1000}
           />
-          {/* <axesHelper args={[15]} /> */}
         </Suspense>
       </Canvas>
     </div>
