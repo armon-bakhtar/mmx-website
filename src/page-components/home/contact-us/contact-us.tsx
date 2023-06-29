@@ -33,8 +33,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
     cnIcon,
     cnBlur,
   } = useClasses({ className });
-  const { width, getIsBreakpoint } = useClientSize();
-  const isLaptop = getIsBreakpoint('$laptop');
+  const { getIsBreakpoint } = useClientSize();
   const isTablet = getIsBreakpoint('$tablet');
 
   const ref = useRef(null);

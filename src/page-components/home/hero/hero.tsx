@@ -63,7 +63,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
     }, preloaderTimeInBillseconds);
   }, [itemActive]);
 
-  const { getIsBreakpoint, width } = useClientSize();
+  const { getIsBreakpoint } = useClientSize();
   const isTablet = getIsBreakpoint('$tablet');
   const isLaptop = getIsBreakpoint('$laptop');
 

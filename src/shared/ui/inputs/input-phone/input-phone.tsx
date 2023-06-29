@@ -5,7 +5,6 @@ import 'react-phone-number-input/style.css';
 import { Base, BaseProps } from '../base/Base';
 
 import { useClasses } from './lib/use-classes';
-import { CountrySelectComponent } from './ui/country-select-component/country-select-component';
 
 export type InputPhoneProps = Omit<BaseProps, 'value' | 'onChange'> & {
   value: E164Number | string;
