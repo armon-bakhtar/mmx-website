@@ -10,10 +10,12 @@
   padding-bottom: 20px;
   background-color: transparent;
   z-index: var(--z-index-cookie-banner);
+  pointer-events: none;
 
   &__container {
     padding-left: 16px;
     padding-right: 16px;
+    pointer-events: all;
   }
 
   &__content {
