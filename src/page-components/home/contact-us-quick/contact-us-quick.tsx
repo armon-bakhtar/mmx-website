@@ -3,13 +3,12 @@ import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
 import { Coin, Etherium, GraphCirle } from '@/shared/icons';
-import { InputText, InputTextField } from '@/shared/ui/inputs/input-text';
+import { InputTextField } from '@/shared/ui/inputs/input-text';
 import { InputPhoneField } from '@/shared/ui/inputs/input-phone/input-phone-field';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { useForm } from 'react-hook-form';
 import { InputSize } from '@/shared/ui/inputs/base/Base';
 import { useClientSize } from '@/shared/hooks/use-client-size';
-import { Breakpoints } from '@/shared/assets/styles/mixins/breakpoints';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export type ContactUsQuickProps = CommonTypes;
@@ -25,7 +24,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
     cnIcon,
     cnButton,
   } = useClasses({ className });
-  const { width, getIsBreakpoint } = useClientSize();
+  const { getIsBreakpoint } = useClientSize();
   const isLaptop = getIsBreakpoint('$laptop');
   const isTablet = getIsBreakpoint('$tablet');
 

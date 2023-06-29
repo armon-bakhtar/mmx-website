@@ -1,11 +1,6 @@
 import Head from 'next/head';
 import { Hero } from '@/page-components/home/hero';
 import { Layout } from '@/widgets/layout';
-import { WorkSpheres } from '@/page-components/home/work-spheres';
-import { Features } from '@/page-components/home/features';
-import { ContactUsQuick } from '@/page-components/home/contact-us-quick';
-import { Reviews } from '@/page-components/home/reviews';
-import { ContactUs } from '@/page-components/home/contact-us';
 import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
   WebSecureStorageKeys,
@@ -13,7 +8,47 @@ import SecureStoreServices, {
 import { GetServerSidePropsContext } from 'next';
 import { Preloader } from '@/widgets/preloader';
 import { Header } from '@/widgets/header';
-import { Footer } from '@/widgets/footer';
+import dynamic from 'next/dynamic';
+import { Spinner } from '@/shared/ui/spinner';
+
+const DynamicWorkSpheres = dynamic(
+  () =>
+    import('@/page-components/home/work-spheres').then(
+      (module) => module.WorkSpheres,
+    ),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
+const DynamicFeatures = dynamic(
+  () =>
+    import('@/page-components/home/features').then((module) => module.Features),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
+const DynamicContactUsQuick = dynamic(
+  () =>
+    import('@/page-components/home/contact-us-quick').then(
+      (module) => module.ContactUsQuick,
+    ),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
+
+const DynamicReviews = dynamic(
+  () =>
+    import('@/page-components/home/reviews').then((module) => module.Reviews),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
+
+const DynamicContactUs = dynamic(
+  () =>
+    import('@/page-components/home/contact-us').then(
+      (module) => module.ContactUs,
+    ),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
+
+const DynamicFooter = dynamic(
+  () => import('@/widgets/footer').then((module) => module.Footer),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -38,15 +73,15 @@ export default function Home({ cookie }: HomeProps) {
         <Header />
 
         <Hero />
-        <WorkSpheres />
-        <Features />
-        <ContactUsQuick />
-        <Reviews />
-        <ContactUs />
+        <DynamicWorkSpheres />
+        <DynamicFeatures />
+        <DynamicContactUsQuick />
+        <DynamicReviews />
+        <DynamicContactUs />
 
         <Preloader />
         <CookieBanner cookie={cookie} />
-        <Footer />
+        <DynamicFooter />
       </Layout>
     </>
   );

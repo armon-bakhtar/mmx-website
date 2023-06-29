@@ -9,7 +9,6 @@ import { InputPhone } from '@/shared/ui/inputs/input-phone/input-phone';
 import { InputText } from '@/shared/ui/inputs/input-text';
 import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
-import { Layout } from '@/widgets/layout';
 
 import React, { useState } from 'react';
 
