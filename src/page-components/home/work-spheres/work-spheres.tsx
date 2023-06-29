@@ -28,7 +28,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
   const isTabletS = getIsBreakpoint('$tablet-s');
 
   return (
-    <section className={cnRoot}>
+    <section className={cnRoot} id="services">
       <Container className={cnContainer}>
         <motion.h2
           {...motionConfig}

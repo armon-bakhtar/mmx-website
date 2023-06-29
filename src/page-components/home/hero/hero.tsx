@@ -11,6 +11,8 @@ import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { useSafari } from '@/shared/hooks/use-safari';
 import { useProgress } from '@react-three/drei';
+import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
+import { PATHS } from '@/shared/constants/paths';
 export interface HeroProps extends CommonTypes {
   itemActive?: number;
   isSafari?: boolean;
@@ -43,7 +45,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
     itemMotion,
   } = useAnimation();
 
-  const { showRequestSent } = useShowRequestSent();
+  const { handleAnchorLink } = useAnchorLink();
 
   useEffect(() => {
     setTimeout(() => {
@@ -65,8 +67,6 @@ const Hero: FC<HeroProps> = ({ className }) => {
   const { getIsBreakpoint, width } = useClientSize();
   const isTablet = getIsBreakpoint('$tablet');
   const isLaptop = getIsBreakpoint('$laptop');
-
-  const isSmallThanTablet = width && width <= 768;
 
   if (progress !== 100) {
     return <Planet />;
@@ -97,7 +97,10 @@ const Hero: FC<HeroProps> = ({ className }) => {
           </motion.span>
         </h2>
         <motion.div {...buttonMotion} key={String(isTablet + 'buttonMotion')}>
-          <ButtonPrimary className={cnButton} onClick={showRequestSent}>
+          <ButtonPrimary
+            className={cnButton}
+            onClick={() => handleAnchorLink(PATHS.CONTACT)}
+          >
             Let’s talk
           </ButtonPrimary>
         </motion.div>
