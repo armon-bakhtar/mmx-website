@@ -8,7 +8,6 @@ import { Planet } from '@/shared/models/planet';
 import { motion } from 'framer-motion';
 import { TIME } from '@/shared/constants';
 import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
-import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { useSafari } from '@/shared/hooks/use-safari';
 import { useProgress } from '@react-three/drei';
 import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
