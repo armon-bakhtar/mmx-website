@@ -1,3 +1,5 @@
+import { LINKS } from '@/shared/constants/links';
+import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
 import { Instagram, Linkedin, MomentumLogo, Twitter } from '@/shared/icons';
 import { CommonTypes } from '@/shared/types/common';
 import { TextButtonPrimary } from '@/shared/ui/buttons/text-button-primary';
@@ -25,6 +27,8 @@ const Footer: FC<FooterProps> = ({ className }) => {
     cnCopyright,
     cnBottomLinks,
   } = useClasses({ className });
+  const { handleAnchorLink } = useAnchorLink();
+
   return (
     <footer className={cnRoot}>
       <Container className={cnContainer}>
@@ -32,26 +36,11 @@ const Footer: FC<FooterProps> = ({ className }) => {
           <div className={cnFirstBlock}>
             <MomentumLogo className={cnLogo} />
             <ul className={cnLinkWrapper}>
-              <li>
-                <a target="_blank" href="/" className={cnLink}>
-                  Services
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="/" className={cnLink}>
-                  Advantages
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="/" className={cnLink}>
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="/" className={cnLink}>
-                  Contact
-                </a>
-              </li>
+              {LINKS.map((link) => (
+                <li key={link.path} onClick={() => handleAnchorLink(link.path)}>
+                  <button className={cnLink}>{link.name}</button>
+                </li>
+              ))}
             </ul>
           </div>
           <div className={cnSecondBlock}>

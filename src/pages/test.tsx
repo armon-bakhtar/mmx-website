@@ -1,3 +1,4 @@
+import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { InputStatus } from '@/shared/types/common';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { ButtonSecondary } from '@/shared/ui/buttons/button-secondary';
@@ -6,12 +7,17 @@ import { TextButtonSecondary } from '@/shared/ui/buttons/text-button-secondary';
 import { InputSize } from '@/shared/ui/inputs/base/Base';
 import { InputPhone } from '@/shared/ui/inputs/input-phone/input-phone';
 import { InputText } from '@/shared/ui/inputs/input-text';
+import { Footer } from '@/widgets/footer';
+import { Header } from '@/widgets/header';
+import { Layout } from '@/widgets/layout';
 
 import React, { useState } from 'react';
 
 const Test = () => {
   const [phone, setPhone] = useState<any>();
   const [phoneNumber, setPhoneNumber] = useState<any>();
+  const { showRequestSent } = useShowRequestSent();
+
   return (
     <div
       style={{
@@ -26,6 +32,8 @@ const Test = () => {
         gap: '100px',
       }}
     >
+      <Header />
+
       <div
         style={{
           display: 'flex',
@@ -37,7 +45,7 @@ const Test = () => {
         }}
       >
         <h2>Primary</h2>
-        <ButtonPrimary>LET’S TALK</ButtonPrimary>
+        <ButtonPrimary onClick={showRequestSent}>LET’S TALK</ButtonPrimary>
         <ButtonPrimary isLoading={true}> LET’S TALK</ButtonPrimary>
         <ButtonPrimary disabled> LET’S TALK</ButtonPrimary>
         <h2>Secondary</h2>
@@ -88,6 +96,7 @@ const Test = () => {
           sizeVariant={InputSize.Small}
         />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -26,6 +26,7 @@
 
   &__link {
     @include body-regular-12;
+    color: var(--greyscale-11);
   }
 
   &__second-block {

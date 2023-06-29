@@ -62,7 +62,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
   const { control } = useForm({ defaultValues });
 
   return (
-    <motion.section className={cnRoot} ref={ref}>
+    <motion.section className={cnRoot} ref={ref} id="contact">
       <Container className={cnContainer}>
         <div className={cnFormWrapper}>
           <div className={cnTextWrapper}>

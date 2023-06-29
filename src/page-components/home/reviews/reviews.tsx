@@ -10,7 +10,7 @@ const Reviews: FC<ReviewsProps> = ({ className }) => {
   const { cnRoot, cnContainer, cnTitle, cnBlur } = useClasses({ className });
 
   return (
-    <section className={cnRoot}>
+    <section className={cnRoot} id="reviews">
       <Container className={cnContainer}>
         <h2 className={cnTitle}>
           Find out <span>what clients think</span> about our work

@@ -42,7 +42,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
   );
 
   return (
-    <motion.section className={cnRoot} ref={ref}>
+    <motion.section className={cnRoot} ref={ref} id="advantages">
       <Container className={cnContainer}>
         <motion.div
           className={cnTextWrapper}

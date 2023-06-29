@@ -1,5 +1,4 @@
 import { useLockScroll } from '@/shared/hooks/use-lock-scroll';
-import { useScroll } from '@/shared/hooks/use-scroll';
 import {
   BurgerMenu,
   Instagram,
@@ -12,7 +11,11 @@ import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
 import { Container } from '@/shared/ui/container/container';
 import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
+import { LINKS } from '../../shared/constants/links';
 import { useClasses } from './lib/use-classes';
+import { useClientSize } from '@/shared/hooks/use-client-size';
+import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
+import { PATHS } from '@/shared/constants/paths';
 
 export interface HeaderProps extends CommonTypes {
   isMenuOpen?: boolean;
@@ -21,7 +24,9 @@ export interface HeaderProps extends CommonTypes {
 const Header: FC<HeaderProps> = ({ className }) => {
   const { disableLockScroll, enableLockScroll } = useLockScroll({});
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isUnderlineVisible, setIsUnderlineVisible] = useState(false);
+
+  const { handleAnchorLink } = useAnchorLink();
+
   const {
     cnRoot,
     cnBurger,
@@ -39,17 +44,20 @@ const Header: FC<HeaderProps> = ({ className }) => {
   });
   const handleCloseMenu = () => setIsMenuOpen(false);
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const { scrollY } = useScroll();
+
+  const { getIsBreakpoint } = useClientSize();
+  const isTablet = getIsBreakpoint('$tablet');
+
   useEffect(() => {
-    if (scrollY > 50) {
-      setIsUnderlineVisible(true);
-    } else {
-      setIsUnderlineVisible(false);
+    if (!isTablet) {
+      isMenuOpen ? enableLockScroll() : disableLockScroll();
     }
-  }, [scrollY]);
-  useEffect(() => {
-    isMenuOpen ? enableLockScroll() : disableLockScroll();
   }, [isMenuOpen, enableLockScroll, disableLockScroll]);
+
+  const handleLink = async (path: string) => {
+    await handleCloseMenu();
+    handleAnchorLink(path);
+  };
 
   return (
     <header className={cnRoot}>
@@ -59,26 +67,16 @@ const Header: FC<HeaderProps> = ({ className }) => {
         </Link>
         <nav className={cnNav}>
           <ul className={cnMenu}>
-            <li className={cnMenuItem}>
-              <a target="_blank" href="/" className={cnLink}>
-                Services
-              </a>
-            </li>
-            <li className={cnMenuItem}>
-              <a target="_blank" href="/" className={cnLink}>
-                Advantages
-              </a>
-            </li>
-            <li className={cnMenuItem}>
-              <a target="_blank" href="/" className={cnLink}>
-                Reviews
-              </a>
-            </li>
-            <li className={cnMenuItem}>
-              <a target="_blank" href="/" className={cnLink}>
-                Contact
-              </a>
-            </li>
+            {LINKS.map((link) => (
+              <li key={link.path} className={cnMenuItem}>
+                <button
+                  className={cnLink}
+                  onClick={() => handleLink(link.path)}
+                >
+                  {link.name}
+                </button>
+              </li>
+            ))}
             <li className={cnMenuSocialLinks}>
               <a target="_blank" href="/" className={cnLink}>
                 <Linkedin />
@@ -91,7 +89,9 @@ const Header: FC<HeaderProps> = ({ className }) => {
               </a>
             </li>
             <li className={cnMenuItem}>
-              <ButtonPrimary>LET’s TALK</ButtonPrimary>
+              <ButtonPrimary onClick={() => handleLink(PATHS.CONTACT)}>
+                LET’s TALK
+              </ButtonPrimary>
             </li>
           </ul>
         </nav>

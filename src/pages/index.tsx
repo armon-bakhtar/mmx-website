@@ -12,6 +12,8 @@ import SecureStoreServices, {
 } from '@/shared/services/secure-store-services';
 import { GetServerSidePropsContext } from 'next';
 import { Preloader } from '@/widgets/preloader';
+import { Header } from '@/widgets/header';
+import { Footer } from '@/widgets/footer';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -33,7 +35,7 @@ export default function Home({ cookie }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Preloader />
+        <Header />
 
         <Hero />
         <WorkSpheres />
@@ -42,7 +44,9 @@ export default function Home({ cookie }: HomeProps) {
         <Reviews />
         <ContactUs />
 
+        <Preloader />
         <CookieBanner cookie={cookie} />
+        <Footer />
       </Layout>
     </>
   );
