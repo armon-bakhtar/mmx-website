@@ -11,13 +11,14 @@
 
   &__text-wrapper {
     margin-bottom: 40px;
+    position: relative;
+    z-index: var(--z-index-features-text-wrapper);
   }
 
   &__title {
     @include title-bold-30;
     margin-bottom: 20px;
     position: relative;
-    z-index: var(--z-index-features-title);
   }
 
   &__text {
@@ -88,6 +89,7 @@
       opacity: 0.9;
       filter: blur(37px);
       pointer-events: none;
+      z-index: var(--z-index-features-blur);
     }
   }
 
@@ -98,6 +100,7 @@
     &__container {
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
+      gap: 20px;
     }
 
     &__text-wrapper {

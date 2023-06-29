@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import { CommonTypes } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useAnimation } from './lib/use-animation';
 import { featureCards } from './lib/feature-cards';
+import { useClientSize } from '@/shared/hooks/use-client-size';
 
 export type FeaturesProps = CommonTypes;
 
@@ -22,15 +23,32 @@ const Features: FC<FeaturesProps> = ({ className }) => {
     cnDescription,
     cnBlur,
   } = useClasses({ className });
+
+  const { getIsBreakpoint } = useClientSize();
+
+  const isLaptop = getIsBreakpoint('$laptop');
+
   const { motionConfig, titleAniamtion, cardAnimation } = useAnimation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['80% end', '50% start'],
+  });
+
+  const titleY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isLaptop ? ['0px', '380px'] : ['0', '0'],
+  );
 
   return (
-    <section className={cnRoot}>
+    <motion.section className={cnRoot} ref={ref}>
       <Container className={cnContainer}>
         <motion.div
           className={cnTextWrapper}
           {...motionConfig}
           variants={titleAniamtion}
+          style={{ y: titleY }}
         >
           <h2 className={cnTitle}>Why Momentum Max</h2>
           <p className={cnText}>
@@ -57,7 +75,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
         </div>
         <div className={cnBlur}></div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 
