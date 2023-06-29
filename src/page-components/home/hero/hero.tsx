@@ -10,6 +10,7 @@ import { TIME } from '@/shared/constants';
 import { preloaderPlusPlanetTime, useAnimation } from './lib/use-animation';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { useSafari } from '@/shared/hooks/use-safari';
+import { useProgress } from '@react-three/drei';
 export interface HeroProps extends CommonTypes {
   itemActive?: number;
   isSafari?: boolean;
@@ -21,7 +22,7 @@ const activeItemDelay = 2000;
 const Hero: FC<HeroProps> = ({ className }) => {
   const [itemActive, setItemActive] = useState(2);
   const { isSafari } = useSafari();
-
+  const { progress } = useProgress();
   const {
     cnRoot,
     cnContainer,
@@ -66,6 +67,10 @@ const Hero: FC<HeroProps> = ({ className }) => {
   const isLaptop = getIsBreakpoint('$laptop');
 
   const isSmallThanTablet = width && width <= 768;
+
+  if (progress !== 100) {
+    return <Planet />;
+  }
 
   return (
     <section className={cnRoot}>
