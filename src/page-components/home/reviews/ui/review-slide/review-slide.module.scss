@@ -3,6 +3,8 @@
   background-color: var(--property-initial);
   border-radius: 20px;
   width: 300px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
 
   &__reviewer {
     display: grid;
@@ -47,5 +49,12 @@
   @include tablet {
     padding: 40px;
     width: 544px;
+  }
+
+  @include laptop {
+    &:hover {
+      background: var(--property-hover);
+      border-color: var(--greyscale-8);
+    }
   }
 }
