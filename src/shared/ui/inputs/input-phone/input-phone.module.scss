@@ -14,13 +14,14 @@
   }
   > :global(.PhoneInputCountry) {
     max-height: 44px;
-    margin-left: 10px;
+    left: 10px;
     z-index: 2;
   }
 
   @include tablet {
     > :global(.PhoneInputCountry) {
       max-height: 64px;
+      left: 20px;
     }
   }
 }

@@ -27,7 +27,7 @@ export const useClasses = ({ className, isMenuOpen }: PickedHeaderProps) => {
 
   const cnMenuSocialLinks = cn(`header__social-link-wrapper`);
 
-  const cnSocialLink = cn(`header__social-link`);
+  const cnMenuButton = cn(`header__menu-button`);
 
   return {
     cnRoot,
@@ -39,6 +39,6 @@ export const useClasses = ({ className, isMenuOpen }: PickedHeaderProps) => {
     cnMenuItem,
     cnLink,
     cnMenuSocialLinks,
-    cnSocialLink,
+    cnMenuButton,
   };
 };

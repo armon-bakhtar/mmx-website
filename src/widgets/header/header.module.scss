@@ -58,7 +58,8 @@
     margin: 0 auto;
     padding: 0;
     grid-auto-flow: row;
-    text-align: center;
+    height: 100%;
+    align-content: flex-start;
   }
 
   &__menu-item {
@@ -67,16 +68,20 @@
   }
 
   &__social-link-wrapper {
-    margin-top: 240px;
+    position: absolute;
+    bottom: 100px;
+    margin-top: 100%;
     display: grid;
     align-self: center;
+    align-items: flex-end;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-bottom: 24px;
   }
 
-  &__button {
-    width: 100%;
+  &__menu-button {
+    position: absolute;
+    bottom: 30px;
   }
 
   &__link {
@@ -94,6 +99,7 @@
   margin: 0;
   padding: 0;
   color: var(--greyscale-12);
+  transition: all 0.3s ease-in;
 
   :global(.svg-burger-line) {
     transition: all var(--transition-settings);
@@ -160,7 +166,20 @@
 
   @include desktop-xl {
     &__navigation_open {
-      right: 27%;
+      right: 15%;
+    }
+  }
+}
+
+.buttonBurger {
+  @include desktop-s {
+    &_active {
+      transform: translateX(70px);
+    }
+  }
+  @include desktop-m {
+    &_active {
+      transform: translateX(0px);
     }
   }
 }
