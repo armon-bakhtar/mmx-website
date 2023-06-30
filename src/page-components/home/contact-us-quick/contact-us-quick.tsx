@@ -14,6 +14,7 @@ import axios from 'axios';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactUsQuickSchema } from './lib/contact-us-quick-scheme';
+import { API_URL } from '@/shared/constants/api-url';
 
 export type ContactUsQuickProps = CommonTypes;
 
@@ -62,8 +63,8 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
 
   const onSubmit: SubmitHandler<ContactUsQuickRequest> = async (data) => {
     try {
-      const response = await axios.post(
-        `https://script.google.com/macros/s/AKfycbzOe8S78ZDw8FlG7A1XfbfBLg27i43ngOKylczZHLSrXvyGqX4hS_NOxgtXNf2-LYTy/exec?p1=${data.name}&p2=${data.phoneNumber}`,
+      await axios.post(
+        `${API_URL.googleSheetQuick}?p1=${data.name}&p2=${data.phoneNumber}`,
       );
       showRequestSent();
       reset();

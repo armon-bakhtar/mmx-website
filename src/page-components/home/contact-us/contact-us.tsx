@@ -16,6 +16,7 @@ import axios, { AxiosError } from 'axios';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactUsSchema } from './lib/contact-us-scheme';
+import { API_URL } from '@/shared/constants/api-url';
 
 export type ContactUsProps = CommonTypes;
 
@@ -77,8 +78,13 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
 
   const onSubmit: SubmitHandler<ContactUsRequest> = async (data) => {
     try {
-      const response = await axios.post(
-        `https://script.google.com/macros/s/AKfycbzOe8S78ZDw8FlG7A1XfbfBLg27i43ngOKylczZHLSrXvyGqX4hS_NOxgtXNf2-LYTy/exec?p1=${data.name}&p2=${data.phoneNumber}&p3=${data.email}&p4=${data.email}`,
+      await axios.post(
+        API_URL.googleSheetMain(
+          data.name,
+          data.phoneNumber,
+          data.email,
+          data.business,
+        ),
       );
       showRequestSent();
       reset();
