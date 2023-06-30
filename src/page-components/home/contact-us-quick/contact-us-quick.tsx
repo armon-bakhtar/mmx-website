@@ -1,15 +1,20 @@
 import React, { FC, useRef } from 'react';
-import { CommonTypes } from '@/shared/types/common';
+import { CommonTypes, ContactUsQuickRequest } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
 import { Coin, Etherium, GraphCirle } from '@/shared/icons';
 import { InputTextField } from '@/shared/ui/inputs/input-text';
 import { InputPhoneField } from '@/shared/ui/inputs/input-phone/input-phone-field';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { InputSize } from '@/shared/ui/inputs/base/Base';
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import axios from 'axios';
+import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ContactUsQuickSchema } from './lib/contact-us-quick-scheme';
+import { API_URL } from '@/shared/constants/api-url';
 
 export type ContactUsQuickProps = CommonTypes;
 
@@ -24,6 +29,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
     cnIcon,
     cnButton,
   } = useClasses({ className });
+  const { showRequestSent } = useShowRequestSent();
   const { getIsBreakpoint } = useClientSize();
   const isLaptop = getIsBreakpoint('$laptop');
   const isTablet = getIsBreakpoint('$tablet');
@@ -50,7 +56,22 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
     phoneNumber: '',
   };
 
-  const { control } = useForm({ defaultValues });
+  const { control, handleSubmit, reset, setError } = useForm({
+    defaultValues,
+    resolver: yupResolver(ContactUsQuickSchema),
+  });
+
+  const onSubmit: SubmitHandler<ContactUsQuickRequest> = async (data) => {
+    try {
+      await axios.post(
+        `${API_URL.googleSheetQuick}?p1=${data.name}&p2=${data.phoneNumber}`,
+      );
+      showRequestSent();
+      reset();
+    } catch (error: any) {
+      setError(`phoneNumber`, { type: `value`, message: error?.message });
+    }
+  };
 
   return (
     <motion.section className={cnRoot} ref={ref}>
@@ -65,7 +86,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
             Leave your contact details, we will call you back and discuss your
             tasks
           </p>
-          <form className={cnForm}>
+          <form className={cnForm} onSubmit={handleSubmit(onSubmit)}>
             <InputTextField
               style={{ height: isTablet ? '48px' : '44px' }}
               control={control}

@@ -1,17 +1,22 @@
 import React, { FC, useRef } from 'react';
-import { CommonTypes } from '@/shared/types/common';
+import { CommonTypes, ContactUsRequest } from '@/shared/types/common';
 import { useClasses } from './lib/use-classes';
 import { Container } from '@/shared/ui/container/container';
 import { InputTextField } from '@/shared/ui/inputs/input-text';
 import { InputPhoneField } from '@/shared/ui/inputs/input-phone/input-phone-field';
 import { ButtonPrimary } from '@/shared/ui/buttons/button-primary';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { InputSize } from '@/shared/ui/inputs/base/Base';
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import Link from 'next/link';
 import EtheriumGreen from '@/shared/icons/EtheriumGreen';
 import CoinViolet from '@/shared/icons/CoinViolet';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import axios, { AxiosError } from 'axios';
+import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ContactUsSchema } from './lib/contact-us-scheme';
+import { API_URL } from '@/shared/constants/api-url';
 
 export type ContactUsProps = CommonTypes;
 
@@ -35,6 +40,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
   } = useClasses({ className });
   const { getIsBreakpoint } = useClientSize();
   const isTablet = getIsBreakpoint('$tablet');
+  const { showRequestSent } = useShowRequestSent();
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -51,14 +57,41 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
 
   const inputsSize = isTablet ? InputSize.Normal : InputSize.Small;
 
-  const defaultValues = {
+  const defaultValues: ContactUsRequest = {
     name: '',
     phoneNumber: '',
     email: '',
     business: '',
   };
 
-  const { control } = useForm({ defaultValues });
+  const {
+    control,
+    formState: { isDirty, errors },
+    handleSubmit,
+    reset,
+    setError,
+  } = useForm({
+    defaultValues,
+    mode: 'all',
+    resolver: yupResolver(ContactUsSchema),
+  });
+
+  const onSubmit: SubmitHandler<ContactUsRequest> = async (data) => {
+    try {
+      await axios.post(
+        API_URL.googleSheetMain(
+          data.name,
+          data.phoneNumber,
+          data.email,
+          data.business,
+        ),
+      );
+      showRequestSent();
+      reset();
+    } catch (error: any) {
+      setError(`business`, { type: `value`, message: error?.message });
+    }
+  };
 
   return (
     <motion.section className={cnRoot} ref={ref} id="contact">
@@ -75,7 +108,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
               NY 13733-1034 USA
             </p>
           </div>
-          <form className={cnForm}>
+          <form className={cnForm} onSubmit={handleSubmit(onSubmit)}>
             <p className={cnText}>
               Leave your details, we will call you back and discuss your tasks
             </p>

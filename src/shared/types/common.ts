@@ -10,3 +10,15 @@ export enum InputStatus {
   SUCCESS = `SUCCESS`,
   ERROR = `ERROR`,
 }
+
+export interface ContactUsRequest {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  business: string;
+}
+
+export interface ContactUsQuickRequest {
+  name: string;
+  phoneNumber: string;
+}
