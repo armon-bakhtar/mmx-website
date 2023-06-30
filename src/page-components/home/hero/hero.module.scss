@@ -129,7 +129,7 @@
   }
 
   &__blur {
-    display: block;
+    display: none;
     position: absolute;
     right: -80px;
     bottom: -100px;
@@ -256,6 +256,10 @@
 
     &__info-decor--third-active {
       left: 283px;
+    }
+
+    &__blur {
+      display: block;
     }
   }
 

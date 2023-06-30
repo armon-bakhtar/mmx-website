@@ -29,7 +29,6 @@
     border-radius: 20px;
     border: 1px solid transparent;
     background: var(--property-initial);
-    transition: all 0.3s;
   }
 
   &__name {
@@ -176,6 +175,7 @@
 
     &__card {
       padding: 36px;
+      transition: all 0.3s;
 
       &:first-child {
         grid-row: 1/3;
