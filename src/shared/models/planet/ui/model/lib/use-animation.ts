@@ -10,15 +10,15 @@ export const useAnimation = () => {
   if (isDesktop) {
     planetAnimation = {
       animate: {
-        x: [-8, 30, 0],
-        y: -3,
+        x: [5, 50, 0],
+        y: [2, -3],
         z: 10,
         rotateY: [0, 0.2, -0.6, 0.2, 0],
         rotateZ: 6.5,
       },
       transition: {
         duration: TIME.planetDuration,
-        delay: TIME.preloaderTimeInSeconds,
+        delay: TIME.planetDelay,
         ease: 'easeInOut',
         rotateY: {
           repeat: Infinity,
@@ -30,15 +30,15 @@ export const useAnimation = () => {
   } else if (isTablet) {
     planetAnimation = {
       animate: {
-        x: [-8, 30, 10],
-        y: -3,
+        x: [5, 50, 10],
+        y: [2, -3],
         z: 10,
         rotateY: [0, 0.2, -0.6, 0.2, 0],
         rotateZ: 6.5,
       },
       transition: {
         duration: TIME.planetDuration,
-        delay: TIME.preloaderTimeInSeconds,
+        delay: TIME.planetDelay,
         ease: 'easeInOut',
         rotateY: {
           repeat: Infinity,
@@ -50,15 +50,15 @@ export const useAnimation = () => {
   } else {
     planetAnimation = {
       animate: {
-        x: [-8, 30, 5],
-        y: -5,
+        x: [5, 50, 5],
+        y: [2, -5],
         z: 7.2,
         rotateY: [0, 0.2, -0.6, 0.2, 0],
         rotateZ: 6.5,
       },
       transition: {
         duration: TIME.planetDuration,
-        delay: TIME.preloaderTimeInSeconds,
+        delay: TIME.planetDelay,
         ease: 'easeInOut',
         rotateY: {
           repeat: Infinity,
