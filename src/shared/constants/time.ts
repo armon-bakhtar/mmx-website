@@ -1,5 +1,5 @@
 export const TIME = {
-  preloaderTimeInSeconds: 2,
+  preloaderTimeInSeconds: 1,
   planetDuration: 1.5,
   planetDelay: 1,
 };

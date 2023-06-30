@@ -12,7 +12,7 @@ import Link from 'next/link';
 import EtheriumGreen from '@/shared/icons/EtheriumGreen';
 import CoinViolet from '@/shared/icons/CoinViolet';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import useShowRequestSent from '@/features/home/request-sent/lib/use-show-request-sent';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactUsSchema } from './lib/contact-us-scheme';
@@ -64,13 +64,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
     business: '',
   };
 
-  const {
-    control,
-    formState: { isDirty, errors },
-    handleSubmit,
-    reset,
-    setError,
-  } = useForm({
+  const { control, handleSubmit, reset, setError } = useForm({
     defaultValues,
     mode: 'all',
     resolver: yupResolver(ContactUsSchema),
