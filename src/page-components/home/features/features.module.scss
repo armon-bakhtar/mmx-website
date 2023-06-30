@@ -42,7 +42,6 @@
     border-radius: 20px;
     background: var(--property-initial);
     border: 1px solid transparent;
-    transition: all 0.3s;
   }
 
   &__icon {
@@ -120,6 +119,7 @@
       max-width: 510px;
       border-radius: 30px;
       gap: 28px;
+      transition: all 0.3s;
     }
 
     &__card:hover {
