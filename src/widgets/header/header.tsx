@@ -37,7 +37,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
     cnLink,
     cnLogo,
     cnMenuSocialLinks,
-    cnSocialLink,
+    cnMenuButton,
   } = useClasses({
     className,
     isMenuOpen,
@@ -88,9 +88,9 @@ const Header: FC<HeaderProps> = ({ className }) => {
                 <Instagram />
               </a>
             </li>
-            <li className={cnMenuItem}>
+            <li className={cnMenuButton}>
               <ButtonPrimary onClick={() => handleLink(PATHS.CONTACT)}>
-                LET’s TALK
+                Let’s talk
               </ButtonPrimary>
             </li>
           </ul>
