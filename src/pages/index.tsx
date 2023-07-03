@@ -80,13 +80,14 @@ export default function Home({ cookie }: HomeProps) {
       </Head>
       <Layout>
         <Header />
+
         <Hero />
         <DynamicWorkSpheres />
         <DynamicFeatures />
         <DynamicContactUsQuick />
         <DynamicReviews />
         <DynamicContactUs />
-        {/* <Preloader /> */}
+
         {isCookieShow && <CookieBanner cookie={cookie} />}
         <DynamicFooter />
       </Layout>
