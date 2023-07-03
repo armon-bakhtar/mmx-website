@@ -18,8 +18,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'localhost:3000',
         port: '',
-        pathname:
-          '/cloud-poker-night-worker.cloud-poker-night-dev.workers.dev/**',
+        pathname: '',
       },
     ],
   },

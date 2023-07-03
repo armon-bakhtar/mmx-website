@@ -10,6 +10,7 @@ import { Preloader } from '@/widgets/preloader';
 import { Header } from '@/widgets/header';
 import dynamic from 'next/dynamic';
 import { Spinner } from '@/shared/ui/spinner';
+import { useEffect, useState } from 'react';
 
 const DynamicWorkSpheres = dynamic(
   () =>
@@ -18,6 +19,7 @@ const DynamicWorkSpheres = dynamic(
     ),
   { loading: () => <Spinner isAbsolute={false} /> },
 );
+
 const DynamicFeatures = dynamic(
   () =>
     import('@/page-components/home/features').then((module) => module.Features),
@@ -58,6 +60,13 @@ interface HomeProps {
 }
 
 export default function Home({ cookie }: HomeProps) {
+  const [isCookieShow, setIsCookieShow] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsCookieShow(true);
+    }, 5000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -71,16 +80,14 @@ export default function Home({ cookie }: HomeProps) {
       </Head>
       <Layout>
         <Header />
-
         <Hero />
         <DynamicWorkSpheres />
         <DynamicFeatures />
         <DynamicContactUsQuick />
         <DynamicReviews />
         <DynamicContactUs />
-
-        <Preloader />
-        <CookieBanner cookie={cookie} />
+        {/* <Preloader /> */}
+        {isCookieShow && <CookieBanner cookie={cookie} />}
         <DynamicFooter />
       </Layout>
     </>
