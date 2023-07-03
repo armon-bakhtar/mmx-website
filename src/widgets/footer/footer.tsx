@@ -2,7 +2,6 @@ import { LINKS } from '@/shared/constants/links';
 import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
 import { Instagram, Linkedin, MomentumLogo, Twitter } from '@/shared/icons';
 import { CommonTypes } from '@/shared/types/common';
-import { TextButtonPrimary } from '@/shared/ui/buttons/text-button-primary';
 import { TextButtonSecondary } from '@/shared/ui/buttons/text-button-secondary';
 import { Container } from '@/shared/ui/container/container';
 import React, { FC } from 'react';

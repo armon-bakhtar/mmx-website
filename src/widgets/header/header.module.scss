@@ -165,8 +165,8 @@
   }
 
   @include desktop-xl {
-    &__navigation_open {
-      right: 15%;
+    &__navigation {
+      width: 800px;
     }
   }
 }

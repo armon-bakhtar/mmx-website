@@ -68,7 +68,11 @@ const Hero: FC<HeroProps> = ({ className }) => {
   const isLaptop = getIsBreakpoint('$laptop');
 
   if (progress !== 100) {
-    return <Planet />;
+    return (
+      <section className={cnRoot}>
+        <Planet />;
+      </section>
+    );
   }
 
   return (

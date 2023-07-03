@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
+const withPlugins = require('next-compose-plugins');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -17,8 +18,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'localhost:3000',
         port: '',
-        pathname:
-          '/cloud-poker-night-worker.cloud-poker-night-dev.workers.dev/**',
+        pathname: '',
       },
     ],
   },
@@ -26,6 +26,6 @@ const nextConfig = {
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-module.exports = withBundleAnalyzer({});
-
-module.exports = nextConfig;
+module.exports = withPlugins([[withBundleAnalyzer]], {
+  ...nextConfig,
+});
