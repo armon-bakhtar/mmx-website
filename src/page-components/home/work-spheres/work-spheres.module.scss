@@ -49,6 +49,10 @@
     max-width: 130px;
   }
 
+  &__animation-wrapper {
+    display: none;
+  }
+
   &__icon {
     position: relative;
     z-index: var(--z-index-work-spheres-icon);
@@ -225,17 +229,17 @@
       margin-top: 0;
     }
 
-    &__card:first-child &__icon {
+    &__card:first-child &__animation-wrapper {
       width: 220px;
       height: 190px;
     }
 
-    &__card:nth-child(3) &__icon {
+    &__card:nth-child(3) &__animation-wrapper {
       width: 186px;
       height: 200px;
     }
 
-    &__card:nth-child(5) &__icon {
+    &__card:nth-child(5) &__animation-wrapper {
       width: 186px;
       height: 200px;
     }
@@ -246,6 +250,16 @@
 
     &__blur:last-child {
       bottom: -60px;
+    }
+
+    &__animation-wrapper {
+      display: block;
+      position: relative;
+      pointer-events: none;
+    }
+
+    &__icon {
+      display: none;
     }
   }
 }

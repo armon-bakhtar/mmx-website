@@ -24,6 +24,8 @@ export const useClasses = ({ className }: PickedWorkSpheresProps) => {
 
   const cnIconWrapper = cn('work-spheres__icon-wrapper');
 
+  const cnAnimationWrapper = cn('work-spheres__animation-wrapper');
+
   const cnIcon = cn('work-spheres__icon');
 
   const cnIconBlur = cn('work-spheres__icon-blur');
@@ -39,6 +41,7 @@ export const useClasses = ({ className }: PickedWorkSpheresProps) => {
     cnName,
     cnText,
     cnIconWrapper,
+    cnAnimationWrapper,
     cnIcon,
     cnIconBlur,
     cnBlur,
