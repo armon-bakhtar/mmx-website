@@ -6,23 +6,14 @@ import { motion } from 'framer-motion';
 import { useAnimation } from './lib/use-animation';
 import { useClientSize } from '@/shared/hooks/use-client-size';
 import { sphereCards } from './lib/sphereCards';
+import WorkSpheresCard from './ui/work-spheres-card/work-spheres-card';
 
 export type WorkSpheresProps = CommonTypes;
 
 const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
-  const {
-    cnRoot,
-    cnContainer,
-    cnTitle,
-    cnCardWrapper,
-    cnCard,
-    cnName,
-    cnText,
-    cnIconWrapper,
-    cnIcon,
-    cnIconBlur,
-    cnBlur,
-  } = useClasses({ className });
+  const { cnRoot, cnContainer, cnTitle, cnCardWrapper, cnBlur } = useClasses({
+    className,
+  });
   const { motionConfig, cardAnimation } = useAnimation();
   const { getIsBreakpoint } = useClientSize();
   const isTabletS = getIsBreakpoint('$tablet-s');
@@ -40,24 +31,16 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
         </motion.h2>
 
         <div className={cnCardWrapper}>
-          {sphereCards.map((card, index) => (
-            <motion.div
-              {...motionConfig}
-              key={String(isTabletS + String(index + 1))}
-              custom={index + 1}
-              variants={cardAnimation}
-              className={cnCard}
-            >
-              <h3 className={cnName}>{card.name}</h3>
-              <p className={cnText}>{card.text}</p>
-              {card.icon && (
-                <div className={cnIconWrapper}>
-                  <card.icon className={cnIcon} />
-                  <span className={cnIconBlur}></span>
-                </div>
-              )}
-            </motion.div>
-          ))}
+          {sphereCards.map((card, index) => {
+            return (
+              <WorkSpheresCard
+                key={index + 1}
+                card={card}
+                animation={card.animation}
+                index={index + 1}
+              />
+            );
+          })}
         </div>
 
         <div>
