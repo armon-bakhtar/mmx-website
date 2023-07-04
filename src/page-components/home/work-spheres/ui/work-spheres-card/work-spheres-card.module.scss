@@ -1,0 +1,211 @@
+.work-spheres-card {
+  position: relative;
+  padding: 36px 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: var(--property-initial);
+
+  &__name {
+    @include subhead-medium-20;
+    color: var(--greyscale-11);
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @include body-regular-15;
+    color: var(--greyscale-8);
+    max-width: 290px;
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    margin-left: auto;
+    max-width: 130px;
+  }
+
+  &__animation-wrapper {
+    display: none;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: var(--z-index-work-spheres-icon);
+    transition: all 0.3s ease-in;
+  }
+
+  &__icon-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--work-spheres-decor-shadow);
+    transition: all 0.3s ease-in;
+  }
+
+  &__blur {
+    display: none;
+  }
+
+  @include tablet-s {
+    padding: 36px;
+    border-radius: 28px;
+    &:first-child {
+      grid-row: 1/3;
+    }
+
+    &:nth-child(2) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    &:nth-child(3) {
+      grid-row: 2/4;
+    }
+
+    &:nth-child(5) {
+      display: grid;
+      grid-auto-flow: row;
+      align-content: start;
+      grid-row: 4/6;
+    }
+
+    &:first-child &__icon {
+      width: 156px;
+      height: 144px;
+    }
+
+    &:first-child &__icon-wrapper {
+      margin-top: 45px;
+    }
+
+    &:nth-child(3) &__icon {
+      width: 140px;
+      height: 160px;
+    }
+
+    &:nth-child(3) &__icon-wrapper {
+      margin-top: 40px;
+    }
+
+    &:nth-child(5) &__icon {
+      width: 141px;
+      height: 151px;
+    }
+
+    &:nth-child(5) &__icon-wrapper {
+      grid-row: 1/2;
+      margin-bottom: 12px;
+    }
+
+    &__blur {
+      display: block;
+      position: absolute;
+      border-radius: 150px;
+      pointer-events: none;
+    }
+
+    &__blur:first-child {
+      top: 100px;
+      left: -250px;
+      width: 700px;
+      height: 700px;
+      background: var(--work-spheres-blur-1);
+      opacity: 0.5;
+      filter: blur(37px);
+    }
+
+    &__blur:last-child {
+      right: -60px;
+      bottom: 275px;
+      width: 560px;
+      height: 300px;
+      background: var(--work-spheres-blur-2);
+      opacity: 0.5;
+      filter: blur(37px);
+    }
+  }
+
+  @include laptop {
+    padding: 36px;
+    transition: all 0.3s;
+
+    &:first-child {
+      grid-row: 1/3;
+      display: grid;
+      grid-auto-flow: row;
+      align-content: start;
+    }
+
+    &:nth-child(2) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    &:nth-child(3) {
+      grid-column: 2/3;
+      grid-row: 2/4;
+    }
+
+    &:nth-child(5) {
+      grid-row: 1/3;
+    }
+
+    &:hover {
+      background: var(--property-hover);
+      border-color: var(--greyscale-8);
+    }
+
+    &:hover &__icon {
+      scale: 1.1;
+      rotate: -5deg;
+    }
+
+    &:hover &__icon-blur {
+      scale: 1.5;
+    }
+
+    &__icon-wrapper {
+      grid-row: 1/2;
+      margin-bottom: 12px;
+      max-width: 200px;
+      margin-top: 0px !important;
+    }
+
+    &:first-child &__animation-wrapper {
+      width: 220px;
+      height: 190px;
+    }
+
+    &:nth-child(3) &__animation-wrapper {
+      width: 186px;
+      height: 200px;
+    }
+
+    &:nth-child(5) &__animation-wrapper {
+      width: 186px;
+      height: 200px;
+    }
+
+    &__name {
+      @include subhead-medium-24;
+    }
+
+    &__blur:last-child {
+      bottom: -60px;
+    }
+
+    &__animation-wrapper {
+      display: block;
+      position: relative;
+      pointer-events: none;
+      z-index: var(--z-index-work-spheres-icon);
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+}
