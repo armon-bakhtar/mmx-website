@@ -104,6 +104,7 @@
 
     &__text-wrapper {
       margin-top: 25px;
+      justify-self: start;
     }
 
     &__title {
@@ -112,6 +113,7 @@
 
     &__card-wrapper {
       grid-template-columns: 1fr;
+      justify-self: end;
     }
 
     &__card {
@@ -142,6 +144,28 @@
       transform: rotate(8deg);
       opacity: 0.7;
       background: var(--features-blur-desktop);
+    }
+  }
+
+  @include desktop-xl {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    &__title {
+      @include title-medium-52;
+      max-width: 710px;
+    }
+
+    &__text {
+      @include body-regular-18;
+      max-width: 780px;
+    }
+
+    &__card {
+      grid-auto-flow: column;
+      max-width: 750px;
+      padding: 40px;
+      justify-content: start;
     }
   }
 }

@@ -208,4 +208,13 @@
       display: none;
     }
   }
+
+  @include desktop-xl {
+    &__name {
+      @include subhead-medium-28;
+    }
+    &__text {
+      @include body-regular-18;
+    }
+  }
 }

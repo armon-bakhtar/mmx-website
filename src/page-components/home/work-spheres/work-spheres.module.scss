@@ -86,4 +86,18 @@
       bottom: -60px;
     }
   }
+
+  @include desktop-xl {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    &__title {
+      @include title-medium-52;
+      max-width: 710px;
+    }
+
+    &__card-wrapper {
+      grid-template-rows: repeat(3, 180px);
+    }
+  }
 }

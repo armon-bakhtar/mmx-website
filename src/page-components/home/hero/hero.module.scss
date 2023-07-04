@@ -351,6 +351,27 @@
       animation: blur-animation 8s infinite ease-in;
     }
   }
+
+  @include desktop-xl {
+    padding-bottom: 300px;
+    &__title {
+      @include title-light-italic-60;
+      margin-bottom: 52px;
+      max-width: 1000px;
+    }
+
+    &__title > b {
+      @include title-bold-60;
+    }
+
+    &__button {
+      margin-bottom: 56px;
+    }
+
+    &__info-wrapper {
+      max-width: 600px;
+    }
+  }
 }
 
 @keyframes blur-animation {

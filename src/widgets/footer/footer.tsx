@@ -2,7 +2,6 @@ import { LINKS } from '@/shared/constants/links';
 import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
 import { Instagram, Linkedin, MomentumLogo, Twitter } from '@/shared/icons';
 import { CommonTypes } from '@/shared/types/common';
-import { TextButtonSecondary } from '@/shared/ui/buttons/text-button-secondary';
 import { Container } from '@/shared/ui/container/container';
 import React, { FC } from 'react';
 import { useClasses } from './lib/use-classes';
@@ -25,6 +24,7 @@ const Footer: FC<FooterProps> = ({ className }) => {
     cnBotWrapper,
     cnCopyright,
     cnBottomLinks,
+    cnBottomLink,
   } = useClasses({ className });
   const { handleAnchorLink } = useAnchorLink();
 
@@ -63,16 +63,16 @@ const Footer: FC<FooterProps> = ({ className }) => {
           </p>
           <ul className={cnBottomLinks}>
             <li>
-              <TextButtonSecondary>Privacy Policy</TextButtonSecondary>
+              <button className={cnBottomLink}>Privacy Policy</button>
             </li>
             <li>
-              <TextButtonSecondary>Cookie Policy</TextButtonSecondary>
+              <button className={cnBottomLink}>Cookie Policy</button>
             </li>
             <li>
-              <TextButtonSecondary>Terms Of Service</TextButtonSecondary>
+              <button className={cnBottomLink}>Terms Of Service</button>
             </li>
             <li>
-              <TextButtonSecondary>Terms of Use</TextButtonSecondary>
+              <button className={cnBottomLink}>Terms of Use</button>
             </li>
           </ul>
         </div>
