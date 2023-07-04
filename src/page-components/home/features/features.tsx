@@ -38,7 +38,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
   const titleY = useTransform(
     scrollYProgress,
     [0, 1],
-    isLaptop ? ['0px', '380px'] : ['0', '0'],
+    isLaptop ? ['0px', '550px'] : ['0', '0'],
   );
 
   return (

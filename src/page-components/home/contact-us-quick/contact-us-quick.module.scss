@@ -89,8 +89,7 @@
 
     &__form-wrapper {
       padding: 80px;
-      max-width: 1120px;
-      margin: 0 auto;
+      // max-width: 1120px;
     }
 
     &__icon:first-child {
@@ -104,7 +103,7 @@
 
   @include desktop {
     &__form-wrapper {
-      min-width: 1120px;
+      // min-width: 1120px;
     }
 
     &__icon:first-child {
@@ -121,8 +120,8 @@
       top: -55px;
       right: -75px;
       svg {
-        width: 185px;
-        height: 195px;
+        width: 165px;
+        height: 175px;
       }
     }
 
@@ -133,6 +132,29 @@
         width: 85px;
         height: 135px;
       }
+    }
+  }
+  @include desktop-m {
+    &__title {
+      @include title-semibold-44;
+    }
+
+    &__text {
+      @include body-regular-18;
+    }
+
+    &__form {
+      grid-template-columns: 35% 40% 15%;
+      max-width: 900px;
+    }
+  }
+
+  @include desktop-xl {
+    padding-bottom: 150px;
+    &__form-wrapper {
+      min-width: 1420px;
+      max-width: 1420px;
+      margin: 0 auto;
     }
   }
 }

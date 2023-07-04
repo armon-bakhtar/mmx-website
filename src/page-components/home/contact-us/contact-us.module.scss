@@ -189,8 +189,8 @@
     padding-top: 85px;
     padding-bottom: 85px;
     &__form-wrapper {
-      max-width: 1120px;
-      margin: 0 auto;
+      // max-width: 1120px;
+      // margin: 0 auto;
     }
 
     &__icon:first-child {
@@ -219,6 +219,36 @@
       height: 321.01px;
       border-radius: 30%;
       transform: rotate(330deg);
+    }
+  }
+
+  @include desktop-m {
+    &__text-wrapper {
+      max-width: 600px;
+    }
+
+    &__title {
+      @include title-semibold-44;
+    }
+
+    &__contacts {
+      @include title-bold-24;
+    }
+
+    &__text {
+      @include body-regular-18;
+    }
+
+    &__form {
+      max-width: 440px;
+    }
+  }
+
+  @include desktop-xl {
+    &__form-wrapper {
+      min-width: 1420px;
+      max-width: 1420px;
+      margin: 0 auto;
     }
   }
 }

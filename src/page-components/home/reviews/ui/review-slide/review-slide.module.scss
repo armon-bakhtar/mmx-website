@@ -57,4 +57,25 @@
       border-color: var(--greyscale-8);
     }
   }
+
+  @include desktop-xl {
+    &__reviewer {
+      grid-template-columns: 80px 1fr;
+    }
+    &__avatar {
+      width: 80px;
+      height: 80px;
+    }
+    &__name {
+      @include subhead-medium-24;
+    }
+
+    &__position {
+      @include body-regular-18;
+    }
+
+    &__review {
+      @include body-regular-18;
+    }
+  }
 }

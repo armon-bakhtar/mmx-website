@@ -1,3 +1,13 @@
+@mixin title-bold-60 {
+  @include font($size: 60px, $weight: 700, $lineHeight: 68px);
+  font-family: var(--subjetivity-font), sans-serif;
+}
+
+@mixin title-light-italic-60 {
+  @include font($size: 60px, $weight: 300, $lineHeight: 68px);
+  font-family: (--subjetivity-font), sans-serif;
+}
+
 @mixin title-bold-52 {
   @include font($size: 52px, $weight: 700, $lineHeight: 60px);
   font-family: var(--subjetivity-font), sans-serif;
@@ -6,6 +16,11 @@
 @mixin title-light-italic-52 {
   @include font($size: 52px, $weight: 300, $lineHeight: 60px);
   font-family: (--subjetivity-font), sans-serif;
+}
+
+@mixin title-medium-52 {
+  @include font($size: 52px, $weight: 600, $lineHeight: 60px);
+  font-family: var(--poppins-font), sans-serif;
 }
 
 @mixin title-bold-46 {
@@ -48,6 +63,11 @@
   font-family: var(--subjetivity-font), sans-serif;
 }
 
+@mixin subhead-medium-28 {
+  @include font($size: 28px, $weight: 500, $lineHeight: 32px);
+  font-family: var(--poppins-font);
+}
+
 @mixin subhead-bold-24 {
   @include font($size: 24px, $weight: 700, $lineHeight: 28px);
   font-family: var(--subjetivity-font), sans-serif;
@@ -56,6 +76,11 @@
 @mixin subhead-medium-24 {
   @include font($size: 24px, $weight: 500, $lineHeight: 28px);
   font-family: var(--poppins-font);
+}
+
+@mixin title-bold-24 {
+  @include font($size: 24px, $weight: 700, $lineHeight: 30px);
+  font-family: var(--poppins-font), sans-serif;
 }
 
 @mixin subhead-bold-20 {
@@ -75,6 +100,11 @@
 
 @mixin subhead-medium-18 {
   @include font($size: 18px, $weight: 500, $lineHeight: 22px);
+  font-family: var(--poppins-font);
+}
+
+@mixin body-regular-18 {
+  @include font($size: 18px, $weight: 400, $lineHeight: 26px);
   font-family: var(--poppins-font);
 }
 

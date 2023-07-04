@@ -65,6 +65,26 @@
     white-space: nowrap;
   }
 
+  &__bottom-link {
+    @include body-regular-12;
+    align-items: center;
+    transition: all 0.3s;
+    color: var(--additional-text-dark-lilac);
+
+    &:disabled {
+      color: var(--greyscale-7);
+    }
+
+    &:not(:disabled, :active):focus {
+      @include body-bold-12;
+      font-size: bold;
+    }
+
+    &:not(:disabled):active {
+      @include body-bold-12;
+    }
+  }
+
   @include tablet {
     padding-bottom: 80px;
 
@@ -109,6 +129,73 @@
       gap: 44px;
       margin-bottom: 0;
       max-width: 100%;
+    }
+  }
+
+  @include desktop-m {
+    &__logo {
+      width: 200px;
+      height: 32px;
+      margin-bottom: 40px;
+    }
+
+    &__link {
+      @include body-regular-14;
+    }
+
+    &__social-link-wrapper {
+      gap: 20px;
+      width: 145px;
+    }
+
+    &__social-link {
+      width: 32px;
+      height: 32px;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__social-text {
+      @include body-regular-14;
+
+      &__bottom-link {
+        @include body-regular-14;
+
+        &:not(:disabled, :active):focus {
+          @include body-regular-14;
+          font-weight: bold;
+        }
+
+        &:not(:disabled):active {
+          @include body-regular-14;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  @include desktop-xl {
+    &__link {
+      @include body-regular-18;
+    }
+
+    &__social-text {
+      @include body-regular-18;
+    }
+
+    &__bottom-link {
+      @include body-regular-18;
+
+      &:not(:disabled, :active):focus {
+        @include body-regular-18;
+        font-weight: bold;
+      }
+
+      &:not(:disabled):active {
+        @include body-regular-18;
+      }
     }
   }
 }

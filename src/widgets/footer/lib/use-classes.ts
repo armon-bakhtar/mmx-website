@@ -35,6 +35,8 @@ export const useClasses = ({ className }: PickedFooterProps) => {
 
   const cnBottomLinks = cn('footer__bottom-links');
 
+  const cnBottomLink = cn('footer__bottom-link');
+
   return {
     cnRoot,
     cnContainer,
@@ -50,5 +52,6 @@ export const useClasses = ({ className }: PickedFooterProps) => {
     cnBotWrapper,
     cnCopyright,
     cnBottomLinks,
+    cnBottomLink,
   };
 };
