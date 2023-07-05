@@ -68,7 +68,7 @@
   }
 
   &__social-link-wrapper {
-    margin-top: 95%;
+    margin-top: 60%;
     display: grid;
     align-self: center;
     align-items: end;
@@ -135,6 +135,9 @@
     &__container {
       padding-top: 20;
       padding-bottom: 20px;
+    }
+    &__social-link-wrapper {
+      margin-top: 90%;
     }
   }
 
