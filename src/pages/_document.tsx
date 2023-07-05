@@ -1,4 +1,3 @@
-import { poppins, subjetivity } from '@/shared/constants/fonts';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -8,7 +7,7 @@ export default function Document() {
         <meta name="theme-color" content="#04000d" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#04000d" />
       </Head>
-      <body className={`${poppins.variable} ${subjetivity.variable}`}>
+      <body>
         <Main />
         <NextScript />
       </body>

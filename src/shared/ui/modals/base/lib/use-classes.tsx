@@ -1,3 +1,4 @@
+import { poppins } from '@/shared/constants/fonts';
 import classNames from 'classnames/bind';
 import { BaseProps } from '../base';
 
@@ -8,7 +9,7 @@ type PickedBaseProps = Pick<BaseProps, 'className'>;
 const cn = classNames.bind(classes);
 
 export const useClasses = ({ className }: PickedBaseProps) => {
-  const cnRoot = cn(`modal`, className);
+  const cnRoot = cn(`modal`, poppins.variable, className);
 
   const cnOverlay = cn(`overlay`);
 
