@@ -64,7 +64,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
   const onSubmit: SubmitHandler<ContactUsQuickRequest> = async (data) => {
     try {
       await axios.post(
-        `${API_URL.googleSheetQuick}?p1=${data.name}&p2=${data.phoneNumber}`,
+        `${API_URL.googleSheetQuick(data.name, data.phoneNumber)}`,
       );
       showRequestSent();
       reset();
