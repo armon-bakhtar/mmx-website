@@ -9,7 +9,7 @@ export const ContactUsSchema = yup
     phoneNumber: yup
       .string()
       .required(`The field is required to fill in`)
-      .max(11, `Maximum number of characters 11`),
+      .max(16, `Maximum number of characters 16`),
     email: yup.string().email().required(`The field is required to fill in`),
     business: yup
       .string()

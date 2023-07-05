@@ -9,6 +9,6 @@ export const ContactUsQuickSchema = yup
     phoneNumber: yup
       .string()
       .required(`The field is required to fill in`)
-      .max(11, `Maximum number of characters 11`),
+      .max(16, `Maximum number of characters 16`),
   })
   .required();
