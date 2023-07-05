@@ -6,7 +6,6 @@ import SecureStoreServices, {
   WebSecureStorageKeys,
 } from '@/shared/services/secure-store-services';
 import { GetServerSidePropsContext } from 'next';
-import { Preloader } from '@/widgets/preloader';
 import { Header } from '@/widgets/header';
 import dynamic from 'next/dynamic';
 import { Spinner } from '@/shared/ui/spinner';
