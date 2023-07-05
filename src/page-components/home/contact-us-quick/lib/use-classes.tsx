@@ -24,6 +24,8 @@ export const useClasses = ({ className }: PickedContactUsQuickProps) => {
 
   const cnButton = cn('contact-us-quick__button');
 
+  const cnPhoneInput = cn('contact-us-quick__phone-input');
+
   return {
     cnRoot,
     cnContainer,
@@ -33,5 +35,6 @@ export const useClasses = ({ className }: PickedContactUsQuickProps) => {
     cnForm,
     cnIcon,
     cnButton,
+    cnPhoneInput,
   };
 };

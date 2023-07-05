@@ -81,6 +81,12 @@
     &__button {
       height: 48px;
     }
+
+    &__phone-input {
+      > :global(.PhoneInputCountry) {
+        max-height: 48px;
+      }
+    }
   }
 
   @include laptop {
@@ -89,7 +95,6 @@
 
     &__form-wrapper {
       padding: 80px;
-      // max-width: 1120px;
     }
 
     &__icon:first-child {
@@ -102,10 +107,6 @@
   }
 
   @include desktop {
-    &__form-wrapper {
-      // min-width: 1120px;
-    }
-
     &__icon:first-child {
       display: block;
       top: -75px;
