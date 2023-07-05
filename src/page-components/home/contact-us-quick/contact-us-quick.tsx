@@ -28,6 +28,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
     cnForm,
     cnIcon,
     cnButton,
+    cnPhoneInput,
   } = useClasses({ className });
   const { showRequestSent } = useShowRequestSent();
   const { getIsBreakpoint } = useClientSize();
@@ -88,14 +89,15 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
           </p>
           <form className={cnForm} onSubmit={handleSubmit(onSubmit)}>
             <InputTextField
-              style={{ height: isTablet ? '48px' : '44px' }}
+              style={{ height: isTablet ? '48px' : '' }}
               control={control}
               placeholder="Name"
               name="name"
               sizeVariant={inputsSize}
             />
             <InputPhoneField
-              style={{ height: isTablet ? '48px' : '44px' }}
+              className={cnPhoneInput}
+              style={{ height: isTablet ? '48px' : '' }}
               control={control}
               name="phoneNumber"
               placeholder="+ 1 900 000 00 00 "
