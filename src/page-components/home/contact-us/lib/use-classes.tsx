@@ -20,7 +20,7 @@ export const useClasses = ({ className }: PickedContactUsProps) => {
 
   const cnContacts = cn('contact-us__contacts');
 
-  const cnAdress = cn('contact-us__adreas');
+  const cnAdress = cn('contact-us__adress');
 
   const cnForm = cn('contact-us__form');
 
