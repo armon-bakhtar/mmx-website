@@ -1,8 +1,10 @@
 import { LINKS } from '@/shared/constants/links';
+import { PATHS } from '@/shared/constants/paths';
 import { useAnchorLink } from '@/shared/hooks/use-anchor-link';
 import { Instagram, Linkedin, MomentumLogo, Twitter } from '@/shared/icons';
 import { CommonTypes } from '@/shared/types/common';
 import { Container } from '@/shared/ui/container/container';
+import Link from 'next/link';
 import React, { FC } from 'react';
 import { useClasses } from './lib/use-classes';
 
@@ -36,8 +38,13 @@ const Footer: FC<FooterProps> = ({ className }) => {
             <MomentumLogo className={cnLogo} />
             <ul className={cnLinkWrapper}>
               {LINKS.map((link) => (
-                <li key={link.path} onClick={() => handleAnchorLink(link.path)}>
-                  <button className={cnLink}>{link.name}</button>
+                <li key={link.path}>
+                  <button
+                    className={cnLink}
+                    onClick={() => handleAnchorLink(link.path)}
+                  >
+                    {link.name}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -63,16 +70,14 @@ const Footer: FC<FooterProps> = ({ className }) => {
           </p>
           <ul className={cnBottomLinks}>
             <li>
-              <button className={cnBottomLink}>Privacy Policy</button>
+              <Link href={PATHS.PRIVACY_POLICY} className={cnBottomLink}>
+                Privacy Policy
+              </Link>
             </li>
             <li>
-              <button className={cnBottomLink}>Cookie Policy</button>
-            </li>
-            <li>
-              <button className={cnBottomLink}>Terms Of Service</button>
-            </li>
-            <li>
-              <button className={cnBottomLink}>Terms of Use</button>
+              <Link href={PATHS.TERMS} className={cnBottomLink}>
+                Terms Of Service
+              </Link>
             </li>
           </ul>
         </div>

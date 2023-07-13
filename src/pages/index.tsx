@@ -10,6 +10,7 @@ import { Header } from '@/widgets/header';
 import dynamic from 'next/dynamic';
 import { Spinner } from '@/shared/ui/spinner';
 import { useEffect, useState } from 'react';
+import { Preloader } from '@/widgets/preloader';
 
 const DynamicWorkSpheres = dynamic(
   () =>
@@ -89,6 +90,8 @@ export default function Home({ cookie }: HomeProps) {
 
         {isCookieShow && <CookieBanner cookie={cookie} />}
         <DynamicFooter />
+
+        <Preloader />
       </Layout>
     </>
   );
