@@ -17,6 +17,7 @@ import useShowRequestSent from '@/features/home/request-sent/lib/use-show-reques
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactUsSchema } from './lib/contact-us-scheme';
 import { API_URL } from '@/shared/constants/api-url';
+import { PATHS } from '@/shared/constants/paths';
 
 export type ContactUsProps = CommonTypes;
 
@@ -92,19 +93,22 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
       <Container className={cnContainer}>
         <div className={cnFormWrapper}>
           <div className={cnTextWrapper}>
-            <h2 className={cnTitle}>Have no time to waste?</h2>
+            <h2 className={cnTitle}>Contact Momentum Max today</h2>
             <p className={cnContacts}>
-              <span>+44 7551 450 400</span> <br />
               <span>hello@momentummax.us</span>
             </p>
             <p className={cnAdress}>
-              New-York, 12 Scott Bainbridge <br />
-              NY 13733-1034 USA
+              7901 4TH ST N
+              <br />
+              STE 300
+              <br />
+              ST. PETERSBURG, FL 33702
             </p>
           </div>
           <form className={cnForm} onSubmit={handleSubmit(onSubmit)}>
             <p className={cnText}>
-              Leave your details, we will call you back and discuss your tasks
+              Contact us today to start the conversation about your specific
+              business needs and objectives.
             </p>
             <InputTextField
               className={cnInput}
@@ -136,8 +140,8 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
             />
             <p className={cnAlert}>
               By submitting this form you are agreeing to MomentumMax’s{' '}
-              <Link href="/policy">Privacy policy</Link> and{' '}
-              <Link href="/Terms">Terms of use</Link>
+              <Link href={PATHS.PRIVACY_POLICY}>Privacy policy</Link> and{' '}
+              <Link href={PATHS.TERMS}>Terms of use</Link>
             </p>
             <ButtonPrimary className={cnButton} type="submit">
               Send it
