@@ -44,7 +44,7 @@ export const useAnimation = () => {
         transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.3 },
       };
 
-  const buttonMotion = isTablet
+  const subTitleMotionSpan1 = isTablet
     ? {
         initial: { y: 400, opacity: 0 },
         animate: { y: 0, opacity: 1 },
@@ -54,6 +54,41 @@ export const useAnimation = () => {
         initial: { x: -500 },
         animate: { x: 0 },
         transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.4 },
+      };
+  const subTitleMotionSpan2 = isTablet
+    ? {
+        initial: { y: 400, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.5 },
+      }
+    : {
+        initial: { x: -500 },
+        animate: { x: 0 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.5 },
+      };
+
+  const subTitleMotionSpan3 = isTablet
+    ? {
+        initial: { y: 400, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.6 },
+      }
+    : {
+        initial: { x: -500 },
+        animate: { x: 0 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.6 },
+      };
+
+  const buttonMotion = isTablet
+    ? {
+        initial: { y: 400, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.7 },
+      }
+    : {
+        initial: { x: -500 },
+        animate: { x: 0 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.7 },
       };
 
   const infoMotion = isTablet
@@ -84,6 +119,9 @@ export const useAnimation = () => {
     titleMotionSpan1,
     titleMotionSpan2,
     titleMotionSpan3,
+    subTitleMotionSpan1,
+    subTitleMotionSpan2,
+    subTitleMotionSpan3,
     buttonMotion,
     infoMotion,
     itemMotion,

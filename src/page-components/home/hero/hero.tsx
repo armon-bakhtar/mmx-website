@@ -28,6 +28,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
     cnRoot,
     cnContainer,
     cnTitle,
+    cnSubTitle,
     cnButton,
     cnInfoWrapper,
     cnInfoDecor,
@@ -38,6 +39,9 @@ const Hero: FC<HeroProps> = ({ className }) => {
     titleMotionSpan1,
     titleMotionSpan2,
     titleMotionSpan3,
+    subTitleMotionSpan1,
+    subTitleMotionSpan2,
+    subTitleMotionSpan3,
     buttonMotion,
     decorMotion,
     infoMotion,
@@ -64,6 +68,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
   }, [itemActive]);
 
   const { getIsBreakpoint } = useClientSize();
+  const isMobileM = getIsBreakpoint('$mobile-m');
   const isTablet = getIsBreakpoint('$tablet');
   const isLaptop = getIsBreakpoint('$laptop');
 
@@ -83,28 +88,56 @@ const Hero: FC<HeroProps> = ({ className }) => {
             key={String(isTablet + 'titleMotionSpan1')}
             {...titleMotionSpan1}
           >
-            <b>We Generate&nbsp;</b>
+            High-Quality&nbsp;
           </motion.span>
-          {isTablet && !isLaptop && <br />}
           <motion.span
             key={String(isTablet + 'titleMotionSpan2')}
             {...titleMotionSpan2}
           >
-            <b>Leads & Calls </b>
+            Inbound&nbsp;
+          </motion.span>
+          {isTablet && <br />}
+          <motion.span
+            key={String(isTablet + 'titleMotionSpan2-2')}
+            {...titleMotionSpan2}
+          >
+            Calls&nbsp;
           </motion.span>
           <motion.span
             key={String(isTablet + 'titleMotionSpan3')}
             {...titleMotionSpan3}
           >
-            for Insurance
+            and Leads
           </motion.span>
         </h2>
+        <h3 className={cnSubTitle}>
+          <motion.span
+            key={String(isTablet + 'subTitleMotionSpan1')}
+            {...subTitleMotionSpan1}
+          >
+            Maximize Conversions&nbsp;
+            <br />
+          </motion.span>
+          <motion.span
+            key={String(isTablet + 'subTitleMotionSpan2')}
+            {...subTitleMotionSpan2}
+          >
+            and Accelerate Business&nbsp;
+            {isMobileM && <br />}
+          </motion.span>
+          <motion.span
+            key={String(isTablet + 'titleMotionSpan3')}
+            {...subTitleMotionSpan3}
+          >
+            Growth
+          </motion.span>
+        </h3>
         <motion.div {...buttonMotion} key={String(isTablet + 'buttonMotion')}>
           <ButtonPrimary
             className={cnButton}
             onClick={() => handleAnchorLink(PATHS.CONTACT)}
           >
-            Let’s talk
+            START NOW
           </ButtonPrimary>
         </motion.div>
         <motion.div
@@ -122,7 +155,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
             }}
           >
             <p>Call sold</p>
-            <b>2 500 000</b>
+            <b>1 500 000+</b>
           </motion.div>
           <motion.div
             className={cnInfoItem}
@@ -134,7 +167,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
             }}
           >
             <p>Leads Generated</p>
-            <b>2,400,000</b>
+            <b>1,000,000+</b>
           </motion.div>
           <motion.div
             className={cnInfoItem}
@@ -146,7 +179,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
             }}
           >
             <p>Team Members</p>
-            <b>1600</b>
+            <b>22</b>
           </motion.div>
           <motion.div className={cnInfoDecor} {...decorMotion}></motion.div>
         </motion.div>
