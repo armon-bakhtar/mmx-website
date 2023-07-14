@@ -14,32 +14,32 @@ interface SpheresProps {
 export const sphereCards: SpheresProps[] = [
   {
     name: 'Health insurance',
-    text: 'Low cost health insurance for Americans in need.',
+    text: 'High-quality inbound calls for health insurance coverage.',
     icon: Healthcare,
     animation: shielt,
   },
   {
     name: 'Medicare',
-    text: 'Federal health insurane for seniors asnd disabled adults.',
+    text: 'Get the most out of your medicare leads.',
   },
   {
     name: 'Tax Debt',
-    text: 'Back tax negotitation to pay less than owed.',
+    text: 'Assist individuals and businesses in need of tax relief solutions.',
     icon: Dollar,
     animation: coin,
   },
   {
     name: 'Debt Settlement',
-    text: 'Debt negotitaion to settle outstanding balances for less than owed.',
+    text: 'People in debt are searching for you.',
   },
   {
     name: 'Personal Loan',
-    text: 'Borrowed money without a bank or credit card.',
+    text: 'Become a financial assistance frontrunner.',
     icon: Loan,
     animation: graph,
   },
   {
     name: 'Auto Insurance',
-    text: 'Protects you against financial loss in the event of an accident or theft.',
+    text: 'Shift gears to drive more sales and acquire new customers.',
   },
 ];

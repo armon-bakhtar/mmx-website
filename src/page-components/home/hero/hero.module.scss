@@ -3,7 +3,7 @@
   padding-bottom: 60px;
   color: var(--greyscale-11);
   position: relative;
-  min-height: 550px;
+  min-height: 700px;
 
   &__container {
     position: relative;
@@ -273,7 +273,7 @@
   @include laptop {
     padding-top: 150px;
     padding-bottom: 250px;
-    min-height: 700px;
+    min-height: 800px;
 
     &__title {
       @include title-bold-52;
