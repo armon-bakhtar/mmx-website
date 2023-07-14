@@ -79,13 +79,15 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
       <Container className={cnContainer}>
         <div className={cnFormWrapper}>
           <h2 className={cnTitle}>
-            Increase{!isTablet && <br />}
-            the volume <br />
-            <span>of successful transactions</span>
+            Choose Momentum Max
+            {isTablet && <br />}
+            as your&nbsp;
+            {!isTablet && <br />}
+            <span>Pay Per Call partner</span>
           </h2>
           <p className={cnText}>
-            Leave your contact details, we will call you back and discuss your
-            tasks
+            Together, we’ll take your business to new heights through effective
+            and results-driven Pay Per Call advertising.
           </p>
           <form className={cnForm} onSubmit={handleSubmit(onSubmit)}>
             <InputTextField

@@ -18,7 +18,7 @@
   }
 
   &__title {
-    @include title-bold-30;
+    @include title-bold-28;
     margin-bottom: 20px;
   }
 
@@ -30,6 +30,7 @@
     @include body-regular-15;
     color: var(--greyscale-8);
     margin-bottom: 40px;
+    max-width: 510px;
   }
 
   &__form {
