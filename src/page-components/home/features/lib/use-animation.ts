@@ -7,7 +7,7 @@ export const useAnimation = () => {
     viewport: { once: true },
   };
 
-  const titleAniamtion: Variants = {
+  const textWrapperAniamtion: Variants = {
     hidden: {
       x: 300,
       opacity: 0,
@@ -31,5 +31,5 @@ export const useAnimation = () => {
     },
   };
 
-  return { motionConfig, titleAniamtion, cardAnimation };
+  return { motionConfig, textWrapperAniamtion, cardAnimation };
 };

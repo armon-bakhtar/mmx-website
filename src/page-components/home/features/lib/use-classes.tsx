@@ -16,6 +16,8 @@ export const useClasses = ({ className }: PickedFeaturesProps) => {
 
   const cnTitle = cn('features__title');
 
+  const cnSubTitle = cn('features__sub-title');
+
   const cnText = cn('features__text');
 
   const cnCardWrapper = cn('features__card-wrapper');
@@ -35,6 +37,7 @@ export const useClasses = ({ className }: PickedFeaturesProps) => {
     cnContainer,
     cnTextWrapper,
     cnTitle,
+    cnSubTitle,
     cnText,
     cnCardWrapper,
     cnCard,
