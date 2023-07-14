@@ -13,7 +13,7 @@ const Reviews: FC<ReviewsProps> = ({ className }) => {
     <section className={cnRoot} id="reviews">
       <Container className={cnContainer}>
         <h2 className={cnTitle}>
-          Find out <span>what clients think</span> about our work
+          See <span>what our clients say</span> about Momentum Max
         </h2>
         <ReviewsSwiper />
         <div className={cnBlur}></div>

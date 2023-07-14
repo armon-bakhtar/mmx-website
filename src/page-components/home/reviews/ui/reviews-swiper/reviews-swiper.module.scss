@@ -1,8 +1,10 @@
 .reviews-swiper {
   overflow: visible !important;
+  height: 100%;
 
   &__slide {
     width: 100%;
+    height: auto;
     flex-shrink: 1 !important;
   }
 }

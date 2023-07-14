@@ -5,6 +5,7 @@
   width: 300px;
   border: 1px solid transparent;
   transition: all 0.3s ease-in;
+  height: 360px;
 
   &__reviewer {
     display: grid;
@@ -49,6 +50,11 @@
   @include tablet {
     padding: 40px;
     width: 544px;
+    height: 265px;
+
+    &__reviewer {
+      margin-bottom: 16px;
+    }
   }
 
   @include laptop {
