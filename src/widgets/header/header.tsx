@@ -90,7 +90,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
             </li>
             <li className={cnMenuButton}>
               <ButtonPrimary onClick={() => handleLink(PATHS.CONTACT)}>
-                Let’s talk
+                START NOW
               </ButtonPrimary>
             </li>
           </ul>

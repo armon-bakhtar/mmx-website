@@ -21,10 +21,16 @@
     position: relative;
   }
 
+  &__sub-title {
+    @include subhead-medium-24;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
   &__text {
     @include body-regular-15;
     color: var(--additional-text-lilac);
-    max-width: 470px;
+    max-width: 490px;
   }
 
   &__card-wrapper {
@@ -35,9 +41,10 @@
   }
 
   &__card {
+    position: relative;
     display: grid;
     grid-auto-flow: row;
-    position: relative;
+    align-content: start;
     padding: 36px 20px;
     border-radius: 20px;
     background: var(--property-initial);
@@ -72,8 +79,18 @@
       @include title-semibold-44;
     }
 
+    &__sub-title {
+      @include subhead-medium-24;
+      margin-bottom: 20px;
+      max-width: 320px;
+    }
+
     &__card-wrapper {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__description {
+      max-width: 285px;
     }
 
     &__blur {

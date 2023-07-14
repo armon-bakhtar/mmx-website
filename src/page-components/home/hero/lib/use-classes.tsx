@@ -18,6 +18,8 @@ export const useClasses = ({
 
   const cnTitle = cn('hero__title');
 
+  const cnSubTitle = cn('hero__sub-title');
+
   const cnButton = cn('hero__button');
 
   const cnInfoWrapper = cn('hero__info-wrapper');
@@ -41,6 +43,7 @@ export const useClasses = ({
     cnRoot,
     cnContainer,
     cnTitle,
+    cnSubTitle,
     cnButton,
     cnInfoWrapper,
     cnInfoDecor,

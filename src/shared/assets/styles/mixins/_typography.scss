@@ -45,7 +45,12 @@
 
 @mixin title-light-italic-32 {
   @include font($size: 32px, $weight: 300, $lineHeight: 36px);
-  font-family: 'Subjectivity', sans-serif;
+  font-family: var(--subjetivity-font), sans-serif;
+}
+
+@mixin subhead-light-32 {
+  @include font($size: 32px, $weight: 300, $lineHeight: 36px);
+  font-family: var(--subjetivity-font);
 }
 
 @mixin title-bold-30 {
@@ -98,9 +103,19 @@
   font-family: var(--poppins-font);
 }
 
+@mixin subhead-light-20 {
+  @include font($size: 20px, $weight: 300, $lineHeight: 26px);
+  font-family: var(--subjetivity-font);
+}
+
 @mixin subhead-medium-18 {
   @include font($size: 18px, $weight: 500, $lineHeight: 22px);
   font-family: var(--poppins-font);
+}
+
+@mixin subhead-light-18 {
+  @include font($size: 18px, $weight: 300, $lineHeight: 24px);
+  font-family: var(--subjetivity-font);
 }
 
 @mixin body-regular-18 {

@@ -10,6 +10,7 @@
   &__title {
     @include title-bold-30;
     margin-bottom: 40px;
+    max-width: 300px;
   }
 
   &__title > span {
@@ -23,7 +24,7 @@
   @include tablet {
     &__title {
       @include title-semibold-44;
-      max-width: 725px;
+      max-width: 625px;
     }
 
     &__blur {

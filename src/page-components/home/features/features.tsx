@@ -15,6 +15,7 @@ const Features: FC<FeaturesProps> = ({ className }) => {
     cnContainer,
     cnTextWrapper,
     cnTitle,
+    cnSubTitle,
     cnText,
     cnCardWrapper,
     cnCard,
@@ -28,17 +29,17 @@ const Features: FC<FeaturesProps> = ({ className }) => {
 
   const isLaptop = getIsBreakpoint('$laptop');
 
-  const { motionConfig, titleAniamtion, cardAnimation } = useAnimation();
+  const { motionConfig, textWrapperAniamtion, cardAnimation } = useAnimation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['80% end', '50% start'],
+    offset: ['60% end', '50% start'],
   });
 
-  const titleY = useTransform(
+  const textWrapperY = useTransform(
     scrollYProgress,
     [0, 1],
-    isLaptop ? ['0px', '550px'] : ['0', '0'],
+    isLaptop ? ['0px', '750px'] : ['0', '0'],
   );
 
   return (
@@ -47,14 +48,21 @@ const Features: FC<FeaturesProps> = ({ className }) => {
         <motion.div
           className={cnTextWrapper}
           {...motionConfig}
-          variants={titleAniamtion}
-          style={{ y: titleY }}
+          variants={textWrapperAniamtion}
+          style={{ y: textWrapperY }}
         >
-          <h2 className={cnTitle}>Why Momentum Max</h2>
+          <h2 className={cnTitle}>
+            All about <br /> Momentum Max
+          </h2>
+          <h3 className={cnSubTitle}>
+            Your partner for effective Pay Per Call solutions
+          </h3>
           <p className={cnText}>
-            Momentum Max lets you decide what you want to put aside for your
-            family with flexible, fast, and easy plans that you can tailor to
-            your specific needs!
+            At Momentum Max, we’re more than just a Pay Per Call advertising
+            agency. We’re your trusted partner in driving results and maximizing
+            your marketing ROI. With a deep understanding of the industry and a
+            commitment to excellence, we deliver tailored solutions that meet
+            the unique needs of your business.
           </p>
         </motion.div>
         <div className={cnCardWrapper}>

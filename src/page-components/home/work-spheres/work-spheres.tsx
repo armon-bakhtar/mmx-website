@@ -27,7 +27,7 @@ const WorkSpheres: FC<WorkSpheresProps> = ({ className }) => {
           key={String(isTabletS + 'h2')}
           className={cnTitle}
         >
-          Lead generation services <span>that win clients</span>
+          Lead generation solutions <span> that convert</span>
         </motion.h2>
 
         <div className={cnCardWrapper}>

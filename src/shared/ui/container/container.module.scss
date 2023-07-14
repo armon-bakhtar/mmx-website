@@ -1,5 +1,5 @@
 .container {
-  --horizontal-indent: 20px;
+  --horizontal-indent: 16px;
   width: 100%;
   max-width: calc(var(--max-width) + var(--horizontal-indent) * 2);
   padding: 0 var(--horizontal-indent);
@@ -7,6 +7,10 @@
 
   @include mobile-s {
     --max-width: none;
+  }
+
+  @include tablet-s {
+    --horizontal-indent: 20px;
   }
 
   @include laptop {
