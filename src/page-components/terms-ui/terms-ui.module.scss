@@ -1,0 +1,49 @@
+.privacy-policy-ui {
+  padding-top: 60px;
+  color: var(--greyscale-10);
+
+  &__container {
+  }
+
+  &__part {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @include subhead-bold-20;
+    margin-bottom: 20px;
+  }
+
+  &__part-title {
+    @include subhead-medium-20;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include body-regular-15;
+    margin-bottom: 16px;
+  }
+
+  @include laptop {
+    padding-top: 120px;
+
+    &__part {
+      margin-bottom: 36px;
+    }
+
+    &__title {
+      @include subhead-bold-24;
+      margin-bottom: 25px;
+    }
+
+    &__part-title {
+      @include subhead-medium-24;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      @include body-regular-15;
+      margin-bottom: 25px;
+    }
+  }
+}
