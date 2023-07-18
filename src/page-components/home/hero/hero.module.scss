@@ -172,6 +172,7 @@
 
     &__title {
       @include title-bold-46;
+      font-weight: 600;
       max-width: 875px;
       margin-bottom: 16px;
     }
@@ -279,6 +280,7 @@
 
     &__title {
       @include title-bold-52;
+      font-weight: 600;
       margin-bottom: 16px;
     }
 
@@ -366,7 +368,8 @@
   @include desktop-xl {
     padding-bottom: 300px;
     &__title {
-      @include title-light-italic-60;
+      @include title-bold-60;
+      font-weight: 600;
       margin-bottom: 52px;
       max-width: 1000px;
     }
