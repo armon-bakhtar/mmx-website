@@ -40,7 +40,8 @@ const ReviewSlide: FC<ReviewSlideProps> = ({
         <Image className={cnAvatar} src={avatar} alt="review-avatar" />
         <div className={cnReviewerInfo}>
           <h3 className={cnName}>{name}</h3>
-          <p className={cnPosition}>{position}</p>
+          {/*   props position can be returned
+            <p className={cnPosition}>{position}</p> */}
           <div className={cnStars}>
             {starsArray.map((index) => {
               index += v4();
