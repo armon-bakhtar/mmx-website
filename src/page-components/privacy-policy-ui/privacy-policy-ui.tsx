@@ -634,6 +634,16 @@ const PrivacyPolicyUI: FC<PrivacyPolicyProps> = ({ className }) => {
 
         <div className={cnPart}>
           <h3 className={cnPartTitle}>
+            13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+          </h3>
+          <p className={cnText}>
+            If you have questions or comments about this notice, you may email
+            us at hello@momentummax.co or contact us by post at:
+          </p>
+        </div>
+
+        <div className={cnPart}>
+          <h3 className={cnPartTitle}>
             14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
             YOU?
           </h3>
