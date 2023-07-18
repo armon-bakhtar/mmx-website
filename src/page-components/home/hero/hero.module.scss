@@ -10,9 +10,10 @@
   }
 
   &__title {
-    @include title-bold-32;
+    @include title-bold-30;
     text-transform: uppercase;
     max-width: 300px;
+    font-weight: 600;
     z-index: var(--z-index-hero-content);
   }
 
@@ -25,6 +26,7 @@
     margin-bottom: 28px;
     text-transform: uppercase;
     max-width: 300px;
+    font-style: italic;
   }
 
   &__sub-title > span {
