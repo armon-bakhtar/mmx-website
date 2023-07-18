@@ -13,7 +13,7 @@ interface SpheresProps {
 
 export const sphereCards: SpheresProps[] = [
   {
-    name: 'Health insurance',
+    name: 'Health Insurance',
     text: 'High-quality inbound calls for health insurance coverage.',
     icon: Healthcare,
     animation: shielt,

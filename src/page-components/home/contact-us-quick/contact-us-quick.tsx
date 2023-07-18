@@ -79,7 +79,7 @@ const ContactUsQuick: FC<ContactUsQuickProps> = ({ className }) => {
       <Container className={cnContainer}>
         <div className={cnFormWrapper}>
           <h2 className={cnTitle}>
-            Choose Momentum Max
+            Choose Momentum Max&nbsp;
             {isTablet && <br />}
             as your&nbsp;
             {!isTablet && <br />}

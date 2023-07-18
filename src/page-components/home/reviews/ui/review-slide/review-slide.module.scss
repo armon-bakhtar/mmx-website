@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 68px 1fr;
     gap: 16px;
-    align-items: center;
+    align-items: start;
     margin-bottom: 36px;
   }
 
@@ -28,7 +28,7 @@
   }
 
   &__name {
-    @include subhead-medium-18;
+    @include subhead-medium-16;
   }
 
   &__position {
