@@ -70,10 +70,10 @@ export default function Home({ cookie }: HomeProps) {
   return (
     <>
       <Head>
-        <title>TypeScript starter for Next.js</title>
+        <title>Momentum Max: Quality Inbound Calls and Leads</title>
         <meta
           name="description"
-          content="TypeScript starter for Next.js that includes all you need to build amazing apps"
+          content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -615,7 +615,9 @@ const PrivacyPolicyUI: FC<PrivacyPolicyProps> = ({ className }) => {
         </div>
 
         <div className={cnPart}>
-          <h3 className={cnPartTitle}></h3>
+          <h3 className={cnPartTitle}>
+            13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+          </h3>
           <p className={cnText}>
             If you have questions or comments about this notice, you may email
             us at hello@momentummax.co or contact us by post at:
@@ -629,16 +631,6 @@ const PrivacyPolicyUI: FC<PrivacyPolicyProps> = ({ className }) => {
             <br />
             United States
             <br />
-          </p>
-        </div>
-
-        <div className={cnPart}>
-          <h3 className={cnPartTitle}>
-            13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
-          </h3>
-          <p className={cnText}>
-            If you have questions or comments about this notice, you may email
-            us at hello@momentummax.co or contact us by post at:
           </p>
         </div>
 

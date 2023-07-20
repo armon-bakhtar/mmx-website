@@ -17,7 +17,7 @@ export const useAnimation = () => {
     : {
         initial: { x: -500 },
         animate: { x: 0 },
-        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.1 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.2 },
       };
 
   const titleMotionSpan2 = isTablet
@@ -41,7 +41,7 @@ export const useAnimation = () => {
     : {
         initial: { x: -500 },
         animate: { x: 0 },
-        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.3 },
+        transition: { duration: 1, delay: preloaderPlusPlanetTime + 0.1 },
       };
 
   const subTitleMotionSpan1 = isTablet
