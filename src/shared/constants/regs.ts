@@ -3,3 +3,5 @@ export const REG_EXP_EMAIL =
 
 export const REG_EXP_PHONE =
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+export const REG_EXP_ONLY_WORDS = /^[a-zA-Z0-9_.-]*$/;

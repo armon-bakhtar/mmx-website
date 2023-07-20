@@ -88,7 +88,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
             key={String(isTablet + 'titleMotionSpan1')}
             {...titleMotionSpan1}
           >
-            High-Quality&nbsp;
+            Quality&nbsp;
           </motion.span>
           <motion.span
             key={String(isTablet + 'titleMotionSpan2')}
