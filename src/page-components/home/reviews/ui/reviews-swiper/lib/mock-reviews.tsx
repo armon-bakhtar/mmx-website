@@ -6,7 +6,7 @@ import client_4 from 'public/client-4.png';
 export const reviewers = [
   {
     avatar: client_1,
-    name: 'John Doe',
+    name: 'Mark Ramy',
     position: '',
     stars: 5,
     review:
