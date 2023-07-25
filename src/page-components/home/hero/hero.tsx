@@ -155,7 +155,7 @@ const Hero: FC<HeroProps> = ({ className }) => {
             }}
           >
             <p>Call sold</p>
-            <b>1 500 000+</b>
+            <b>1,500,000+</b>
           </motion.div>
           <motion.div
             className={cnInfoItem}
