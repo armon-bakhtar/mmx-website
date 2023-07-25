@@ -17,14 +17,14 @@ export const InputPhoneField = <T extends FieldValues>({
 }: Props<T>) => {
   const {
     field: { onChange, ...field },
-    fieldState: { isTouched, error },
+    fieldState: { error },
   } = useController<T>({
     control,
     name,
   });
 
-  const status = getInputStatus(isTouched, error);
-  const statusText = isTouched ? error?.message : '';
+  const status = getInputStatus(error);
+  const statusText = error?.message;
 
   return (
     <InputPhone

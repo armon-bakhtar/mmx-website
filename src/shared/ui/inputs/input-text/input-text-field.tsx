@@ -16,20 +16,20 @@ export const InputTextField = <T extends FieldValues>({
 }: Props<T>) => {
   const {
     field,
-    fieldState: { isTouched, error },
+    fieldState: { error },
   } = useController<T>({
     control,
     name,
   });
 
-  const status = getInputStatus(isTouched, error);
+  const status = getInputStatus(error);
 
   return (
     <InputText
       {...props}
       {...field}
       status={status}
-      statusText={isTouched ? error?.message : ``}
+      statusText={error?.message}
     />
   );
 };
