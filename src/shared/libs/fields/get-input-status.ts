@@ -1,17 +1,17 @@
 import { InputStatus } from '@/shared/types/common';
 
-export const getInputStatus = (isTouched: boolean, error: any) => {
+export const getInputStatus = (error: any) => {
   const isError = !!error;
 
-  if (!isTouched && !isError) {
+  if (!isError) {
     return;
   }
 
-  if (isTouched && isError) {
+  if (isError) {
     return InputStatus.ERROR;
   }
 
-  if (isTouched && !isError) {
+  if (!isError) {
     return InputStatus.SUCCESS;
   }
 };

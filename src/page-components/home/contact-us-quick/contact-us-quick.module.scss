@@ -82,12 +82,6 @@
     &__button {
       height: 48px;
     }
-
-    &__phone-input {
-      > :global(.PhoneInputCountry) {
-        max-height: 48px;
-      }
-    }
   }
 
   @include laptop {
@@ -158,5 +152,11 @@
       max-width: 1420px;
       margin: 0 auto;
     }
+  }
+}
+
+@include tablet {
+  .contact-us-quick__phone-input > :global(.PhoneInputCountry) {
+    max-height: 48px;
   }
 }
