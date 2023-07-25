@@ -95,7 +95,7 @@ const ContactUs: FC<ContactUsProps> = ({ className }) => {
           <div className={cnTextWrapper}>
             <h2 className={cnTitle}>Contact Momentum Max today</h2>
             <p className={cnContacts}>
-              <span>hello@momentummax.us</span>
+              <span>hello@momentummax.co</span>
             </p>
             <p className={cnAdress}>
               7901 4TH ST N
