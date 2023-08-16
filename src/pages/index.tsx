@@ -75,8 +75,36 @@ export default function Home({ cookie }: HomeProps) {
           name="description"
           content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
         />
+        <meta
+          name="title"
+          content="Momentum Max: Quality Inbound Calls and Leads"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.momentummax.co/" />
+        <meta
+          property="og:title"
+          content="Momentum Max: Quality Inbound Calls and Leads"
+        />
+        <meta
+          property="og:description"
+          content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
+        />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.momentummax.co/" />
+        <meta
+          property="twitter:title"
+          content="Momentum Max: Quality Inbound Calls and Leads"
+        />
+        <meta
+          property="twitter:description"
+          content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
+        />
+        <meta property="twitter:image" content="/favicon.ico" />
       </Head>
       <Layout>
         <Header />
