@@ -6,6 +6,11 @@
   border: 1px solid transparent;
   transition: all 0.3s ease-in;
   height: 360px;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 
   &__reviewer {
     display: grid;
@@ -81,8 +86,8 @@
       @include body-regular-18;
     }
 
-    &__review {
-      @include body-regular-18;
-    }
+    // &__review {
+    //   @include body-regular-18;
+    // }
   }
 }
