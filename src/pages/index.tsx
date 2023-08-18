@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Hero } from '@/page-components/home/hero';
 import { Layout } from '@/widgets/layout';
 import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
@@ -11,6 +10,11 @@ import dynamic from 'next/dynamic';
 import { Spinner } from '@/shared/ui/spinner';
 import { useEffect, useState } from 'react';
 import { Preloader } from '@/widgets/preloader';
+
+const DynamicHero = dynamic(
+  () => import('@/page-components/home/hero').then((module) => module.Hero),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
 
 const DynamicWorkSpheres = dynamic(
   () =>
@@ -93,7 +97,7 @@ export default function Home({ cookie }: HomeProps) {
           property="og:description"
           content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
         />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:image" content="/og-image.ico" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.momentummax.co/" />
         <meta
@@ -104,12 +108,12 @@ export default function Home({ cookie }: HomeProps) {
           property="twitter:description"
           content="Accelerate business growth with Momentum Max - your trusted partner for quality inbound calls & lead generation. Maximize conversions & success with tailored Pay Per Call services."
         />
-        <meta property="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:image" content="/og-image.ico" />
       </Head>
       <Layout>
         <Header />
 
-        <Hero />
+        <DynamicHero />
         <DynamicWorkSpheres />
         <DynamicFeatures />
         <DynamicContactUsQuick />
