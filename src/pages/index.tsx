@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Hero } from '@/page-components/home/hero';
 import { Layout } from '@/widgets/layout';
 import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
@@ -11,6 +10,11 @@ import dynamic from 'next/dynamic';
 import { Spinner } from '@/shared/ui/spinner';
 import { useEffect, useState } from 'react';
 import { Preloader } from '@/widgets/preloader';
+
+const DynamicHero = dynamic(
+  () => import('@/page-components/home/hero').then((module) => module.Hero),
+  { loading: () => <Spinner isAbsolute={false} /> },
+);
 
 const DynamicWorkSpheres = dynamic(
   () =>
@@ -126,7 +130,7 @@ export default function Home({ cookie }: HomeProps) {
       <Layout>
         <Header />
 
-        <Hero />
+        <DynamicHero />
         <DynamicWorkSpheres />
         <DynamicFeatures />
         <DynamicContactUsQuick />
