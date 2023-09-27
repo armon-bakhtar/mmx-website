@@ -61,7 +61,13 @@ const Footer: FC<FooterProps> = ({ className }) => {
                 <Instagram />
               </a>
             </div>
-            <p className={cnSocialText}>Designed and developed by Purrweb</p>
+            <a
+              className={cnSocialText}
+              href="https://www.purrweb.com/"
+              rel="dofollow"
+            >
+              Designed and developed by Purrweb
+            </a>
           </div>
         </div>
         <div className={cnBotWrapper}>
@@ -78,15 +84,6 @@ const Footer: FC<FooterProps> = ({ className }) => {
               <Link href={PATHS.TERMS} className={cnBottomLink}>
                 Terms Of Service
               </Link>
-            </li>
-            <li>
-              <a
-                className={cnBottomLink}
-                href="https://www.purrweb.com/"
-                rel="dofollow"
-              >
-                designed by Purrweb
-              </a>
             </li>
           </ul>
         </div>
