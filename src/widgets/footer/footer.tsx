@@ -79,6 +79,15 @@ const Footer: FC<FooterProps> = ({ className }) => {
                 Terms Of Service
               </Link>
             </li>
+            <li>
+              <a
+                className={cnBottomLink}
+                href="https://www.purrweb.com/"
+                rel="dofollow"
+              >
+                designed by Purrweb
+              </a>
+            </li>
           </ul>
         </div>
       </Container>
