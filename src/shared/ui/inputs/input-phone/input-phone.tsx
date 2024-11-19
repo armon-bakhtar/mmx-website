@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { Base, BaseProps } from '../base/Base';
-
+import SvgGlobeIcon from '@/shared/icons/Globe';
 import { useClasses } from './lib/use-classes';
 
 export type InputPhoneProps = Omit<BaseProps, 'value' | 'onChange'> & {
@@ -30,6 +30,7 @@ export const InputPhone = forwardRef<HTMLInputElement, InputPhoneProps>(
         withCountryCallingCode
         // defaultCountry="US"
         international
+        internationalIcon={SvgGlobeIcon}
         ref={ref as any}
         {...props}
       />
