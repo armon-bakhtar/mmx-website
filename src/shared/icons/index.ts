@@ -19,3 +19,4 @@ export { default as Notebook } from './Notebook';
 export { default as OkCircle } from './OkCircle';
 export { default as Star } from './Star';
 export { default as Twitter } from './Twitter';
+export { default as Globe } from './Globe';
