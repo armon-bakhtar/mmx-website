@@ -10,7 +10,7 @@ export const reviewers = [
     position: '',
     stars: 5,
     review:
-      'Momentum Max did an incredible job generating high quality leads for us in auto insurance. Within the first week, they were able to generate 10,000+ leads for us through a lead form. Highly recommend them!',
+      'Momentum Max has been awesome for us! In just the first week, they pulled in over 10,000 quality leads for our auto insurance through their lead forms. Super impressed and definitely recommend them!',
   },
   {
     avatar: client_2,
@@ -18,7 +18,7 @@ export const reviewers = [
     position: '',
     stars: 5,
     review:
-      'Their team is the real deal. From the moment we started working with them, they work extremely fast. I was overwhelmed with the amount of calls they sent to us in the first day. I couldn’t recommend a better partner.',
+      'Seriously, their team crushed it! They got things up and running super fast, and we were swamped with calls on day one. Honestly, couldn’t ask for a better partner!',
   },
   {
     avatar: client_3,
@@ -26,7 +26,7 @@ export const reviewers = [
     position: '',
     stars: 5,
     review:
-      'We run a debt resolution business focused on pay per call and we weren’t hitting daily KPI’s. We started working with Momentum Max and within the first week, they were sending around 1,000 calls per day. Absolutely an impressive team.',
+      'We run a debt resolution business and struggled with daily KPIs. Then we started working with Momentum Max, and wow, they turned things around fast.  Within a week, we were getting 1,000 calls a day. Their team is seriously impressive!!!',
   },
   {
     avatar: client_4,
@@ -34,6 +34,6 @@ export const reviewers = [
     position: '',
     stars: 5,
     review:
-      'If you’re in the pay per call industry, don’t hesitate to hit up Momentum Max. They’re quick to provide results and always over deliver. I liked how attentive they are and fast to respond. Their communication is on point.',
+      'If you’re in pay-per-call, reach out to Momentum Max. They get results fast and always deliver more than expected. I loved how quick and easy they are to work with. Great communication!',
   },
 ];
