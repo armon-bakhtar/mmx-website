@@ -22,6 +22,8 @@ $horizontal-indent: 8.33%;
     padding-bottom: 20px;
     width: 96%;
     max-width: calc($max-width + $horizontal-indent* 2);
+    opacity: 0;
+    animation: cc-banner-fade-in 5s forwards;
 
     &-h2 {
       display: none;
@@ -143,4 +145,10 @@ $horizontal-indent: 8.33%;
       }
     }
   }
+}
+
+@keyframes cc-banner-fade-in {
+  0% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 1; }
 }
