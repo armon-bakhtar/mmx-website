@@ -14,9 +14,7 @@ export const CCBannerComponent: FC = () => {
         'access-token',
         'b7b14ddc-6b78-462e-820f-732631695ded',
       );
-      setTimeout(() => {
-        document.body.appendChild(script);
-      }, 5000);
+      document.body.appendChild(script);
     }
   }, []);
 

@@ -57,8 +57,7 @@ const DynamicFooter = dynamic(
 );
 
 const DynamicCCBanner = dynamic(
-  () =>
-    import('../shared/ui/modals/cc-banner').then((module) => module.CCBanner),
+  () => import('@/widgets/cc-banner').then((module) => module.CCBanner),
   { ssr: false },
 );
 
