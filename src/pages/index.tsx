@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Layout } from '@/widgets/layout';
-import { CookieBanner } from '@/widgets/cookie-banner';
+// import { CookieBanner } from '@/widgets/cookie-banner';
 import SecureStoreServices, {
   WebSecureStorageKeys,
 } from '@/shared/services/secure-store-services';
@@ -54,6 +54,12 @@ const DynamicContactUs = dynamic(
 const DynamicFooter = dynamic(
   () => import('@/widgets/footer').then((module) => module.Footer),
   { loading: () => <Spinner isAbsolute={false} /> },
+);
+
+const DynamicCCBanner = dynamic(
+  () =>
+    import('../shared/ui/modals/cc-banner').then((module) => module.CCBanner),
+  { ssr: false },
 );
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
@@ -120,7 +126,9 @@ export default function Home({ cookie }: HomeProps) {
         <DynamicReviews />
         <DynamicContactUs />
 
-        {isCookieShow && <CookieBanner cookie={cookie} />}
+        {/* {isCookieShow && <CookieBanner cookie={cookie} />} */}
+        <DynamicCCBanner />
+
         <DynamicFooter />
 
         <Preloader />
